@@ -23,6 +23,7 @@
         }
     ],
     "mute": 0.8,
+    "mute-priority": 5,
     "sounds": [
         {
             "name": "rain",

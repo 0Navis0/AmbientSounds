@@ -7,11 +7,11 @@
             "fade": 20
         }
     },
-    "mute": 1,
     "sounds": [
         {
             "name": "warden",
             "mute": 0.8,
+            "mute-priority": 8,
             "fade-volume": 0.01,
             "category": "animal",
             "files": [

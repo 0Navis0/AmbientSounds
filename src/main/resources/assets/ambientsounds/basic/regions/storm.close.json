@@ -24,6 +24,7 @@
             ],
             "outside": true,
             "volume": 0.4,
+            "mute-priority": 5,
             "mute": 0.3
         }
     ]

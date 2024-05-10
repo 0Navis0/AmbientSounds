@@ -5,6 +5,9 @@ import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 import java.util.List;
 
+import it.unimi.dsi.fastutil.doubles.Double2DoubleMap.Entry;
+import it.unimi.dsi.fastutil.doubles.Double2DoubleRBTreeMap;
+import it.unimi.dsi.fastutil.doubles.Double2DoubleSortedMap;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.sounds.SoundManager;
 import team.creative.ambientsounds.sound.AmbientSound.SoundStream;
@@ -26,15 +29,14 @@ public class AmbientSoundEngine {
     }
     
     public void tick() {
-        
         // Is still playing
         synchronized (sounds) {
-            Double mute = null;
             try {
+                Double2DoubleSortedMap mutes = new Double2DoubleRBTreeMap((x, y) -> y.compareTo(x));
                 for (SoundStream sound : sounds) {
                     double soundMute = sound.mute();
-                    if (soundMute > 0 && (mute == null || mute < soundMute))
-                        mute = soundMute;
+                    if (soundMute > 0)
+                        mutes.mergeDouble(sound.mutePriority(), soundMute, (x, y) -> Math.max(x, y));
                 }
                 
                 for (Iterator<SoundStream> iterator = sounds.iterator(); iterator.hasNext();) {
@@ -57,10 +59,19 @@ public class AmbientSoundEngine {
                     } else if (!sound.hasPlayedOnce() && playing)
                         sound.setPlayedOnce();
                     
-                    if (mute == null || sound.mute() >= mute || sound.muteResistant())
+                    if (mutes.isEmpty())
                         sound.generatedVoume = (float) sound.volume;
-                    else
+                    else {
+                        double mute = 0;
+                        for (Entry muteEntry : mutes.double2DoubleEntrySet()) {
+                            if (sound.mutePriority() < muteEntry.getDoubleKey() || sound.mute() == 0)
+                                mute = Math.max(muteEntry.getDoubleValue(), mute);
+                            else
+                                break;
+                        }
                         sound.generatedVoume = (float) (sound.volume * (1 - mute));
+                    }
+                    
                 }
                 
             } catch (ConcurrentModificationException e) {

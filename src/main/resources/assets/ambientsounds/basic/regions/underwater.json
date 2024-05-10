@@ -1,6 +1,7 @@
 {
     "name": "underwater",
     "mute": 0.95,
+    "mute-priority": 10,
     "fade-volume": 0.1,
     "fade-pitch": 0.1,
     "pitch": 2.0,
@@ -15,7 +16,7 @@
     "sounds": [
         {
             "name": "underwater",
-            "mute": 0.6,
+            "mute": 0.9,
             "files": [
                 "ambientsounds:water.underwater"
             ]

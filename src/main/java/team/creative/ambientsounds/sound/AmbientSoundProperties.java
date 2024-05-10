@@ -30,8 +30,8 @@ public class AmbientSoundProperties {
     public Double fadeOutPitch;
     
     public Double mute;
-    @SerializedName("mute-resistant")
-    public boolean muteResistant = false;
+    @SerializedName("mute-priority")
+    public Double mutePriority;
     
     @SerializedName("random-offset")
     public boolean randomOffset = true;

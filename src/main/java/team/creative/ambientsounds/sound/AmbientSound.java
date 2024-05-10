@@ -362,11 +362,11 @@ public class AmbientSound extends AmbientCondition {
         }
         
         public double mute() {
-            return AmbientSound.this.currentPropertries.mute != null ? AmbientSound.this.currentPropertries.mute * conditionVolume() : 0;
+            return AmbientSound.this.currentPropertries.mute == null ? 0 : AmbientSound.this.currentPropertries.mute * conditionVolume();
         }
         
-        public boolean muteResistant() {
-            return AmbientSound.this.currentPropertries.muteResistant;
+        public double mutePriority() {
+            return AmbientSound.this.currentPropertries.mutePriority != null ? AmbientSound.this.currentPropertries.mutePriority : 0;
         }
         
         public void onStart() {
