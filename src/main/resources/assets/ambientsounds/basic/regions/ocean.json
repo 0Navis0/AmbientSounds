@@ -25,6 +25,7 @@
         },
         {
             "name": "light-wind",
+            "category": "wind",
             "files": [
                 "ambientsounds:wind.light-wind"
             ],

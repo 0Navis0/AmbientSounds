@@ -2,11 +2,14 @@ package team.creative.ambientsounds.sound;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 
+import com.google.gson.annotations.JsonAdapter;
 import com.mojang.blaze3d.audio.OggAudioStream;
 
 import net.minecraft.Util;
@@ -28,11 +31,14 @@ import net.minecraft.util.RandomSource;
 import team.creative.ambientsounds.AmbientSounds;
 import team.creative.ambientsounds.condition.AmbientCondition;
 import team.creative.ambientsounds.condition.AmbientSelection;
+import team.creative.ambientsounds.condition.AmbientSelectionMulti;
 import team.creative.ambientsounds.condition.AmbientVolume;
 import team.creative.ambientsounds.engine.AmbientEngine;
-import team.creative.ambientsounds.engine.AmbientTickHandler;
+import team.creative.ambientsounds.engine.AmbientEngineLoadException;
+import team.creative.ambientsounds.entity.AmbientEntityCondition.StringJson;
 import team.creative.ambientsounds.environment.AmbientEnvironment;
 import team.creative.ambientsounds.mixin.SoundBufferLibraryAccessor;
+import team.creative.creativecore.client.render.text.DebugTextRenderer;
 import team.creative.creativecore.client.sound.SpecialSoundInstance;
 import team.creative.creativecore.common.config.api.CreativeConfig;
 import team.creative.creativecore.common.util.mc.ResourceUtils;
@@ -47,6 +53,8 @@ public class AmbientSound extends AmbientCondition {
     public transient String fullName;
     public ResourceLocation[] files;
     public double[] chances;
+    @JsonAdapter(StringJson.class)
+    public String[] category;
     
     public transient SoundStream stream1;
     public transient SoundStream stream2;
@@ -65,8 +73,10 @@ public class AmbientSound extends AmbientCondition {
     protected transient AmbientSoundProperties currentPropertries;
     protected transient AmbientEngine engine;
     
+    protected transient List<AmbientSoundCategory> categories;
+    
     @Override
-    public void init(AmbientEngine engine) {
+    public void init(AmbientEngine engine) throws AmbientEngineLoadException {
         if (files == null || files.length == 0)
             throw new RuntimeException("Invalid sound " + name + " which does not contain any sound file");
         
@@ -86,6 +96,17 @@ public class AmbientSound extends AmbientCondition {
                     newChances[i] = 1D / files.length;
             }
             this.chances = newChances;
+        }
+        
+        if (category != null && category.length > 0) {
+            categories = new ArrayList<>();
+            for (int i = 0; i < category.length; i++) {
+                var cat = engine.getSoundCategory(category[i]);
+                if (cat != null)
+                    categories.add(cat);
+                else
+                    AmbientSounds.LOGGER.error("Could not find sound category {} for {}.", category[i], fullName);
+            }
         }
     }
     
@@ -194,7 +215,18 @@ public class AmbientSound extends AmbientCondition {
     public AmbientSelection value(AmbientEnvironment env) {
         if (volumeSetting == 0)
             return null;
-        return super.value(env);
+        
+        var value = super.value(env);
+        if (value != null && categories != null) {
+            List<AmbientSelection> collected = new ArrayList<>();
+            for (AmbientSoundCategory cat : categories) {
+                if (cat.selection == null)
+                    return null;
+                collected.add(cat.selection);
+            }
+            value = new AmbientSelectionMulti(value, collected);
+        }
+        return value;
     }
     
     public boolean tick(AmbientEnvironment env, AmbientSelection selection) {
@@ -313,7 +345,7 @@ public class AmbientSound extends AmbientCondition {
             this.index = index;
             this.location = AmbientSound.this.files[index];
             this.volume = AmbientSound.this.getCombinedVolume(env);
-            this.category = getSoundSource(currentPropertries.category);
+            this.category = getSoundSource(currentPropertries.channel);
             this.generatedVoume = (float) volume;
         }
         
@@ -361,7 +393,7 @@ public class AmbientSound extends AmbientCondition {
         
         @Override
         public String toString() {
-            return "l:" + location + ",v:" + AmbientTickHandler.DECIMAL_FORMAT.format(volume) + "(" + AmbientTickHandler.DECIMAL_FORMAT.format(
+            return "l:" + location + ",v:" + DebugTextRenderer.DECIMAL_FORMAT.format(volume) + "(" + DebugTextRenderer.DECIMAL_FORMAT.format(
                 conditionVolume()) + "),i:" + index + ",p:" + pitch + ",t:" + ticksPlayed + ",d:" + duration;
         }
         
@@ -473,6 +505,18 @@ public class AmbientSound extends AmbientCondition {
                     throw new CompletionException(ioexception);
                 }
             }, Util.backgroundExecutor());
+        }
+        
+        public void collectDetails(DebugTextRenderer text) {
+            text.text("[");
+            text.detail("n", location);
+            text.detail("v", volume);
+            text.detail("cv", conditionVolume());
+            text.detail("i", index);
+            text.detail("p", pitch);
+            text.detail("t", ticksPlayed);
+            text.detail("d", duration);
+            text.text("]");
         }
     }
     

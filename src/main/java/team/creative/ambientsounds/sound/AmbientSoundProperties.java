@@ -5,6 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import net.minecraft.util.Mth;
 import team.creative.ambientsounds.condition.AmbientCondition.AmbientMinMaxCondition;
 import team.creative.ambientsounds.engine.AmbientEngine;
+import team.creative.ambientsounds.engine.AmbientEngineLoadException;
 import team.creative.ambientsounds.environment.AmbientEnvironment;
 
 public class AmbientSoundProperties {
@@ -41,9 +42,9 @@ public class AmbientSoundProperties {
     @SerializedName(value = "underwater-pitch")
     public AmbientMinMaxClimbingProperty underwaterPitch;
     
-    public String category;
+    public String channel;
     
-    public void init(AmbientEngine engine) {
+    public void init(AmbientEngine engine) throws AmbientEngineLoadException {
         if (mute != null)
             mute = Mth.clamp(mute, 0, 1);
     }

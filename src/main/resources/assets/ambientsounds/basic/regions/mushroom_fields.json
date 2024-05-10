@@ -6,6 +6,7 @@
     "sounds": [
         {
             "name": "cicadas-mushroom-fields",
+            "category": "cicadas",
             "files": [
                 "ambientsounds:animals.cicadas-mushroom-fields"
             ],
@@ -15,6 +16,7 @@
         },
         {
             "name": "special-mushroom-fields",
+            "category": "animal",
             "files": [
                 "ambientsounds:animals.special-mushroom-fields"
             ],

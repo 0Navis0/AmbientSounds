@@ -9,6 +9,7 @@
     "sounds": [
         {
             "name": "deep-dark",
+            "category": "cave",
             "files": [
                 "ambientsounds:cave.deep-dark"
             ],
@@ -16,6 +17,7 @@
         },
         {
             "name": "water-droplets",
+            "category": "cave",
             "files": [
                 "ambientsounds:cave.cave-water5"
             ],

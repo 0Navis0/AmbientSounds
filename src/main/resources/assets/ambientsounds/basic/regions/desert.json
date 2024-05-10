@@ -31,6 +31,7 @@
     "sounds": [
         {
             "name": "cicadas-desert",
+            "category": "cicadas",
             "files": [
                 "ambientsounds:animals.cicadas-desert1",
                 "ambientsounds:animals.cicadas-desert2"
@@ -53,6 +54,7 @@
         },
         {
             "name": "light-wind",
+            "category": "wind",
             "files": [
                 "ambientsounds:wind.light-wind"
             ],

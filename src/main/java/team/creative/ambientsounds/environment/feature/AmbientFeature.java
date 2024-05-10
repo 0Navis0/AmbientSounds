@@ -4,7 +4,8 @@ import team.creative.ambientsounds.engine.AmbientStackType;
 
 public class AmbientFeature extends AmbientFeatureSelection {
     
-    public String name;
     public AmbientStackType stack = AmbientStackType.overwrite;
+    
+    public transient String name;
     
 }

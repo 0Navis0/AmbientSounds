@@ -15,6 +15,7 @@ import team.creative.ambientsounds.condition.AmbientVolume;
 import team.creative.ambientsounds.engine.AmbientEngine;
 import team.creative.ambientsounds.environment.BiomeEnvironment.BiomeArea;
 import team.creative.creativecore.client.CreativeCoreClient;
+import team.creative.creativecore.client.render.text.DebugTextRenderer;
 import team.creative.creativecore.common.util.type.list.Pair;
 import team.creative.creativecore.common.util.type.list.PairList;
 
@@ -60,6 +61,11 @@ public class BiomeEnvironment implements Iterable<Pair<BiomeArea, AmbientVolume>
     
     public double rainVolume() {
         return highestRainVolume;
+    }
+    
+    public void collectDetails(DebugTextRenderer text) {
+        for (Pair<BiomeArea, AmbientVolume> pair : this)
+            text.detail(pair.getKey().location.toString(), pair.getValue());
     }
     
     public static class BiomeArea {

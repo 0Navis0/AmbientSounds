@@ -71,7 +71,7 @@ public class AmbientDimension {
             }
     }
     
-    public void init(AmbientEngine engine) {
+    public void init(AmbientEngine engine) throws AmbientEngineLoadException {
         if (biomeSelector != null)
             biomeSelector.init(engine);
         

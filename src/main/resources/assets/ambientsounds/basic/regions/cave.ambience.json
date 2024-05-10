@@ -27,6 +27,7 @@
     "sounds": [
         {
             "name": "cave",
+            "category": "cave",
             "files": [
                 "ambientsounds:cave.cave1",
                 "ambientsounds:cave.cave2",
@@ -41,6 +42,7 @@
         },
         {
             "name": "cave-water",
+            "category": "cave",
             "files": [
                 "ambientsounds:cave.cave-water1",
                 "ambientsounds:cave.cave-water2",
@@ -62,6 +64,7 @@
         },
         {
             "name": "cave-deep",
+            "category": "cave",
             "files": [
                 "ambientsounds:cave.cave-deep1",
                 "ambientsounds:cave.cave-deep2"
@@ -81,6 +84,7 @@
         },
         {
             "name": "cave-large",
+            "category": "cave",
             "files": [
                 "ambientsounds:cave.cave-large1",
                 "ambientsounds:cave.cave-large2"

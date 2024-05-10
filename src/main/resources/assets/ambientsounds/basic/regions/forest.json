@@ -68,8 +68,7 @@
                 "max": 3000
             },
             "transition": 400,
-            "day": 1,
-            "night": 0
+            "category": "bird_day"
         },
         {
             "name": "owl",
@@ -80,8 +79,7 @@
                 "min": 10,
                 "max": 100
             },
-            "night": 1,
-            "day": 0
+            "category": "bird_night"
         }
     ]
 }

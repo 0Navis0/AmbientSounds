@@ -38,6 +38,7 @@
     "sounds": [
         {
             "name": "bird-ambience-huge",
+            "category": "bird_day",
             "files": [
                 "ambientsounds:animals.bird-ambience-huge1",
                 "ambientsounds:animals.bird-ambience-huge2",
@@ -47,9 +48,7 @@
                 "min": 2000,
                 "max": 3000
             },
-            "transition": 400,
-            "day": 1,
-            "night": 0
+            "transition": 400
         }
     ]
 }

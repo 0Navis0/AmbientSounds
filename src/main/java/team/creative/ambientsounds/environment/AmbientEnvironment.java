@@ -1,7 +1,6 @@
 package team.creative.ambientsounds.environment;
 
 import java.util.HashMap;
-import java.util.List;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.tags.FluidTags;
@@ -10,10 +9,8 @@ import net.minecraft.world.level.Level;
 import team.creative.ambientsounds.condition.AmbientVolume;
 import team.creative.ambientsounds.dimension.AmbientDimension;
 import team.creative.ambientsounds.engine.AmbientEngine;
-import team.creative.ambientsounds.engine.AmbientTickHandler;
-import team.creative.ambientsounds.environment.BiomeEnvironment.BiomeArea;
 import team.creative.ambientsounds.mod.SereneSeasonsCompat;
-import team.creative.creativecore.common.util.type.list.Pair;
+import team.creative.creativecore.client.render.text.DebugTextRenderer;
 
 public class AmbientEnvironment {
     
@@ -102,36 +99,32 @@ public class AmbientEnvironment {
         rainSurfaceVolume = biome.rainVolume();
     }
     
-    public void collectLevelDetails(List<Pair<String, Object>> details) {
-        details.add(new Pair<>("dimension", dimension));
-        details.add(new Pair<>("night", night));
-        details.add(new Pair<>("rain", raining));
-        details.add(new Pair<>("rainSurfaceVolume", rainSurfaceVolume));
-        details.add(new Pair<>("snow", snowing));
-        details.add(new Pair<>("storm", thundering));
-        details.add(new Pair<>("time", time));
+    public void collectLevelDetails(DebugTextRenderer text) {
+        text.detail("dimension", dimension);
+        text.detail("night", night);
+        text.detail("rain", raining);
+        text.detail("rainSurfaceVolume", rainSurfaceVolume);
+        text.detail("snow", snowing);
+        text.detail("storm", thundering);
+        text.detail("time", time);
         
     }
     
-    public void collectPlayerDetails(List<Pair<String, Object>> details, Player player) {
-        details.add(new Pair<>("underwater", underwater));
-        details.add(new Pair<>("temp", temperature));
-        details.add(new Pair<>("height", "r:" + AmbientTickHandler.DECIMAL_FORMAT.format(relativeHeight) + ",a:" + AmbientTickHandler.DECIMAL_FORMAT.format(
-            terrain.averageHeight) + " (" + AmbientTickHandler.DECIMAL_FORMAT.format(relativeMinHeight) + "," + AmbientTickHandler.DECIMAL_FORMAT.format(relativeMaxHeight) + ")"));
+    public void collectPlayerDetails(DebugTextRenderer text, Player player) {
+        text.detail("underwater", underwater);
+        text.detail("temp", temperature);
+        text.detail("height", "r:" + DebugTextRenderer.DECIMAL_FORMAT.format(relativeHeight) + ",a:" + DebugTextRenderer.DECIMAL_FORMAT.format(
+            terrain.averageHeight) + " (" + DebugTextRenderer.DECIMAL_FORMAT.format(relativeMinHeight) + "," + DebugTextRenderer.DECIMAL_FORMAT.format(relativeMaxHeight) + ")");
         
     }
     
-    public void collectTerrainDetails(List<Pair<String, Object>> details) {
-        details.add(new Pair<>("features", terrain.airPocket.features.toString(AmbientTickHandler.DECIMAL_FORMAT)));
-        details.add(new Pair<>("light", terrain.airPocket.averageLight));
-        details.add(new Pair<>("sky-light", terrain.airPocket.averageSkyLight));
-        details.add(new Pair<>("air", terrain.airPocket.air));
+    public void collectTerrainDetails(DebugTextRenderer text) {
+        terrain.collectDetails(text);
     }
     
-    public void collectBiomeDetails(List<Pair<String, Object>> details) {
-        details.add(new Pair<>("b-volume", biomeVolume));
-        for (Pair<BiomeArea, AmbientVolume> pair : biome)
-            details.add(new Pair<>(pair.getKey().location.toString(), pair.getValue()));
+    public void collectBiomeDetails(DebugTextRenderer text) {
+        text.detail("b-volume", biomeVolume);
+        biome.collectDetails(text);
     }
     
     public void reload() {

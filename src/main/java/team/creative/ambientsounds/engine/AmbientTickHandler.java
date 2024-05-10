@@ -1,16 +1,10 @@
 package team.creative.ambientsounds.engine;
 
 import java.lang.reflect.Field;
-import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map.Entry;
-
-import com.mojang.blaze3d.systems.RenderSystem;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.player.Player;
@@ -21,13 +15,14 @@ import team.creative.ambientsounds.dimension.AmbientDimension;
 import team.creative.ambientsounds.environment.AmbientEnvironment;
 import team.creative.ambientsounds.region.AmbientRegion;
 import team.creative.ambientsounds.sound.AmbientSound;
+import team.creative.ambientsounds.sound.AmbientSoundCategory;
 import team.creative.ambientsounds.sound.AmbientSoundEngine;
 import team.creative.creativecore.CreativeCore;
 import team.creative.creativecore.Side;
+import team.creative.creativecore.client.render.text.DebugTextRenderer;
 import team.creative.creativecore.common.config.holder.ConfigHolderDynamic;
 import team.creative.creativecore.common.config.holder.CreativeConfigRegistry;
 import team.creative.creativecore.common.config.sync.ConfigSynchronization;
-import team.creative.creativecore.common.util.type.list.Pair;
 import team.creative.creativecore.reflection.ReflectionHelper;
 
 public class AmbientTickHandler {
@@ -77,6 +72,11 @@ public class AmbientTickHandler {
                     region.registerField(sound.name, soundField, sound);
         }
         
+        ConfigHolderDynamic categories = holder.registerFolder("categories");
+        Field categoryField = ReflectionHelper.findField(AmbientSoundCategory.class, "volumeSetting");
+        for (AmbientSoundCategory cat : engine.sortedSoundCategories)
+            createSoundCategoryConfiguration(categories, cat, categoryField);
+        
         holder.registerField("fade-volume", ReflectionHelper.findField(AmbientEngine.class, "fadeVolume"), engine);
         holder.registerField("fade-pitch", ReflectionHelper.findField(AmbientEngine.class, "fadePitch"), engine);
         holder.registerField("silent-dimensions", ReflectionHelper.findField(AmbientEngine.class, "silentDimensions"), engine);
@@ -84,119 +84,57 @@ public class AmbientTickHandler {
         CreativeCore.CONFIG_HANDLER.load(AmbientSounds.MODID, Side.CLIENT);
     }
     
-    public static final DecimalFormat DECIMAL_FORMAT = new DecimalFormat("0.##");
-    
-    private String format(Object value) {
-        if (value instanceof Double || value instanceof Float)
-            return DECIMAL_FORMAT.format(value);
-        return value.toString();
-    }
-    
-    private String format(List<Pair<String, Object>> details) {
-        StringBuilder builder = new StringBuilder();
-        boolean first = true;
-        for (Pair<String, Object> pair : details) {
-            if (!first)
-                builder.append(",");
-            else
-                first = false;
-            if (pair.key.isEmpty())
-                builder.append(format(pair.value));
-            else
-                builder.append(ChatFormatting.YELLOW + pair.key + ChatFormatting.RESET + ":" + format(pair.value));
-        }
-        return builder.toString();
+    private void createSoundCategoryConfiguration(ConfigHolderDynamic parent, AmbientSoundCategory cat, Field categoryField) {
+        if (!cat.children.isEmpty())
+            parent = parent.registerFolder(cat.name);
+        parent.registerField(cat.name, categoryField, cat);
+        for (AmbientSoundCategory child : cat.children)
+            createSoundCategoryConfiguration(parent, child, categoryField);
     }
     
     public void onRender(Object object) {
         if (showDebugInfo && engine != null && !mc.isPaused() && environment != null && mc.level != null) {
-            List<String> list = new ArrayList<>();
-            
             GuiGraphics graphics = (GuiGraphics) object;
-            List<Pair<String, Object>> details = new ArrayList<>();
-            engine.collectDetails(details);
+            DebugTextRenderer text = new DebugTextRenderer();
             
-            details.add(new Pair<>("playing", engine.soundEngine.playingCount()));
-            details.add(new Pair<>("dim-name", mc.level.dimension().location()));
+            engine.collectDetails(text);
             
-            list.add(format(details));
-            details.clear();
+            text.detail("playing", engine.soundEngine.playingCount()).detail("dim-name", mc.level.dimension().location()).newLine();
             
-            environment.collectLevelDetails(details);
+            environment.collectLevelDetails(text);
+            text.newLine();
             
-            list.add(format(details));
-            details.clear();
+            environment.collectPlayerDetails(text, mc.player);
+            text.newLine();
             
-            environment.collectPlayerDetails(details, mc.player);
+            environment.collectTerrainDetails(text);
+            text.newLine();
             
-            list.add(format(details));
-            details.clear();
+            environment.collectBiomeDetails(text);
+            text.newLine();
             
-            environment.collectTerrainDetails(details);
-            
-            list.add(format(details));
-            details.clear();
-            
-            environment.collectBiomeDetails(details);
-            
-            list.add(format(details));
-            details.clear();
+            for (AmbientSoundCategory cat : engine.sortedSoundCategories)
+                cat.collectDetails(text);
+            text.newLine();
             
             for (AmbientRegion region : engine.activeRegions) {
+                text.detail("region", ChatFormatting.DARK_GREEN + region.name + ChatFormatting.RESET);
+                text.detail("playing", region.playing.size());
+                text.newLine();
                 
-                details.add(new Pair<>("region", ChatFormatting.DARK_GREEN + region.name + ChatFormatting.RESET));
-                details.add(new Pair<>("playing", region.playing.size()));
-                
-                list.add(format(details));
-                
-                details.clear();
                 for (AmbientSound sound : region.playing) {
-                    
                     if (!sound.isPlaying())
                         continue;
                     
-                    String text = "";
-                    if (sound.stream1 != null) {
-                        details.add(new Pair<>("n", sound.stream1.location));
-                        details.add(new Pair<>("v", sound.stream1.volume));
-                        details.add(new Pair<>("cv", sound.stream1.conditionVolume()));
-                        details.add(new Pair<>("i", sound.stream1.index));
-                        details.add(new Pair<>("p", sound.stream1.pitch));
-                        details.add(new Pair<>("t", sound.stream1.ticksPlayed));
-                        details.add(new Pair<>("d", sound.stream1.duration));
-                        
-                        text = "[" + format(details) + "]";
-                        
-                        details.clear();
-                    }
-                    
-                    if (sound.stream2 != null) {
-                        details.add(new Pair<>("n", sound.stream2.location));
-                        details.add(new Pair<>("v", sound.stream2.volume));
-                        details.add(new Pair<>("cv", sound.stream2.conditionVolume()));
-                        details.add(new Pair<>("i", sound.stream2.index));
-                        details.add(new Pair<>("p", sound.stream2.pitch));
-                        details.add(new Pair<>("t", sound.stream2.ticksPlayed));
-                        details.add(new Pair<>("d", sound.stream2.duration));
-                        
-                        text += "[" + format(details) + "]";
-                        
-                        details.clear();
-                    }
-                    
-                    list.add(text);
+                    if (sound.stream1 != null)
+                        sound.stream1.collectDetails(text);
+                    if (sound.stream2 != null)
+                        sound.stream2.collectDetails(text);
+                    text.newLine();
                 }
             }
-            RenderSystem.defaultBlendFunc();
-            Font font = mc.font;
-            int top = 2;
-            for (String msg : list) {
-                if (msg != null && !msg.isEmpty()) {
-                    graphics.fill(1, top - 1, 2 + font.width(msg) + 1, top + font.lineHeight - 1, -1873784752);
-                    graphics.drawString(font, msg, 2, top, 14737632, false);
-                }
-                top += font.lineHeight;
-            }
+            
+            text.render(mc.font, graphics);
         }
     }
     

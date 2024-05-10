@@ -1,6 +1,6 @@
 package team.creative.ambientsounds.condition;
 
-import team.creative.ambientsounds.engine.AmbientTickHandler;
+import team.creative.creativecore.client.render.text.DebugTextRenderer;
 
 public class AmbientVolume implements Comparable<AmbientVolume> {
     
@@ -36,6 +36,11 @@ public class AmbientVolume implements Comparable<AmbientVolume> {
     
     public AmbientVolume() {
         this(1, 1);
+    }
+    
+    protected void assign(AmbientVolume volume) {
+        this.conditionVolume = volume.conditionVolume;
+        this.settingVolume = volume.settingVolume;
     }
     
     @Deprecated
@@ -75,7 +80,7 @@ public class AmbientVolume implements Comparable<AmbientVolume> {
     
     @Override
     public String toString() {
-        return AmbientTickHandler.DECIMAL_FORMAT.format(volume()) + "(" + AmbientTickHandler.DECIMAL_FORMAT.format(conditionVolume()) + ")";
+        return DebugTextRenderer.DECIMAL_FORMAT.format(volume()) + "(" + DebugTextRenderer.DECIMAL_FORMAT.format(conditionVolume()) + ")";
     }
     
     public AmbientVolume copy() {

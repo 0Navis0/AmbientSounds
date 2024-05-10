@@ -13,7 +13,7 @@
         {
             "name": "unknown",
             "volume": 0.3,
-            "sound-groups": [
+            "sound-collections": [
                 "suspense"
             ]
         }

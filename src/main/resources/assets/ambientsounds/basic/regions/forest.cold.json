@@ -15,6 +15,7 @@
     "sounds": [
         {
             "name": "crow",
+            "category": "bird",
             "files": [
                 "ambientsounds:animals.crow"
             ],

@@ -24,8 +24,8 @@ public class AmbientRegion extends AmbientCondition {
     public String name;
     public AmbientStackType stack = AmbientStackType.overwrite;
     public AmbientSound[] sounds;
-    @SerializedName("sound-groups")
-    public String[] soundGroups;
+    @SerializedName("sound-collections")
+    public String[] soundCollections;
     
     @CreativeConfig.DecimalRange(min = 0, max = 1)
     public transient double volumeSetting = 1;
@@ -54,17 +54,17 @@ public class AmbientRegion extends AmbientCondition {
     }
     
     @Override
-    public void init(AmbientEngine engine) {
+    public void init(AmbientEngine engine) throws AmbientEngineLoadException {
         super.init(engine);
         
         if (loadedSounds != null)
             for (AmbientSound sound : loadedSounds.values())
                 sound.init(engine);
             
-        if (soundGroups != null) {
+        if (soundCollections != null) {
             if (loadedSounds == null)
                 loadedSounds = new LinkedHashMap<>();
-            engine.consumeSoundGroups(soundGroups, x -> loadedSounds.put(x.name, x));
+            engine.consumeSoundCollections(soundCollections, x -> loadedSounds.put(x.name, x));
         }
     }
     

@@ -15,6 +15,13 @@ public class AmbientSelection extends AmbientVolume {
     }
     
     @Override
+    protected void assign(AmbientVolume volume) {
+        if (volume instanceof AmbientSelection sel)
+            subSelection = sel.subSelection;
+        super.assign(volume);
+    }
+    
+    @Override
     public double conditionVolume() {
         return subSelection != null ? subSelection.conditionVolume() * super.conditionVolume() : super.conditionVolume();
     }

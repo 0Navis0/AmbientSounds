@@ -4,8 +4,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
-import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -19,10 +19,7 @@ import org.apache.commons.io.IOUtils;
 import com.google.common.base.Charsets;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
-import com.google.gson.JsonParseException;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.annotations.SerializedName;
@@ -40,9 +37,10 @@ import team.creative.ambientsounds.environment.feature.AmbientFeature;
 import team.creative.ambientsounds.environment.pocket.AirPocketGroup;
 import team.creative.ambientsounds.region.AmbientRegion;
 import team.creative.ambientsounds.sound.AmbientSound;
+import team.creative.ambientsounds.sound.AmbientSoundCategory;
+import team.creative.ambientsounds.sound.AmbientSoundCollection;
 import team.creative.ambientsounds.sound.AmbientSoundEngine;
-import team.creative.ambientsounds.sound.AmbientSoundGroup;
-import team.creative.creativecore.common.util.type.list.Pair;
+import team.creative.creativecore.client.render.text.DebugTextRenderer;
 
 public class AmbientEngine {
     
@@ -50,19 +48,12 @@ public class AmbientEngine {
     public static final String ENGINE_LOCATION = "engine.json";
     public static final String DIMENSIONS_LOCATION = "dimensions";
     public static final String REGIONS_LOCATION = "regions";
-    public static final String SOUNDGROUPS_LOCATION = "soundgroups";
+    public static final String SOUNDCOLLECTIONS_LOCATION = "sound_collections";
+    public static final String SOUNDCATEGORIES_LOCATION = "sound_categories";
     public static final String BLOCKGROUPS_LOCATION = "blockgroups";
     public static final String FEATURES_LOCATION = "features";
     
-    public static final Gson GSON = new GsonBuilder().registerTypeAdapter(ResourceLocation.class, new JsonDeserializer<ResourceLocation>() {
-        
-        @Override
-        public ResourceLocation deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
-            if (json.isJsonPrimitive() && json.getAsJsonPrimitive().isString())
-                return new ResourceLocation(json.getAsString());
-            return null;
-        }
-    }).create();
+    public static final Gson GSON = new GsonBuilder().registerTypeAdapter(ResourceLocation.class, new ResourceLocation.Serializer()).create();
     
     private static String loadedEngine;
     
@@ -126,8 +117,11 @@ public class AmbientEngine {
                 engine.blockGroups.put(blockGroupName, group);
             }
             
-            engine.soundGroups = loadMultiple(manager, new ResourceLocation(AmbientSounds.MODID, name + "/" + SOUNDGROUPS_LOCATION), AmbientSoundGroup.class, x -> x.stack,
-                (soundGroup, soundGroupName, json) -> {});
+            engine.soundCollections = loadMultiple(manager, new ResourceLocation(AmbientSounds.MODID, name + "/" + SOUNDCOLLECTIONS_LOCATION), AmbientSoundCollection.class,
+                x -> x.stack, (soundGroup, soundGroupName, json) -> {});
+            
+            engine.soundCategories = loadMultiple(manager, new ResourceLocation(AmbientSounds.MODID, name + "/" + SOUNDCATEGORIES_LOCATION), AmbientSoundCategory.class,
+                x -> x.stack, (soundCategory, soundCategoryName, json) -> soundCategory.name = soundCategoryName);
             
             engine.features = loadMultiple(manager, new ResourceLocation(AmbientSounds.MODID, name + "/" + FEATURES_LOCATION), AmbientFeature.class, x -> x.stack,
                 (feature, featureName, json) -> feature.name = featureName);
@@ -142,9 +136,9 @@ public class AmbientEngine {
             engine.soundEngine = soundEngine;
             
             AmbientSounds.LOGGER.info(
-                "Loaded AmbientEngine '{}' v{}. {} dimension(s), {} features, {} blockgroups, {} soundgroups, {} regions, {} sounds, {} solids and {} biome types", engine.name,
-                engine.version, engine.dimensions.size(), engine.features.size(), engine.blockGroups.size(), engine.soundGroups.size(), engine.allRegions.size(), engine.allSounds
-                        .size(), engine.solids.length, engine.biomeTypes.length);
+                "Loaded AmbientEngine '{}' v{}. {} dimension(s), {} features, {} blockgroups, {} sound collections, {} regions, {} sounds, {} sound categories, {} solids and {} biome types",
+                engine.name, engine.version, engine.dimensions.size(), engine.features.size(), engine.blockGroups.size(), engine.soundCollections.size(), engine.allRegions.size(),
+                engine.allSounds.size(), engine.soundCategories.size(), engine.solids.length, engine.biomeTypes.length);
             return engine;
         } finally {
             engineInput.close();
@@ -232,22 +226,22 @@ public class AmbientEngine {
     protected transient List<AmbientRegion> activeRegions = new ArrayList<>();
     
     protected transient LinkedHashMap<String, AmbientSound> allSounds = new LinkedHashMap<>();
+    protected transient LinkedHashMap<String, AmbientSoundCategory> soundCategories;
+    protected transient List<AmbientSoundCategory> sortedSoundCategories;
     
     public transient LinkedHashMap<String, AmbientBlockGroup> blockGroups;
-    public transient LinkedHashMap<String, AmbientSoundGroup> soundGroups;
+    public transient LinkedHashMap<String, AmbientSoundCollection> soundCollections;
     public transient LinkedHashMap<String, AmbientFeature> features;
-    
-    protected transient List<String> silentDimensions = new ArrayList<>();
     
     public transient AmbientSoundEngine soundEngine;
     
+    protected transient List<String> silentDimensions = new ArrayList<>();
     protected transient AmbientDimension silentDim;
     
     protected transient List<Double> airPocketDistanceFactor;
     public transient int maxAirPocketCount;
     
     public transient AmbientBlockGroup considerSolid;
-    
     public transient double squaredBiomeDistance;
     
     public AmbientRegion getRegion(String name) {
@@ -357,9 +351,9 @@ public class AmbientEngine {
         return res;
     }
     
-    public void consumeSoundGroups(String[] groups, Consumer<AmbientSound> consumer) {
+    public void consumeSoundCollections(String[] groups, Consumer<AmbientSound> consumer) {
         for (int i = 0; i < groups.length; i++) {
-            AmbientSoundGroup group = soundGroups.get(groups[i]);
+            AmbientSoundCollection group = soundCollections.get(groups[i]);
             if (group == null || group.sounds == null)
                 continue;
             for (AmbientSound sound : group.sounds)
@@ -367,7 +361,7 @@ public class AmbientEngine {
         }
     }
     
-    public void init() {
+    public void init() throws AmbientEngineLoadException {
         airPocketDistanceFactor = new ArrayList<>();
         for (int i = 0; i < airPocketGroups.length; i++)
             for (int subDistance = 0; subDistance < airPocketGroups[i].distance; subDistance++)
@@ -375,7 +369,7 @@ public class AmbientEngine {
             
         maxAirPocketCount = airPocketVolume(airPocketDistance);
         
-        for (Entry<String, AmbientSoundGroup> group : soundGroups.entrySet())
+        for (Entry<String, AmbientSoundCollection> group : soundCollections.entrySet())
             if (group.getValue().sounds != null)
                 for (AmbientSound sound : group.getValue().sounds) {
                     sound.name = group.getKey() + "." + sound.name;
@@ -389,11 +383,31 @@ public class AmbientEngine {
         for (AmbientRegion region : allRegions.values())
             region.init(this);
         
+        for (AmbientSoundCategory cat : soundCategories.values())
+            cat.init(this);
+        
+        // Sort categories into new list which is sorted in a way later on calculations will be a lot easier. Furthermore circular references will result in an error
+        sortedSoundCategories = new ArrayList<>();
+        HashSet<String> unsorted = new HashSet<>(soundCategories.keySet());
+        for (AmbientSoundCategory cat : soundCategories.values()) {
+            if (cat.parent == null || cat.parent.isBlank()) {
+                cat.postInit(unsorted);
+                sortedSoundCategories.add(cat);
+            } else if (cat.parentCategory == null)
+                AmbientSounds.LOGGER.error("Could not parse {} sound category, because the parent '{}' does not exist.", cat.name, cat.parent);
+            
+            if (unsorted.isEmpty())
+                break;
+        }
+        
+        if (!unsorted.isEmpty()) // Check for unresolved categories, which are an independent circle and wil be ignored.
+            AmbientSounds.LOGGER.error("Could not resolve all sound categories. {} sound categories will be ignored {}.", unsorted.size(), unsorted);
+        
         considerSolid = new AmbientBlockGroup();
         if (solids != null)
             considerSolid.add(solids);
         
-        squaredBiomeDistance = Math.pow(biomeScanCount * biomeScanDistance * 2, 2); // It is actually twice the distance, so the furthest away biome still has half of the volume
+        squaredBiomeDistance = Math.pow(biomeScanCount * biomeScanDistance * 2, 2); // It is actually twice the distance, so the farthest away biome still has half of the volume
         
         onClientLoad();
     }
@@ -410,6 +424,9 @@ public class AmbientEngine {
     }
     
     public void tick(AmbientEnvironment env) {
+        for (AmbientSoundCategory cat : sortedSoundCategories)
+            cat.tick(env, null);
+        
         if (env.dimension.loadedRegions != null)
             for (AmbientRegion region : env.dimension.loadedRegions.values()) {
                 if (region.tick(env)) {
@@ -434,10 +451,12 @@ public class AmbientEngine {
                 activeRegions.remove(region);
             }
         }
+        
     }
     
     public void fastTick(AmbientEnvironment env) {
         soundEngine.tick();
+        
         if (!activeRegions.isEmpty()) {
             for (Iterator<AmbientRegion> iterator = activeRegions.iterator(); iterator.hasNext();) {
                 AmbientRegion region = iterator.next();
@@ -447,7 +466,6 @@ public class AmbientEngine {
                 }
             }
         }
-        
     }
     
     public void changeDimension(AmbientEnvironment env, AmbientDimension newDimension) {
@@ -462,8 +480,12 @@ public class AmbientEngine {
         }
     }
     
-    public void collectDetails(List<Pair<String, Object>> details) {
-        details.add(new Pair<>("", name + " v" + version));
+    public void collectDetails(DebugTextRenderer text) {
+        text.text(name + " v" + version);
+    }
+    
+    public AmbientSoundCategory getSoundCategory(String name) {
+        return soundCategories.get(name);
     }
     
 }

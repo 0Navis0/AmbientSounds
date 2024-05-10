@@ -31,6 +31,7 @@
     "sounds": [
         {
             "name": "cricket-swamp",
+            "category": "cricket",
             "files": [
                 "ambientsounds:animals.cricket-swamp"
             ],
@@ -40,6 +41,7 @@
         },
         {
             "name": "cricket-warm-night",
+            "category": "cricket",
             "files": [
                 "ambientsounds:animals.cricket-warm-night",
                 "ambientsounds:animals.cricket-warm-night2"
@@ -55,6 +57,7 @@
         },
         {
             "name": "frog",
+            "category": "animal",
             "files": [
                 "ambientsounds:animals.frog1",
                 "ambientsounds:animals.frog2"

@@ -7,6 +7,7 @@ import com.google.gson.annotations.SerializedName;
 
 import net.minecraft.util.Mth;
 import team.creative.ambientsounds.engine.AmbientEngine;
+import team.creative.ambientsounds.engine.AmbientEngineLoadException;
 import team.creative.ambientsounds.entity.AmbientEntityCondition;
 import team.creative.ambientsounds.environment.AmbientEnvironment;
 import team.creative.ambientsounds.environment.BiomeEnvironment.BiomeArea;
@@ -77,7 +78,7 @@ public class AmbientCondition extends AmbientSoundProperties {
     }
     
     @Override
-    public void init(AmbientEngine engine) {
+    public void init(AmbientEngine engine) throws AmbientEngineLoadException {
         super.init(engine);
         
         volume = Mth.clamp(volume, 0, 1);

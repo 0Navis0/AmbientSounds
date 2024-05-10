@@ -12,8 +12,25 @@ import team.creative.ambientsounds.engine.AmbientEngine;
 import team.creative.ambientsounds.environment.pocket.AirPocket;
 import team.creative.ambientsounds.environment.pocket.AirPocketScanner;
 import team.creative.creativecore.client.CreativeCoreClient;
+import team.creative.creativecore.client.render.text.DebugTextRenderer;
 
 public class TerrainEnvironment {
+    
+    public static int getHeightBlock(Level level, MutableBlockPos pos) {
+        int y;
+        int heighest = 0;
+        
+        for (y = level.getMaxBuildHeight(); y > level.getMinBuildHeight(); --y) {
+            pos.setY(y);
+            BlockState state = level.getBlockState(pos);
+            if (state.isSolidRender(level, pos) || state.is(BlockTags.LEAVES) || level.getFluidState(pos).is(FluidTags.WATER)) {
+                heighest = y;
+                break;
+            }
+        }
+        
+        return heighest;
+    }
     
     public double averageHeight;
     
@@ -76,19 +93,11 @@ public class TerrainEnvironment {
             });
     }
     
-    public static int getHeightBlock(Level level, MutableBlockPos pos) {
-        int y;
-        int heighest = 0;
-        
-        for (y = level.getMaxBuildHeight(); y > level.getMinBuildHeight(); --y) {
-            pos.setY(y);
-            BlockState state = level.getBlockState(pos);
-            if (state.isSolidRender(level, pos) || state.is(BlockTags.LEAVES) || level.getFluidState(pos).is(FluidTags.WATER)) {
-                heighest = y;
-                break;
-            }
-        }
-        
-        return heighest;
+    public void collectDetails(DebugTextRenderer text) {
+        text.detail("features", airPocket.features.toString(DebugTextRenderer.DECIMAL_FORMAT));
+        text.detail("light", airPocket.averageLight);
+        text.detail("sky-light", airPocket.averageSkyLight);
+        text.detail("air", airPocket.air);
     }
+    
 }

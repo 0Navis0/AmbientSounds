@@ -14,6 +14,7 @@
     "sounds": [
         {
             "name": "cave-lush",
+            "category": "cave",
             "files": [
                 "ambientsounds:cave.cave-lush"
             ],
@@ -29,6 +30,7 @@
         },
         {
             "name": "frog",
+            "category": "animal",
             "files": [
                 "ambientsounds:animals.frog-cave1"
             ],

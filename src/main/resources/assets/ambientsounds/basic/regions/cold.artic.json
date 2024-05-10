@@ -27,6 +27,7 @@
     "sounds": [
         {
             "name": "heavy-wind",
+            "category": "wind",
             "files": [
                 "ambientsounds:wind.heavy-wind"
             ],

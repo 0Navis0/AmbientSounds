@@ -13,6 +13,7 @@
             "name": "warden",
             "mute": 0.8,
             "fade-volume": 0.01,
+            "category": "animal",
             "files": [
                 "ambientsounds:animals.warden"
             ]

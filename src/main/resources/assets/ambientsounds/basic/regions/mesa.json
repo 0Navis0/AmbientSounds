@@ -13,6 +13,7 @@
     "sounds": [
         {
             "name": "wind-mesa",
+            "category": "wind",
             "files": [
                 "ambientsounds:wind.mesa"
             ]

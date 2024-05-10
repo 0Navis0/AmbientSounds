@@ -13,7 +13,7 @@
         {
             "name": "dark",
             "volume": 0.2,
-            "sound-groups": [
+            "sound-collections": [
                 "suspense"
             ]
         }

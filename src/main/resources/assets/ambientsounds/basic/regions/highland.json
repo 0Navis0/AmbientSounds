@@ -26,6 +26,7 @@
     "sounds": [
         {
             "name": "heavy-wind",
+            "category": "wind",
             "files": [
                 "ambientsounds:wind.heavy-wind"
             ],
@@ -37,6 +38,7 @@
         },
         {
             "name": "wind-in-leaves",
+            "category": "wind",
             "files": [
                 "ambientsounds:wind.wind-in-leaves"
             ],

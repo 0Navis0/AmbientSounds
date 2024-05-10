@@ -28,6 +28,7 @@
     "sounds": [
         {
             "name": "cricket-jungle",
+            "category": "cricket",
             "files": [
                 "ambientsounds:animals.cricket-jungle"
             ],
@@ -36,6 +37,7 @@
         },
         {
             "name": "cricket-jungle-night",
+            "category": "cricket",
             "files": [
                 "ambientsounds:animals.cricket-jungle-night"
             ],
@@ -44,15 +46,15 @@
         },
         {
             "name": "bird-ambience-jungle",
+            "category": "bird_day",
             "files": [
                 "ambientsounds:animals.bird-ambience-jungle",
                 "ambientsounds:animals.bird-ambience-jungle2"
-            ],
-            "day": 1,
-            "night": 0
+            ]
         },
         {
             "name": "bird-ambience-jungle-night",
+            "category": "bird_night",
             "files": [
                 "ambientsounds:animals.bird-ambience-jungle-night",
                 "ambientsounds:animals.bird-ambience-jungle-night2"
@@ -61,9 +63,7 @@
                 "min": 1500,
                 "max": 2000
             },
-            "transition": 200,
-            "day": 0,
-            "night": 1
+            "transition": 200
         }
     ]
 }
