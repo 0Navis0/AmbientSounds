@@ -20,38 +20,40 @@ public class AmbientCondition extends AmbientSoundProperties {
     public Boolean always;
     
     public double volume = 1.0;
-    @SerializedName(value = "night")
+    @SerializedName("night")
     public double nightVolume = 1.0;
-    @SerializedName(value = "day")
+    @SerializedName("day")
     public double dayVolume = 1.0;
     
-    @SerializedName(value = "biome-type")
+    public AmbientTime time;
+    
+    @SerializedName("biome-type")
     public String biomeType;
     
     public String[] biomes;
-    @SerializedName(value = "bad-biomes")
+    @SerializedName("bad-biomes")
     public String[] badBiomes;
     
     public Boolean raining;
-    @SerializedName(value = "overall-raining")
+    @SerializedName("overall-raining")
     public Boolean overallRaining;
     public Boolean snowing;
     public Boolean storming;
     
     public AmbientMinMaxFadeCondition underwater;
     
-    @SerializedName(value = "relative-height")
+    @SerializedName("relative-height")
     public AmbientMinMaxFadeSpecialCondition relativeHeight;
-    @SerializedName(value = "absolute-height")
+    @SerializedName("absolute-height")
     public AmbientMinMaxFadeCondition absoluteHeight;
-    @SerializedName(value = "min-height-relative")
+    @SerializedName("min-height-relative")
     public AmbientMinMaxFadeCondition minHeightRelative;
-    @SerializedName(value = "max-height-relative")
+    @SerializedName("max-height-relative")
     public AmbientMinMaxFadeCondition maxHeightRelative;
     
     public AmbientMinMaxFadeCondition light;
     
-    @SerializedName(value = "sky-light")
+    @SerializedName("sky-light")
     public AmbientMinMaxFadeCondition skyLight;
     
     public AmbientMinMaxFadeCondition air;
@@ -59,7 +61,7 @@ public class AmbientCondition extends AmbientSoundProperties {
     public AmbientMinMaxFadeCondition temperature;
     
     public String[] features;
-    @SerializedName(value = "bad-features")
+    @SerializedName("bad-features")
     public String[] badFeatures;
     
     public AmbientCondition[] variants;
@@ -67,7 +69,7 @@ public class AmbientCondition extends AmbientSoundProperties {
     public String[] regions;
     transient List<AmbientRegion> regionList;
     
-    @SerializedName(value = "bad-regions")
+    @SerializedName("bad-regions")
     public String[] badRegions;
     transient List<AmbientRegion> badRegionList;
     
@@ -148,6 +150,13 @@ public class AmbientCondition extends AmbientSoundProperties {
         AmbientSelection selection = new AmbientSelection(this);
         
         selection.mulCondition(env.night ? nightVolume : dayVolume);
+        
+        if (time != null) {
+            double value = time.value(env);
+            if (value <= 0)
+                return null;
+            selection.mulCondition(value);
+        }
         
         if (badRegionList != null)
             for (AmbientRegion region : badRegionList)

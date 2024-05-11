@@ -6,6 +6,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+import team.creative.ambientsounds.condition.AmbientTime;
 import team.creative.ambientsounds.condition.AmbientVolume;
 import team.creative.ambientsounds.dimension.AmbientDimension;
 import team.creative.ambientsounds.engine.AmbientEngine;
@@ -19,8 +20,8 @@ public class AmbientEnvironment {
     public boolean muted = false;
     
     public boolean night;
-    /** 0: night, 1: day ... has smooth transition */
-    public double time;
+    public double sunAngle;
+    public double dayTimeHour;
     
     public double rainSurfaceVolume;
     public boolean raining;
@@ -68,17 +69,11 @@ public class AmbientEnvironment {
     }
     
     public void analyzeTime(Level level, float deltaTime) {
-        double sunAngle = Math.toDegrees(level.getSunAngle(deltaTime));
-        this.night = sunAngle > 90 && sunAngle < 270;
-        double fadeTime = 10;
-        if (sunAngle > 90 - fadeTime && sunAngle < 90 + fadeTime)
-            this.time = Math.min((sunAngle - (90 - fadeTime)) / (fadeTime * 2), 1);
-        else if (sunAngle > 270 - fadeTime && sunAngle < 270 + fadeTime)
-            this.time = Math.max(1 - ((sunAngle - (270 - fadeTime)) / (fadeTime * 2)), 0);
-        else if (night)
-            this.time = 0;
-        else
-            this.time = 1;
+        this.sunAngle = (Math.toDegrees(level.getSunAngle(deltaTime)) - 180) % 360;
+        if (this.sunAngle < 0)
+            this.sunAngle += 360;
+        this.night = sunAngle < 90 || sunAngle > 270;
+        this.dayTimeHour = sunAngle * AmbientTime.ANGLE_TO_TIME;
     }
     
     public void analyzeUnderwater(Player player, Level level) {
@@ -106,7 +101,8 @@ public class AmbientEnvironment {
         text.detail("rainSurfaceVolume", rainSurfaceVolume);
         text.detail("snow", snowing);
         text.detail("storm", thundering);
-        text.detail("time", time);
+        text.detail("sun", sunAngle);
+        text.detail("time", dayTimeHour);
         
     }
     

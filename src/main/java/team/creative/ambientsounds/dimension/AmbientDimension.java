@@ -39,13 +39,13 @@ public class AmbientDimension {
     public Boolean rain;
     public Boolean storm;
     
-    @SerializedName(value = "dimension-names")
+    @SerializedName("dimension-names")
     public String[] dimensionNames;
     
-    @SerializedName(value = "bad-dimension-names")
+    @SerializedName("bad-dimension-names")
     public String[] badDimensionNames;
     
-    @SerializedName(value = "average-height")
+    @SerializedName("average-height")
     public Integer averageHeight;
     
     public AmbientRegion[] regions;

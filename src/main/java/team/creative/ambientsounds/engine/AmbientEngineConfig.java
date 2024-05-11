@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class AmbientEngineConfig {
     
-    @SerializedName(value = "default-engine")
+    @SerializedName("default-engine")
     public String defaultEngine = "basic";
     
     public String[] engines;

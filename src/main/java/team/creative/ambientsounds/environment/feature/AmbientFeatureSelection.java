@@ -21,14 +21,14 @@ public class AmbientFeatureSelection {
     public AmbientFeatureSelection[] or;
     public AmbientFeatureSelection[] not;
     
-    @SerializedName(value = "low-weight")
+    @SerializedName("low-weight")
     public Double lowWeight;
-    @SerializedName(value = "high-weight")
+    @SerializedName("high-weight")
     public Double highWeight;
     
-    @SerializedName(value = "low-count")
+    @SerializedName("low-count")
     public Double lowCount;
-    @SerializedName(value = "high-count")
+    @SerializedName("high-count")
     public Double highCount;
     
     public void collectGroups(HashSet<String> groups) {

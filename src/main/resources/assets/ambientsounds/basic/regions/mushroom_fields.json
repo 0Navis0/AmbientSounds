@@ -12,6 +12,10 @@
             ],
             "volume": 0.5,
             "day": 1,
+            "time": [
+                "day",
+                "night"
+            ],
             "night": "0.1"
         },
         {

@@ -10,23 +10,23 @@ import team.creative.ambientsounds.environment.AmbientEnvironment;
 
 public class AmbientSoundProperties {
     
-    @SerializedName(value = "transition")
+    @SerializedName("transition")
     public Integer transition;
     
     public Double pitch = 1D;
     
-    @SerializedName(value = "fade-volume")
+    @SerializedName("fade-volume")
     public Double fadeVolume;
-    @SerializedName(value = "fade-in-volume")
+    @SerializedName("fade-in-volume")
     public Double fadeInVolume;
-    @SerializedName(value = "fade-out-volume")
+    @SerializedName("fade-out-volume")
     public Double fadeOutVolume;
     
-    @SerializedName(value = "fade-pitch")
+    @SerializedName("fade-pitch")
     public Double fadePitch;
-    @SerializedName(value = "fade-in-pitch")
+    @SerializedName("fade-in-pitch")
     public Double fadeInPitch;
-    @SerializedName(value = "fade-out-pitch")
+    @SerializedName("fade-out-pitch")
     public Double fadeOutPitch;
     
     public Double mute;
@@ -39,7 +39,7 @@ public class AmbientSoundProperties {
     public AmbientMinMaxCondition pause;
     public AmbientMinMaxCondition length;
     
-    @SerializedName(value = "underwater-pitch")
+    @SerializedName("underwater-pitch")
     public AmbientMinMaxClimbingProperty underwaterPitch;
     
     public String channel;
@@ -91,7 +91,7 @@ public class AmbientSoundProperties {
         
         public double min = 0;
         public double max;
-        @SerializedName(value = "distance-factor")
+        @SerializedName("distance-factor")
         public double distanceFactor = 1;
         
         public double getValue(double value) {

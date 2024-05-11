@@ -252,41 +252,41 @@ public class AmbientEngine {
     
     public String version;
     
-    @SerializedName(value = "environment-tick-time")
+    @SerializedName("environment-tick-time")
     public int environmentTickTime = 40;
-    @SerializedName(value = "sound-tick-time")
+    @SerializedName("sound-tick-time")
     public int soundTickTime = 4;
-    @SerializedName(value = "block-scan-distance")
+    @SerializedName("block-scan-distance")
     public int blockScanDistance = 40;
     
-    @SerializedName(value = "average-height-scan-distance")
+    @SerializedName("average-height-scan-distance")
     public int averageHeightScanDistance = 2;
-    @SerializedName(value = "average-height-scan-count")
+    @SerializedName("average-height-scan-count")
     public int averageHeightScanCount = 5;
     
-    @SerializedName(value = "biome-scan-distance")
+    @SerializedName("biome-scan-distance")
     public int biomeScanDistance = 5;
-    @SerializedName(value = "biome-scan-count")
+    @SerializedName("biome-scan-count")
     public int biomeScanCount = 3;
     
-    @SerializedName(value = "air-pocket-count")
+    @SerializedName("air-pocket-count")
     public int airPocketCount = 50000;
-    @SerializedName(value = "air-pocket-distance")
+    @SerializedName("air-pocket-distance")
     public int airPocketDistance = 25;
-    @SerializedName(value = "air-pocket-groups")
+    @SerializedName("air-pocket-groups")
     public AirPocketGroup[] airPocketGroups = new AirPocketGroup[0];
     
     public String[] solids = {};
     
-    @SerializedName(value = "biome-types")
+    @SerializedName("biome-types")
     public String[] biomeTypes = {};
-    @SerializedName(value = "default-biome-type")
+    @SerializedName("default-biome-type")
     public String defaultBiomeType;
     
-    @SerializedName(value = "fade-volume")
+    @SerializedName("fade-volume")
     public Double fadeVolume = 0.005D;
     
-    @SerializedName(value = "fade-pitch")
+    @SerializedName("fade-pitch")
     public Double fadePitch = 0.005D;
     
     protected boolean checkRegion(AmbientDimension dimension, int i, AmbientRegion region) {

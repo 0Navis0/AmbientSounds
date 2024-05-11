@@ -41,8 +41,7 @@
                     "min": 0.8
                 }
             },
-            "day": 1,
-            "night": 0,
+            "time": "day",
             "length": {
                 "min": 300,
                 "max": 600
