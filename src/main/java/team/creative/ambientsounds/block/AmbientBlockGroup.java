@@ -3,19 +3,24 @@ package team.creative.ambientsounds.block;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Predicate;
 
 import net.minecraft.world.level.block.state.BlockState;
+import team.creative.ambientsounds.AmbientSounds;
+import team.creative.ambientsounds.engine.AmbientEngineLoadException;
 
 public class AmbientBlockGroup {
     
-    private List<String> data = new ArrayList<>();
-    private List<Predicate<BlockState>> filters;
+    private final List<String> data = new ArrayList<>();
+    private List<AmbientBlock> filters;
     
     public void onClientLoad() {
         filters = new ArrayList<>();
         for (String condition : data)
-            filters.add(AmbientBlockFilters.get(condition));
+            try {
+                filters.add(AmbientBlock.parse(condition));
+            } catch (AmbientEngineLoadException e) {
+                AmbientSounds.LOGGER.error("Failed to load block entry {}", condition, e);
+            }
     }
     
     public void add(String[] data) {
@@ -27,8 +32,8 @@ public class AmbientBlockGroup {
     }
     
     public boolean is(BlockState state) {
-        for (Predicate<BlockState> predicate : filters)
-            if (predicate.test(state))
+        for (AmbientBlock block : filters)
+            if (block.is(state))
                 return true;
         return false;
     }

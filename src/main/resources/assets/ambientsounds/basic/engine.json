@@ -29,10 +29,10 @@
         }
     ],
     "solids": [
-        "t->doors",
-        "t->impermeable",
-        "t->stairs",
-        "t->glass_panes"
+        "#minecraft:doors",
+        "#minecraft:impermeable",
+        "#minecraft:stairs",
+        "#minecraft:glass_panes"
     ],
     "biome-types": [
         "surface",

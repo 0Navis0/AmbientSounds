@@ -400,7 +400,7 @@ public class AmbientEngine {
                 break;
         }
         
-        if (!unsorted.isEmpty()) // Check for unresolved categories, which are an independent circle and wil be ignored.
+        if (!unsorted.isEmpty()) // Check for unresolved categories, which are an independent circle and will be ignored.
             AmbientSounds.LOGGER.error("Could not resolve all sound categories. {} sound categories will be ignored {}.", unsorted.size(), unsorted);
         
         considerSolid = new AmbientBlockGroup();
