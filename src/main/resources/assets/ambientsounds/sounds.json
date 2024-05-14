@@ -780,15 +780,6 @@
         ],
         "category": "ambient"
     },
-    "wind.wind": {
-        "sounds": [
-            {
-                "name": "ambientsounds:wind/wind",
-                "stream": true
-            }
-        ],
-        "category": "ambient"
-    },
     "wind.heavy-wind": {
         "sounds": [
             {
@@ -802,6 +793,24 @@
         "sounds": [
             {
                 "name": "ambientsounds:wind/light-wind",
+                "stream": true
+            }
+        ],
+        "category": "ambient"
+    },
+    "wind.light-wind2": {
+        "sounds": [
+            {
+                "name": "ambientsounds:wind/light-wind2",
+                "stream": true
+            }
+        ],
+        "category": "ambient"
+    },
+    "wind.light-wind3": {
+        "sounds": [
+            {
+                "name": "ambientsounds:wind/light-wind2",
                 "stream": true
             }
         ],

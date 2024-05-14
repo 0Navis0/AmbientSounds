@@ -33,7 +33,6 @@
             "files": [
                 "ambientsounds:wind.heavy-wind"
             ],
-            "outside": true,
             "air": {
                 "min": 0.6
             },
@@ -45,7 +44,6 @@
             "files": [
                 "ambientsounds:wind.wind-in-leaves"
             ],
-            "outside": true,
             "air": {
                 "min": 0.6
             },

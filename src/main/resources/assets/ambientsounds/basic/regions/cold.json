@@ -24,26 +24,7 @@
             }
         }
     ],
-    "sounds": [
-        {
-            "name": "light-wind",
-            "category": "wind",
-            "regions": [
-                "surface"
-            ],
-            "files": [
-                "ambientsounds:wind.light-wind",
-                "ambientsounds:wind.wind"
-            ],
-            "outside": true,
-            "transition": 200,
-            "air": {
-                "min": 0.6
-            },
-            "length": {
-                "min": 1000,
-                "max": 5000
-            }
-        }
+    "sound-collections": [
+        "wind"
     ]
 }

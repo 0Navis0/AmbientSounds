@@ -28,6 +28,9 @@
         "lush desert",
         "ocean"
     ],
+    "sound-collections": [
+        "wind"
+    ],
     "sounds": [
         {
             "name": "cicadas-desert",
@@ -50,14 +53,6 @@
                 "min": 200,
                 "max": 500
             }
-        },
-        {
-            "name": "light-wind",
-            "category": "wind",
-            "files": [
-                "ambientsounds:wind.light-wind"
-            ],
-            "outside": true
         }
     ]
 }

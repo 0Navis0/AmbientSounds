@@ -17,6 +17,9 @@
     "temperature": {
         "min": 0
     },
+    "sound-collections": [
+        "wind"
+    ],
     "sounds": [
         {
             "name": "ocean",
@@ -24,17 +27,6 @@
                 "ambientsounds:water.ocean"
             ],
             "volume": 0.1
-        },
-        {
-            "name": "light-wind",
-            "category": "wind",
-            "files": [
-                "ambientsounds:wind.light-wind"
-            ],
-            "air": {
-                "min": 0.5
-            },
-            "volume": 0.4
         }
     ]
 }

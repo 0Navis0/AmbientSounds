@@ -14,13 +14,8 @@
             "bad-regions": [
                 "cave-ambience"
             ],
-            "sounds": [
-                {
-                    "name": "wind",
-                    "files": [
-                        "ambientsounds:wind.wind"
-                    ]
-                }
+            "sound-collections": [
+                "wind"
             ]
         }
     ]

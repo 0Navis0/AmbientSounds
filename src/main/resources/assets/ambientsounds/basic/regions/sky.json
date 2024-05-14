@@ -11,15 +11,7 @@
     "bad-regions": [
         "end"
     ],
-    "sounds": [
-        {
-            "name": "light-wind",
-            "category": "wind",
-            "files": [
-                "ambientsounds:wind.light-wind"
-            ],
-            "outside": true,
-            "volume": 0.6
-        }
+    "sound-collections": [
+        "wind"
     ]
 }
