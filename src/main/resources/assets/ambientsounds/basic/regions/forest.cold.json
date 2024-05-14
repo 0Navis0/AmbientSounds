@@ -20,8 +20,8 @@
                 "ambientsounds:animals.crow"
             ],
             "pause": {
-                "min": 400,
-                "max": 1000
+                "min": 800,
+                "max": 4000
             },
             "day": 1,
             "night": 0.2
