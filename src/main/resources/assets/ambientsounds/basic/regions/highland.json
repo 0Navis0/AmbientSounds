@@ -5,6 +5,8 @@
         "very_cold"
     ],
     "biomes": [
+        "#is_hill",
+        "#is_mountain",
         "extreme*hills",
         "alps",
         "crag",

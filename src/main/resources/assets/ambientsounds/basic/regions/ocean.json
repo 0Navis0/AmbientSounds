@@ -1,6 +1,8 @@
 {
     "name": "ocean",
     "biomes": [
+        "#is_ocean",
+        "#is_river",
         "ocean",
         "river",
         "coral reef",

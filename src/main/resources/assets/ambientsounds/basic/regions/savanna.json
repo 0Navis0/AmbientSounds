@@ -4,6 +4,7 @@
         "rain"
     ],
     "biomes": [
+        "#is_savanna",
         "savanna",
         "heathland",
         "prairie",

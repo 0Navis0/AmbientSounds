@@ -1,6 +1,7 @@
 {
     "name": "jungle",
     "biomes": [
+        "#is_jungle",
         "jungle",
         "sacred springs",
         "tropical",

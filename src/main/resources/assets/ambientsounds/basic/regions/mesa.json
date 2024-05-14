@@ -1,6 +1,7 @@
 {
     "name": "mesa",
     "biomes": [
+        "#is_badlands",
         "mesa",
         "badlands",
         "lush desert",

@@ -10,6 +10,7 @@
         "rain"
     ],
     "biomes": [
+        "#is_taiga",
         "taiga",
         "grove",
         "jade cliffs",

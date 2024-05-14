@@ -21,6 +21,7 @@
         },
         {
             "biomes": [
+                "#is_forest",
                 "forest",
                 "blossom",
                 "mangrove",

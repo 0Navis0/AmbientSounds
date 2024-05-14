@@ -1,6 +1,7 @@
 {
     "name": "beach",
     "biomes": [
+        "#is_beach",
         "beach",
         "shore",
         "tropics beach"
