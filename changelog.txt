@@ -1,3 +1,19 @@
+6.0.0
+Reworked block format to better align with vanilla's tag definitions
+Reworked volume calculations of birds and crickets in regards to time of day
+Reworked debug renderer to use DebugTextRenderer (from CreativeCore)
+Reworked engine folder structure and defining components (like dimension, region, sound, feature, etc.)
+Added ability to define biome tags for biomes condition (beach, forest, highland, jungle, mesa, ocean, savanna and taiga make use of that feature)
+Added sound collections
+Added sound categories
+Added mute-priority to enhance situations were there are multiple muting sounds
+Added stack configuration for dimension, feature
+Added new property time to better organize during what time of day a sound should be played and how loud
+Added new light-wind sound variant
+Made owl & crow sound less frequent
+Fixed cold region playing underground and in the air
+Fixed playing two wind sounds in mesa biome
+
 5.3.9
 Fixed glass panes not being considered as a solid block
 
