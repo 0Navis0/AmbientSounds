@@ -2,7 +2,8 @@
     "name": "highland",
     "bad-regions": [
         "rain",
-        "very_cold"
+        "very_cold",
+        "mesa"
     ],
     "biomes": [
         "#is_hill",
