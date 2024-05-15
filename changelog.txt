@@ -1,3 +1,6 @@
+6.0.1
+Fixed wind sound collection not working properly
+
 6.0.0
 Reworked block format to better align with vanilla's tag definitions
 Reworked volume calculations of birds and crickets in regards to time of day
