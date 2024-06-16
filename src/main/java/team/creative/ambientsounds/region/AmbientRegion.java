@@ -64,7 +64,7 @@ public class AmbientRegion extends AmbientCondition {
         if (soundCollections != null) {
             if (loadedSounds == null)
                 loadedSounds = new LinkedHashMap<>();
-            engine.consumeSoundCollections(soundCollections, x -> loadedSounds.put(x.name, x));
+            engine.consumeSoundCollections(soundCollections, x -> loadedSounds.put(x.name, x.copy()));
         }
     }
     

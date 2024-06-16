@@ -2,6 +2,8 @@ package team.creative.ambientsounds.sound;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -46,6 +48,30 @@ import team.creative.creativecore.common.util.mc.ResourceUtils;
 public class AmbientSound extends AmbientCondition {
     
     private static final Random RANDOM = new Random();
+    private static final List<Field> COPYFIELDS = new ArrayList<>();
+    
+    {
+        Class clazz = AmbientSound.class;
+        while (clazz != Object.class) {
+            for (Field field : clazz.getDeclaredFields()) {
+                if (Modifier.isPrivate(field.getModifiers()) || Modifier.isFinal(field.getModifiers()))
+                    continue;
+                COPYFIELDS.add(field);
+            }
+            clazz = clazz.getSuperclass();
+        }
+    }
+    
+    public static SoundSource getSoundSource(String name) {
+        if (AmbientSounds.CONFIG.useSoundMasterSource)
+            return SoundSource.MASTER;
+        if (name == null)
+            return SoundSource.AMBIENT;
+        for (int i = 0; i < SoundSource.values().length; i++)
+            if (SoundSource.values()[i].getName().equals(name))
+                return SoundSource.values()[i];
+        return SoundSource.AMBIENT;
+    }
     
     @CreativeConfig.DecimalRange(min = 0, max = 1)
     public transient double volumeSetting = 1;
@@ -532,14 +558,15 @@ public class AmbientSound extends AmbientCondition {
         return builder.toString();
     }
     
-    public static SoundSource getSoundSource(String name) {
-        if (AmbientSounds.CONFIG.useSoundMasterSource)
-            return SoundSource.MASTER;
-        if (name == null)
-            return SoundSource.AMBIENT;
-        for (int i = 0; i < SoundSource.values().length; i++)
-            if (SoundSource.values()[i].getName().equals(name))
-                return SoundSource.values()[i];
-        return SoundSource.AMBIENT;
+    public AmbientSound copy() {
+        AmbientSound copy = new AmbientSound();
+        for (Field field : COPYFIELDS)
+            try {
+                field.set(copy, field.get(this));
+            } catch (IllegalArgumentException | IllegalAccessException e) {
+                e.printStackTrace();
+            }
+        return copy;
     }
+    
 }

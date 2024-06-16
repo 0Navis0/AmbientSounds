@@ -67,11 +67,11 @@ public class AmbientCondition extends AmbientSoundProperties {
     public AmbientCondition[] variants;
     
     public String[] regions;
-    transient List<AmbientRegion> regionList;
+    protected transient List<AmbientRegion> regionList;
     
     @SerializedName("bad-regions")
     public String[] badRegions;
-    transient List<AmbientRegion> badRegionList;
+    protected transient List<AmbientRegion> badRegionList;
     
     public AmbientEntityCondition entity;
     
