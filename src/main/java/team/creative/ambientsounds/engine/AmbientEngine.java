@@ -301,7 +301,7 @@ public class AmbientEngine {
     }
     
     protected void addRegion(AmbientRegion region) {
-        allRegions.put(region.name, region);
+        allRegions.put((region.dimension != null ? region.dimension.name + "." : "") + region.name, region);
         region.volumeSetting = 1;
         
         String prefix = (region.dimension != null ? region.dimension.name + "." : "") + region.name + ".";
