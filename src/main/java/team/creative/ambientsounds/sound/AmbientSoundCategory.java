@@ -50,9 +50,6 @@ public class AmbientSoundCategory extends AmbientCondition {
     }
     
     public void tick(AmbientEnvironment env, AmbientSelection parentSelection) {
-        if (volumeSetting == 0)
-            return;
-        
         selection = value(env);
         
         if (selection != null) {
