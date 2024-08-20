@@ -1,3 +1,7 @@
+6.0.5
+Fixed cricket day and night not extending crickt sound category
+Fixed sound category not working properly when setting it to zero volume
+
 6.0.3
 Fixed not loading some regions for dimensions
 
