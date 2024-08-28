@@ -1,3 +1,6 @@
+6.0.6
+Fixed stop playing sounds when game is paused
+
 6.0.5
 Fixed cricket day and night not extending crickt sound category
 Fixed sound category not working properly when setting it to zero volume
