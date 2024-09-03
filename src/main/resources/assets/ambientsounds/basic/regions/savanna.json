@@ -107,6 +107,10 @@
                 "ambientsounds:animals.bird-ambience-warm1",
                 "ambientsounds:animals.bird-ambience-warm2"
             ],
+            "length": {
+                "min": 2000,
+                "max": 3000
+            },
             "overall-raining": false
         }
     ]
