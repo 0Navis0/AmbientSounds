@@ -405,6 +405,17 @@
         ],
         "category": "ambient"
     },
+    "animals.mouring_dove": {
+        "sounds": [
+            {
+                "name": "ambientsounds:animals/dove/mouring_dove1"
+            },
+            {
+                "name": "ambientsounds:animals/dove/mouring_dove2"
+            }
+        ],
+        "category": "ambient"
+    },
     "animals.frog1": {
         "sounds": [
             {

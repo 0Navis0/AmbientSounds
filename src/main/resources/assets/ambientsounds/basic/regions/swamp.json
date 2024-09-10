@@ -66,6 +66,27 @@
             },
             "day": 0.05,
             "night": 0.15
+        },
+        {
+            "name": "mouring_dove",
+            "category": "animal",
+            "files": [
+                "ambientsounds:animals.mouring_dove"
+            ],
+            "features": [
+                "tree"
+            ],
+            "pause": {
+                "min": 100,
+                "max": 400
+            },
+            "time": {
+                "5": 0,
+                "6": 1,
+                "8": 1,
+                "9": 0
+            },
+            "volume": 0.14
         }
     ]
 }
