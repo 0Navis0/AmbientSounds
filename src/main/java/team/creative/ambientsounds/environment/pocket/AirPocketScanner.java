@@ -8,12 +8,15 @@ import java.util.Map.Entry;
 import java.util.function.Consumer;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.BlockPos.MutableBlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Direction.Axis;
 import net.minecraft.core.Direction.AxisDirection;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.LightLayer;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.levelgen.Heightmap;
 import team.creative.ambientsounds.AmbientSounds;
 import team.creative.ambientsounds.block.AmbientBlockGroup;
 import team.creative.ambientsounds.engine.AmbientEngine;
@@ -29,6 +32,7 @@ public class AirPocketScanner extends Thread {
     private List<HashMap<BlockPosInspection, BlockPosInspection>> toScan = new ArrayList<>();
     private final HashMapDouble<BlockState> foundCount = new HashMapDouble<>();
     private QuadBitSet sky = new QuadBitSet();
+    private MutableBlockPos mutable = new MutableBlockPos();
     
     private double distributionCounter;
     private int totalSize = 0;
@@ -98,9 +102,13 @@ public class AirPocketScanner extends Thread {
         foundCount.put(state, factor);
     }
     
+    protected boolean hearThrough(LevelReader level, BlockState state, BlockPos pos) {
+        return state.isAir() || !(state.isCollisionShapeFullBlock(level, pos) || engine.considerSolid.is(state));
+    }
+    
     protected void scan(Level level, int distance, BlockPosInspection pos) {
         BlockState state = level.getBlockState(pos);
-        if (state.isAir() || !(state.isCollisionShapeFullBlock(level, pos) || engine.considerSolid.is(state))) {
+        if (hearThrough(level, state, pos)) {
             if (!state.isAir())
                 findState(state, distance);
             if (distance < engine.airPocketDistance && air < engine.maxAirPocketCount)
@@ -132,7 +140,7 @@ public class AirPocketScanner extends Thread {
                 totalSize++;
             }
         } else {
-            if (!sky.get(pos.getX(), pos.getZ()) && pos.isUp() && level.canSeeSky(pos.above())) {
+            if (!sky.get(pos.getX(), pos.getZ()) && pos.isUp() && canSeeSkyConsiderSolids(level, pos)) {
                 sky.set(pos.getX(), pos.getZ());
                 if (distance < engine.airPocketDistance)
                     air = engine.maxAirPocketCount;
@@ -145,6 +153,19 @@ public class AirPocketScanner extends Thread {
             }
             findState(state, distance);
         }
+    }
+    
+    protected boolean canSeeSkyConsiderSolids(LevelReader level, BlockPos pos) {
+        mutable.set(pos.getX(), pos.getY() + 1, pos.getZ());
+        if (!level.canSeeSky(mutable))
+            return false;
+        int maxHeight = level.getHeight(Heightmap.Types.WORLD_SURFACE, pos.getX(), pos.getZ());
+        for (int y = mutable.getY(); y <= maxHeight; y++) {
+            mutable.setY(y);
+            if (!hearThrough(level, level.getBlockState(mutable), mutable))
+                return false;
+        }
+        return true;
     }
     
     public static class BlockPosInspection extends BlockPos implements Iterable<Direction> {
