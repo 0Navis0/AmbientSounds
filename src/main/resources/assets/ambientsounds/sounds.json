@@ -504,6 +504,20 @@
         ],
         "category": "ambient"
     },
+    "animals.whale": {
+        "sounds": [
+            {
+                "name": "ambientsounds:animals/whale/whale1"
+            },
+            {
+                "name": "ambientsounds:animals/whale/whale2"
+            },
+            {
+                "name": "ambientsounds:animals/whale/whale3"
+            }
+        ],
+        "category": "ambient"
+    },
     "animals.wolf": {
         "sounds": [
             {
