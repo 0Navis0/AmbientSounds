@@ -553,6 +553,17 @@
         ],
         "category": "ambient"
     },
+    "animals.long-wolf": {
+        "sounds": [
+            {
+                "name": "ambientsounds:animals/wolf/long-wolf1"
+            },
+            {
+                "name": "ambientsounds:animals/wolf/long-wolf2"
+            }
+        ],
+        "category": "ambient"
+    },
     "animals.special-mushroom-fields": {
         "sounds": [
             {

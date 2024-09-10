@@ -101,6 +101,18 @@
             "day": 0
         },
         {
+            "name": "long-wolf",
+            "category": "animal",
+            "files": [
+                "ambientsounds:animals.long-wolf"
+            ],
+            "pause": {
+                "min": 12000,
+                "max": 72000
+            },
+            "day": 0
+        },
+        {
             "name": "bird-warm",
             "category": "bird_day",
             "files": [
