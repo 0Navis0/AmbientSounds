@@ -1,3 +1,13 @@
+6.1.0
+Added creepier wolf sound which plays in savanna during night every 1-6 days (suggested by richarddddy)
+Added whale sounds (can be heard underwater in the ocean) suggested by richarddddy
+Added mouring dove to swamp region (only audible in the morning) Suggested by NicoleConcrete
+Fixed blocks that let light through cases engine to think there is an unblocked way to the sky
+Made underwater mute all other sound effects entire when being 7 blocks in
+Fixed random seeking causes sound engine to crash (big thank goes to @Charleychar for his endless amount of testing)
+Fixed savanna bird sound not transitioning
+Reload the engine asynchronously (Thanks to Steveplays28)
+
 6.0.6
 Fixed stop playing sounds when game is paused
 
