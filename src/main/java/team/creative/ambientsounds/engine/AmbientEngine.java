@@ -191,7 +191,7 @@ public class AmbientEngine {
         return map;
     }
     
-    public static AmbientEngine loadAmbientEngine(AmbientSoundEngine soundEngine) {
+    public static synchronized AmbientEngine loadAmbientEngine(AmbientSoundEngine soundEngine) {
         try {
             ResourceManager manager = Minecraft.getInstance().getResourceManager();
             

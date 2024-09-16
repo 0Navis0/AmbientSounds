@@ -153,7 +153,7 @@ public class AmbientTickHandler {
         }
         
         if (shouldReload) {
-            AmbientSounds.reload();
+            AmbientSounds.reloadAsync();
             shouldReload = false;
         }
         
