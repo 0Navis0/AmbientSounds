@@ -1,3 +1,7 @@
+6.1.1
+Fix async engine reloading (Thanks to Steveplays28)
+Adapted CreativeCore 2.12.14
+
 6.1.0
 Added creepier wolf sound which plays in savanna during night every 1-6 days (suggested by richarddddy)
 Added whale sounds (can be heard underwater in the ocean) suggested by richarddddy
