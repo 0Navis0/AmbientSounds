@@ -81,7 +81,7 @@ public class AmbientTickHandler {
         holder.registerField("fade-pitch", ReflectionHelper.findField(AmbientEngine.class, "fadePitch"), engine);
         holder.registerField("silent-dimensions", ReflectionHelper.findField(AmbientEngine.class, "silentDimensions"), engine);
         
-        CreativeCore.CONFIG_HANDLER.load(AmbientSounds.MODID, Side.CLIENT);
+        CreativeCore.CONFIG_HANDLER.load(Minecraft.getInstance().level != null ? Minecraft.getInstance().level.registryAccess() : null, AmbientSounds.MODID, Side.CLIENT);
     }
     
     private void createSoundCategoryConfiguration(ConfigHolderDynamic parent, AmbientSoundCategory cat, Field categoryField) {
