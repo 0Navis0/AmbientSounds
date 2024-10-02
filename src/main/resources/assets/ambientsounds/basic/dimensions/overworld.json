@@ -1,0 +1,14 @@
+{
+    "name": "overworld",
+    "dimension-names": [
+        "overworld"
+    ],
+    "surface-selector": {
+        "regions": [
+            "surface"
+        ]
+    },
+    "biome-selector": {
+        "always": true
+    }
+}

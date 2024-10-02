@@ -1,7 +1,7 @@
 {
     "name": "nether",
     "dimension-names": [
-        "nether"
+        "the_nether"
     ],
     "rain": false,
     "storm": false,
