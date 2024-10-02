@@ -1,15 +1,10 @@
 {
     "name": "mesa",
     "biomes": [
-        "#is_badlands",
-        "mesa",
-        "badlands",
-        "lush desert",
-        "outback",
-        "wasteland",
-        "steppe",
-        "arid highland",
-        "canyon"
+        "is_badlands"
+    ],
+    "sound-collections": [
+        "wind"
     ],
     "sounds": [
         {
@@ -18,6 +13,25 @@
             "files": [
                 "ambientsounds:wind.mesa"
             ]
+        },
+        {
+            "name": "cicadas-desert",
+            "category": "cicadas",
+            "files": [
+                "ambientsounds:animals.cicadas-desert1",
+                "ambientsounds:animals.cicadas-desert2"
+            ],
+            "overall-raining": false,
+            "day": 1,
+            "night": 0.1,
+            "length": {
+                "min": 300,
+                "max": 600
+            },
+            "pause": {
+                "min": 200,
+                "max": 500
+            }
         }
     ]
 }

@@ -1,0 +1,23 @@
+{
+    "name": "spooky",
+    "biomes": [
+        "is_spooky"
+    ],
+    "sounds": [
+        {
+            "name": "bird-ambience-spooky",
+            "category": "bird_day",
+            "files": [
+                "ambientsounds:animals.bird-ambience-spooky",
+                "ambientsounds:animals.bird-ambience-spooky2",
+                "ambientsounds:animals.bird-ambience-spooky3"
+            ],
+            "overall-raining": false,
+            "transition": 500,
+            "length": {
+                "min": 1500,
+                "max": 3000
+            }
+        }
+    ]
+}

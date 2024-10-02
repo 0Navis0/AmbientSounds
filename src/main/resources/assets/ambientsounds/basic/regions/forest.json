@@ -1,56 +1,12 @@
 {
     "name": "forest",
-    "features": [
-        "tree"
-    ],
-    "bad-regions": [
-        "taiga",
-        "forest.roofed",
-        "jungle",
-        "rain"
-    ],
-    "temperature": {
-        "min": 0.2,
-        "max": 1.5
-    },
-    "variants": [
-        {
-            "regions": [
-                "surface"
-            ]
-        },
-        {
-            "biomes": [
-                "#is_forest",
-                "forest",
-                "blossom",
-                "mangrove",
-                "woods",
-                "orchard",
-                "origin island",
-                "thicket",
-                "woodland",
-                "grove",
-                "origin valley",
-                "rainforest",
-                "lush hills",
-                "orchad",
-                "valley",
-                "origin island",
-                "birch hills",
-                "twilight clearing"
-            ]
-        },
-        {
-            "regions": [
-                "swamp"
-            ],
-            "volume": 0.3
-        }
+    "biomes": [
+        "is_forest"
     ],
     "sounds": [
         {
             "name": "bird-ambience",
+            "category": "bird_day",
             "files": [
                 "ambientsounds:animals.bird-ambience1",
                 "ambientsounds:animals.bird-ambience2",
@@ -64,23 +20,38 @@
                 "ambientsounds:animals.bird-ambience10",
                 "ambientsounds:animals.bird-ambience11"
             ],
+            "overall-raining": false,
             "length": {
                 "min": 2000,
                 "max": 3000
             },
             "transition": 400,
-            "category": "bird_day"
+        },
+        {
+            "name": "crow",
+            "category": "bird",
+            "files": [
+                "ambientsounds:animals.crow"
+            ],
+            "overall-raining": false,
+            "pause": {
+                "min": 800,
+                "max": 4000
+            },
+            "day": 1,
+            "night": 0.2
         },
         {
             "name": "owl",
+            "category": "bird_night",
             "files": [
                 "ambientsounds:animals.owl"
             ],
+            "overall-raining": false,
             "pause": {
                 "min": 400,
                 "max": 5000
             },
-            "category": "bird_night"
         }
     ]
 }

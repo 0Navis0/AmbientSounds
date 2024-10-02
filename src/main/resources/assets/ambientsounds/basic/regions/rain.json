@@ -1,29 +1,12 @@
 {
     "name": "rain",
-    "regions": [
-        "surface"
-    ],
+    "overall-raining": true,
     "bad-regions": [
-        "cold"
+        "is_cold",
+        "is_desert",
+        "is_badlands",
+        "is_savanna"
     ],
-    "variants": [
-        {
-            "raining": true,
-            "volume": 1
-        },
-        {
-            "overall-raining": true,
-            "air": {
-                "min": 1
-            },
-            "temperature": {
-                "min": 0.1
-            },
-            "volume": 0.2
-        }
-    ],
-    "mute": 0.8,
-    "mute-priority": 5,
     "sounds": [
         {
             "name": "rain",

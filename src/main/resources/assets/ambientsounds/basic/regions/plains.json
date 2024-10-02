@@ -1,35 +1,7 @@
 {
     "name": "plains",
-    "features": [
-        "grass"
-    ],
-    "bad-regions": [
-        "ocean",
-        "forest",
-        "savanna",
-        "swamp",
-        "highland",
-        "nether",
-        "rain"
-    ],
-    "temperature": {
-        "min": 0.2
-    },
     "biomes": [
-        "plains",
-        "chaparral",
-        "field",
-        "flower",
-        "grass",
-        "oasis",
-        "tundra",
-        "mushroom*fields",
-        "darklands",
-        "badlands",
-        "pasture",
-        "rocky plateau",
-        "tropics plains",
-        "mycelium"
+        "is_plains"
     ],
     "sounds": [
         {
@@ -67,12 +39,30 @@
             "volume": 0.3
         },
         {
+            "name": "cicadas",
+            "category": "cicadas",
+            "files": [
+                "ambientsounds:animals.cicadas"
+            ],
+            "overall-raining": false,
+            "day": 0.15,
+            "night": 0.01,
+            "length": {
+                "min": 100,
+                "max": 300
+            },
+            "pause": {
+                "min": 100,
+                "max": 600
+            }
+        },
+        {
             "name": "cicadas-night",
             "category": "cicadas",
             "files": [
                 "ambientsounds:animals.cicadas-night"
             ],
-            "time": "night",
+            "overall-raining": false,
             "volume": 0.3
         }
     ]
