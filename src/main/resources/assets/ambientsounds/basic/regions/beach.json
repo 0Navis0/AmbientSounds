@@ -1,7 +1,7 @@
 {
     "name": "beach",
     "biomes": [
-        "is_beach"
+        "#is_beach"
     ],
     "sounds": [
         {
