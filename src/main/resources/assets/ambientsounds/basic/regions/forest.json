@@ -37,9 +37,7 @@
             "pause": {
                 "min": 800,
                 "max": 4000
-            },
-            "day": 1,
-            "night": 0.2
+            }
         },
         {
             "name": "owl",
