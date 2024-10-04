@@ -1,7 +1,7 @@
 {
     "name": "cave.ambience",
     "biomes": [
-        "is_cave"
+        "cave"
     ],
     "absolute-height": {
         "max": 64,
