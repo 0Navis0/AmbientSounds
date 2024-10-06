@@ -1,7 +1,7 @@
 {
     "name": "end",
     "dimension-names": [
-        "the_end"
+        "minecraft:the_end"
     ],
     "rain": false,
     "storm": false,
