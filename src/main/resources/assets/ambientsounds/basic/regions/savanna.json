@@ -1,7 +1,7 @@
 {
     "name": "savanna",
     "biomes": [
-        "is_savanna"
+        "#minecraft:is_savanna"
     ], 
     "sounds": [
         {
