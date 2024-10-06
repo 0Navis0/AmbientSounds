@@ -1,7 +1,7 @@
 {
     "name": "swamp",
     "biomes": [
-        "is_swamp"
+        "#forge:is_swamp"
     ],
     "sounds": [
         {
