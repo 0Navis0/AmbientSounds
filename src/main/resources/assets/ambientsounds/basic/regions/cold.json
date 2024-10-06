@@ -1,7 +1,7 @@
 {
     "name": "cold",
     "biomes": [
-        "is_cold"
+        "#forge:is_cold"
     ],
     "sound-collections": [
         "wind"
