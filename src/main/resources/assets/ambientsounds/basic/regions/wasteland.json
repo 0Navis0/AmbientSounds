@@ -1,7 +1,7 @@
 {
     "name": "wasteland",
     "features": [
-        "is_wasteland"
+        "#forge:is_wasteland"
     ],
     "sound-collections": [
         "wind"
