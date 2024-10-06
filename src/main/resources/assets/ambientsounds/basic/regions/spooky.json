@@ -1,7 +1,7 @@
 {
     "name": "spooky",
     "biomes": [
-        "is_spooky"
+        "#forge:is_spooky"
     ],
     "sounds": [
         {
