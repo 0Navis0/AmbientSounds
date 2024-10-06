@@ -1,8 +1,8 @@
 {
     "name": "mountain",
     "biomes": [
-        "is_hill",
-        "is_mountain"
+        "#minecraft:is_hill",
+        "#minecraft:is_mountain"
     ],
     "sound-collections": [
         "wind"
