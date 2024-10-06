@@ -1,7 +1,7 @@
 {
     "name": "twilightforest",
     "dimension-names": [
-        "twilightforest"
+        "twilightforest:twilightforest"
     ],
     "surface-selector": {
         "regions": [
