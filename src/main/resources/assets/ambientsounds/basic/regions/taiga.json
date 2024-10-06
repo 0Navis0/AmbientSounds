@@ -1,7 +1,7 @@
 {
     "name": "taiga",
     "biomes": [
-        "is_taiga"
+        "#minecraft:is_taiga"
     ],
     "sounds": [
         {
