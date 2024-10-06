@@ -1,7 +1,7 @@
 {
     "name": "desert",
     "biomes": [
-        "is_desert"
+        "#forge:is_desert"
     ],
     "sound-collections": [
         "wind"
