@@ -1,32 +1,7 @@
 {
     "name": "desert",
-    "variants": [
-        {
-            "features": [
-                "sand",
-                "water"
-            ]
-        },
-        {
-            "biomes": [
-                "gravel_desert"
-            ]
-        }
-    ],
-    "bad-regions": [
-        "beach"
-    ],
     "biomes": [
-        "desert",
-        "quagmire",
-        "petrified forest",
-        "menelaus",
-        "dry scrub",
-        "sands"
-    ],
-    "bad-biomes": [
-        "lush desert",
-        "ocean"
+        "#forge:is_desert"
     ],
     "sound-collections": [
         "wind"
@@ -39,12 +14,9 @@
                 "ambientsounds:animals.cicadas-desert1",
                 "ambientsounds:animals.cicadas-desert2"
             ],
-            "special-biomes": {
-                "temperature": {
-                    "min": 0.8
-                }
-            },
-            "time": "day",
+            "overall-raining": false,
+            "day": 1,
+            "night": 0.1,
             "length": {
                 "min": 300,
                 "max": 600

@@ -1,29 +1,13 @@
 {
     "name": "rain",
-    "regions": [
-        "surface"
-    ],
+    "overall-raining": true,
     "bad-regions": [
-        "cold"
+        "#forge:is_desert",
+        "#minecraft:is_badlandes",
+        "#forge:is_mesa",
+        "#minecraft::is_savanna",
+        "#forge:is_snowy",
     ],
-    "variants": [
-        {
-            "raining": true,
-            "volume": 1
-        },
-        {
-            "overall-raining": true,
-            "air": {
-                "min": 1
-            },
-            "temperature": {
-                "min": 0.1
-            },
-            "volume": 0.2
-        }
-    ],
-    "mute": 0.8,
-    "mute-priority": 5,
     "sounds": [
         {
             "name": "rain",

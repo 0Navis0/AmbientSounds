@@ -1,33 +1,8 @@
 {
     "name": "swamp",
-    "bad-regions": [
-        "rain"
-    ],
     "biomes": [
-        "swamp",
-        "bayou",
-        "bog",
-        "marsh",
-        "moor",
-        "fen",
-        "mystic grove",
-        "bamboo marsh",
-        "silkglades",
-        "sludgepit",
-        "wetland",
-        "quagmire",
-        "dead forest",
-        "patchy islands",
-        "deep waters",
-        "coarse islands",
-        "erebus",
-        "fungal forest",
-        "tyros swamp"
+        "#forge:is_swamp"
     ],
-    "temperature": {
-        "min": 0.5,
-        "max": 2
-    },
     "sounds": [
         {
             "name": "cricket-swamp",
@@ -35,8 +10,8 @@
             "files": [
                 "ambientsounds:animals.cricket-swamp"
             ],
+            "overall-raining": false,
             "volume": 0.3,
-            "overall-raining": false
         },
         {
             "name": "cricket-warm-night",
@@ -66,27 +41,6 @@
             },
             "day": 0.05,
             "night": 0.15
-        },
-        {
-            "name": "mouring_dove",
-            "category": "animal",
-            "files": [
-                "ambientsounds:animals.mouring_dove"
-            ],
-            "features": [
-                "tree"
-            ],
-            "pause": {
-                "min": 100,
-                "max": 400
-            },
-            "time": {
-                "5": 0,
-                "6": 1,
-                "8": 1,
-                "9": 0
-            },
-            "volume": 0.14
         }
     ]
 }

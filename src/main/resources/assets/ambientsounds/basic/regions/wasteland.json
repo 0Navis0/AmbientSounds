@@ -1,25 +1,21 @@
 {
-    "name": "cold",
-    "biomes": [
-        "#forge:is_cold",
-        "#forge:is_snowy"
+    "name": "wasteland",
+    "features": [
+        "#forge:is_wasteland"
     ],
     "sound-collections": [
         "wind"
     ],
     "sounds": [
         {
-            "name": "wind-in-leaves",
+            "name": "heavy-wind",
             "category": "wind",
             "files": [
-                "ambientsounds:wind.wind-in-leaves"
+                "ambientsounds:wind.heavy-wind"
             ],
             "air": {
                 "min": 0.6
             },
-            "features": [
-                "tree"
-            ],
             "volume": 0.5
         }
     ]
