@@ -1,7 +1,7 @@
 {
     "name": "plains",
     "biomes": [
-        "is_plains"
+        "#forge:is_plains"
     ],
     "sounds": [
         {
