@@ -1,7 +1,7 @@
 {
     "name": "overworld",
     "dimension-names": [
-        "overworld"
+        "minecraft:overworld"
     ],
     "surface-selector": {
         "regions": [
