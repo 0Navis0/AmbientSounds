@@ -1,7 +1,8 @@
 {
     "name": "mesa",
     "biomes": [
-        "is_badlands"
+        "#minecraft:is_badlands",
+        "#forge:is_mesa"
     ],
     "sound-collections": [
         "wind"
