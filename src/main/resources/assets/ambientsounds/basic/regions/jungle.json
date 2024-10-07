@@ -50,8 +50,8 @@
                 "ambientsounds:animals.cicadas"
             ],
             "overall-raining": false,
-            "day": 0.1,
-            "night": 0.01,
+            "time": "day",
+            "volume": 0.3,
             "length": {
                 "min": 100,
                 "max": 300
