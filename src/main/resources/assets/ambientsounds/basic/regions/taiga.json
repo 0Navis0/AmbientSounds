@@ -26,12 +26,12 @@
                 "ambientsounds:animals.crow"
             ],
             "overall-raining": false,
+            "day": 1,
+            "night": 0.2,
             "pause": {
                 "min": 800,
                 "max": 4000
-            },
-            "day": 1,
-            "night": 0.2
+            }
         },
         {
             "name": "owl",
@@ -57,6 +57,39 @@
                 "max": 600
             },
             "day": 0
+        },
+        {
+            "name": "cricket",
+            "category": "cricket_day",
+            "files": [
+                "ambientsounds:animals.cricket",
+                "ambientsounds:animals.cricket2",
+                "ambientsounds:animals.cricket3"
+            ],
+            "overall-raining": false,
+            "length": {
+                "min": 1000,
+                "max": 1500
+            },
+            "transition": 100,
+            "volume": 0.3
+        },
+        {
+            "name": "cricket-night",
+            "category": "cricket_night",
+            "files": [
+                "ambientsounds:animals.cricket-night",
+                "ambientsounds:animals.cricket-night2",
+                "ambientsounds:animals.cricket-night3",
+                "ambientsounds:animals.cricket-night4"
+            ],
+            "overall-raining": false,
+            "length": {
+                "min": 1000,
+                "max": 1500
+            },
+            "transition": 100,
+            "volume": 0.3
         }
     ]
 }

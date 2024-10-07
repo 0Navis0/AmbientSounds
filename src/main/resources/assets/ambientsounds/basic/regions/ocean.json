@@ -1,7 +1,8 @@
 {
     "name": "ocean",
     "biomes": [
-        "#minecraft:is_ocean"
+        "#minecraft:is_ocean",
+        "#minecraft:is_river"
     ],
     "sounds": [
         {

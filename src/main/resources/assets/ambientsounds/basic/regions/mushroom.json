@@ -1,7 +1,8 @@
 {
     "name": "mushroom",
     "biomes": [
-        "#forge:is_mushroom"
+        "#forge:is_mushroom",
+        "#c:is_mushroom"
     ],
     "sounds": [
         {

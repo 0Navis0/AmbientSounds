@@ -1,7 +1,10 @@
 {
     "name": "cave.ambience",
     "biomes": [
-        "#forge:is_cave"
+        "#forge:is_cave",
+        "#c:is_cave",
+        "#forge:is_underground",
+        "#c:is_underground"
     ],
     "absolute-height": {
         "max": 64,

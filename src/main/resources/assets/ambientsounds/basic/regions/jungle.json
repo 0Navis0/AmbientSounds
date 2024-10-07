@@ -5,22 +5,6 @@
     ],
     "sounds": [
         {
-            "name": "cricket-jungle",
-            "category": "cricket_day",
-            "files": [
-                "ambientsounds:animals.cricket-jungle"
-            ],
-            "overall-raining": false
-        },
-        {
-            "name": "cricket-jungle-night",
-            "category": "cricket_night",
-            "files": [
-                "ambientsounds:animals.cricket-jungle-night"
-            ],
-            "overall-raining": false
-        },
-        {
             "name": "bird-ambience-jungle",
             "category": "bird_day",
             "files": [
@@ -42,6 +26,50 @@
                 "max": 2000
             },
             "transition": 200
+        },
+        {
+            "name": "cricket-jungle",
+            "category": "cricket_day",
+            "files": [
+                "ambientsounds:animals.cricket-jungle"
+            ],
+            "overall-raining": false
+        },
+        {
+            "name": "cricket-jungle-night",
+            "category": "cricket_night",
+            "files": [
+                "ambientsounds:animals.cricket-jungle-night"
+            ],
+            "overall-raining": false
+        },
+        {
+            "name": "cicadas",
+            "category": "cicadas",
+            "files": [
+                "ambientsounds:animals.cicadas"
+            ],
+            "overall-raining": false,
+            "day": 0.1,
+            "night": 0.01,
+            "length": {
+                "min": 100,
+                "max": 300
+            },
+            "pause": {
+                "min": 100,
+                "max": 600
+            }
+        },
+        {
+            "name": "cicadas-night",
+            "category": "cicadas",
+            "files": [
+                "ambientsounds:animals.cicadas-night"
+            ],
+            "overall-raining": false,
+            "time": "night",
+            "volume": 0.3
         }
     ]
 }
