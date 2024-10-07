@@ -3,24 +3,20 @@
     "biomes": [
         "#minecraft:is_jungle"
     ],
+    "absolute-height": {
+        "min": 64,
+        "max": 256,
+        "fade": 10
+    },
     "sounds": [
         {
-            "name": "bird-ambience-jungle",
-            "category": "bird_day",
+            "name": "bird-jungle-day",
             "files": [
                 "ambientsounds:animals.bird-ambience-jungle",
                 "ambientsounds:animals.bird-ambience-jungle2"
             ],
-            "overall-raining": false
-        },
-        {
-            "name": "bird-ambience-jungle-night",
-            "category": "bird_night",
-            "files": [
-                "ambientsounds:animals.bird-ambience-jungle-night",
-                "ambientsounds:animals.bird-ambience-jungle-night2"
-            ],
             "overall-raining": false,
+            "time": "day",
             "length": {
                 "min": 1500,
                 "max": 2000
@@ -28,42 +24,52 @@
             "transition": 200
         },
         {
-            "name": "cricket-jungle",
-            "category": "cricket_day",
+            "name": "bird-jungle-night",
+            "files": [
+                "ambientsounds:animals.bird-ambience-jungle-night",
+                "ambientsounds:animals.bird-ambience-jungle-night2"
+            ],
+            "overall-raining": false,
+            "time": "night",
+            "length": {
+                "min": 1500,
+                "max": 2000
+            },
+            "transition": 200
+        },
+        {
+            "name": "cricket-jungle-day",
             "files": [
                 "ambientsounds:animals.cricket-jungle"
             ],
-            "overall-raining": false
+            "overall-raining": false,
+            "time": "day"
         },
         {
             "name": "cricket-jungle-night",
-            "category": "cricket_night",
             "files": [
                 "ambientsounds:animals.cricket-jungle-night"
             ],
-            "overall-raining": false
+            "overall-raining": false,
+            "time": "night"
         },
         {
-            "name": "cicadas",
-            "category": "cicadas",
+            "name": "cricket-warm-night",
             "files": [
-                "ambientsounds:animals.cicadas"
+                "ambientsounds:animals.cricket-warm-night",
+                "ambientsounds:animals.cricket-warm-night2"
             ],
             "overall-raining": false,
-            "time": "day",
-            "volume": 0.3,
+            "time": "night",
             "length": {
-                "min": 100,
-                "max": 300
+                "min": 1000,
+                "max": 1500
             },
-            "pause": {
-                "min": 100,
-                "max": 600
-            }
+            "transition": 100,
+            "volume": 0.3
         },
         {
             "name": "cicadas-night",
-            "category": "cicadas",
             "files": [
                 "ambientsounds:animals.cicadas-night"
             ],

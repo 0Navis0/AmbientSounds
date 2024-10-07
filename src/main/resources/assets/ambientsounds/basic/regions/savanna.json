@@ -2,26 +2,54 @@
     "name": "savanna",
     "biomes": [
         "#minecraft:is_savanna"
-    ], 
+    ],
+    "absolute-height": {
+        "min": 64,
+        "max": 256,
+        "fade": 10
+    },
     "sounds": [
         {
-            "name": "bird-warm",
-            "category": "bird_day",
+            "name": "bird-warm-day",
             "files": [
                 "ambientsounds:animals.bird-ambience-warm1",
                 "ambientsounds:animals.bird-ambience-warm2"
             ],
-            "overall-raining": false
+            "overall-raining": false,
+            "time": "day",
+            "length": {
+                "min": 1500,
+                "max": 2000
+            },
+            "transition": 200
         },
         {
-            "name": "cricket",
-            "category": "cricket_day",
+            "name": "cricket-day",
             "files": [
                 "ambientsounds:animals.cricket",
                 "ambientsounds:animals.cricket2",
                 "ambientsounds:animals.cricket3"
             ],
             "overall-raining": false,
+            "time": "day",
+            "length": {
+                "min": 1000,
+                "max": 1500
+            },
+            "transition": 100,
+            "volume": 0.3
+        },
+        {
+            "name": "cricket-night",
+            "files": [
+                "ambientsounds:animals.cricket-night",
+                "ambientsounds:animals.cricket-night2",
+                "ambientsounds:animals.cricket-night3",
+                "ambientsounds:animals.cricket-night4",
+                "ambientsounds:animals.cricket-night5"
+            ],
+            "overall-raining": false,
+            "time": "night",
             "length": {
                 "min": 1000,
                 "max": 1500
@@ -31,12 +59,12 @@
         },
         {
             "name": "cricket-warm-night",
-            "category": "cricket_night",
             "files": [
                 "ambientsounds:animals.cricket-warm-night",
                 "ambientsounds:animals.cricket-warm-night2"
             ],
             "overall-raining": false,
+            "time": "night",
             "length": {
                 "min": 1000,
                 "max": 1500
@@ -45,13 +73,12 @@
             "volume": 0.3
         },
         {
-            "name": "cicadas",
-            "category": "cicadas",
+            "name": "cicadas-day",
             "files": [
                 "ambientsounds:animals.cicadas"
             ],
             "overall-raining": false,
-            "time": "night",
+            "time": "day",
             "volume": 0.3,
             "length": {
                 "min": 100,
@@ -64,7 +91,6 @@
         },
         {
             "name": "cicadas-night",
-            "category": "cicadas",
             "files": [
                 "ambientsounds:animals.cicadas-night"
             ],

@@ -4,10 +4,14 @@
         "#forge:is_mushroom",
         "#c:is_mushroom"
     ],
+    "absolute-height": {
+        "min": 64,
+        "max": 256,
+        "fade": 10
+    },
     "sounds": [
         {
             "name": "cicadas-mushroom-fields",
-            "category": "cicadas",
             "files": [
                 "ambientsounds:animals.cicadas-mushroom-fields"
             ],
@@ -18,7 +22,6 @@
         },
         {
             "name": "special-mushroom-fields",
-            "category": "animal",
             "files": [
                 "ambientsounds:animals.special-mushroom-fields"
             ],
@@ -27,12 +30,12 @@
             "day": 1,
             "night": 0.2,
             "length": {
-                "min": 40,
-                "max": 120
+                "min": 50,
+                "max": 100
             },
             "pause": {
                 "min": 500,
-                "max": 2200
+                "max": 2000
             }
         }
     ]

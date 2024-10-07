@@ -1,8 +1,7 @@
 {
     "name": "desert",
     "biomes": [
-        "#forge:is_desert",
-        "#c:is_desert"
+        "#minecraft:is_badlands"
     ],
     "absolute-height": {
         "min": 64,
@@ -42,8 +41,7 @@
             "category": "wind",
             "files": [
                 "ambientsounds:wind.mesa"
-            ],
-            "volume": 0.4
+            ]
         }
     ]
 }

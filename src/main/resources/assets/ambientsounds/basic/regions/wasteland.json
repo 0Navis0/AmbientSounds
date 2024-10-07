@@ -4,13 +4,18 @@
         "#forge:is_wasteland",
         "#c:is_wasteland"
     ],
+    "absolute-height": {
+        "min": 64,
+        "max": 256,
+        "fade": 10
+    },
     "sounds": [
         {
             "name": "wind-mesa",
-            "category": "wind",
             "files": [
                 "ambientsounds:wind.mesa"
-            ]
+            ],
+            "volume": 0.4
         }
     ]
 }

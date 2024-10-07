@@ -1,39 +1,34 @@
 {
     "name": "storm",
     "storming": true,
+    "absolute-height": {
+        "min": 64,
+        "fade": 10
+    },
     "sounds": [
         {
             "name": "storm-away",
-            "category": "weather",
             "files": [
                 "ambientsounds:weather.storm-away"
             ]
         },
         {
             "name": "storm-close",
-            "category": "weather",
             "files": [
                 "ambientsounds:weather.storm-close"
             ]
         },
         {
             "name": "wind",
-            "category": "weather",
             "files": [
                 "ambientsounds:wind.light-wind",
                 "ambientsounds:wind.light-wind2",
                 "ambientsounds:wind.light-wind3"
             ],
-            "air": {
-                "min": 0.6
-            },
-            "volume": 0.4,
-            "mute-priority": 5,
-            "mute": 0.3
+            "volume": 0.4
         },
         {
             "name": "howling-wind",
-            "category": "weather",
             "files": [
                 "ambientsounds:wind.howling-wind"
             ],
