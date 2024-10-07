@@ -1,6 +1,6 @@
 {
     "name": "surface",
-    "relative-height": {
+    "absolute-height": {
         "min": 64,
         "max": 128,
         "fade": 10

@@ -100,7 +100,7 @@
             "volume": 0.4,
             "features": [
                 "lush"
-            ],
+            ]
         },
         {
             "name": "cave-deep-dark",
@@ -112,6 +112,6 @@
             "features": [
                 "sculk"
             ]
-        },
+        }
     ]
 }
