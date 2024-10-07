@@ -3,11 +3,6 @@
     "dimension-names": [
         "twilightforest:twilightforest"
     ],
-    "surface-selector": {
-        "regions": [
-            "surface"
-        ]
-    },
     "regions": [
         {
             "name": "unknown",
