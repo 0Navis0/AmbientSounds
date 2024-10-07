@@ -6,7 +6,7 @@
         "#minecraft:is_badlandes",
         "#forge:is_mesa",
         "#minecraft::is_savanna",
-        "#forge:is_snowy",
+        "#forge:is_snowy"
     ],
     "sounds": [
         {
