@@ -1,5 +1,10 @@
 {
     "name": "ocean",
+    "absolute-height": {
+        "min": 64,
+        "max": 256,
+        "fade": 10
+    },
     "biomes": [
         "#minecraft:is_ocean",
         "#minecraft:is_river"

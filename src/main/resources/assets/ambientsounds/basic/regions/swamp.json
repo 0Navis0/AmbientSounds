@@ -4,24 +4,65 @@
         "#forge:is_swamp",
         "#c:is_swamp"
     ],
+    "absolute-height": {
+        "min": 64,
+        "max": 256,
+        "fade": 10
+    },
     "sounds": [
         {
+            "name": "bird-warm-day",
+            "files": [
+                "ambientsounds:animals.bird-ambience-warm1",
+                "ambientsounds:animals.bird-ambience-warm2"
+            ],
+            "overall-raining": false,
+            "time": "day",
+            "length": {
+                "min": 1500,
+                "max": 2000
+            },
+            "transition": 200
+        },
+        {
+            "name": "frog",
+            "files": [
+                "ambientsounds:animals.frog1",
+                "ambientsounds:animals.frog2"
+            ],
+            "pause": {
+                "min": 100,
+                "max": 750
+            }
+        },
+        {
+            "name": "mouring_dove",
+            "files": [
+                "ambientsounds:animals.mouring_dove"
+            ],
+            "pause": {
+                "min": 100,
+                "max": 400
+            },
+            "volume": 0.1
+        },
+        {
             "name": "cricket-swamp",
-            "category": "cricket_day",
             "files": [
                 "ambientsounds:animals.cricket-swamp"
             ],
             "overall-raining": false,
+            "time": "day",
             "volume": 0.3
         },
         {
             "name": "cricket-warm-night",
-            "category": "cricket_night",
             "files": [
                 "ambientsounds:animals.cricket-warm-night",
                 "ambientsounds:animals.cricket-warm-night2"
             ],
             "overall-raining": false,
+            "time": "night",
             "length": {
                 "min": 1000,
                 "max": 1500
@@ -30,36 +71,13 @@
             "volume": 0.3
         },
         {
-            "name": "frog",
-            "category": "animal",
+            "name": "cicadas-night",
             "files": [
-                "ambientsounds:animals.frog1",
-                "ambientsounds:animals.frog2"
+                "ambientsounds:animals.cicadas-night"
             ],
-            "pause": {
-                "min": 100,
-                "max": 750
-            },
-            "day": 0.05,
-            "night": 0.15
-        },
-        {
-            "name": "mouring_dove",
-            "category": "animal",
-            "files": [
-                "ambientsounds:animals.mouring_dove"
-            ],
-            "pause": {
-                "min": 100,
-                "max": 400
-            },
-            "time": {
-                "5": 0,
-                "6": 1,
-                "8": 1,
-                "9": 0
-            },
-            "volume": 0.15
+            "overall-raining": false,
+            "time": "night",
+            "volume": 0.3
         }
     ]
 }

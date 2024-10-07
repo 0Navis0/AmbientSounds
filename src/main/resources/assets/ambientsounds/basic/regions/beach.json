@@ -3,6 +3,11 @@
     "biomes": [
         "#minecraft:is_beach"
     ],
+    "absolute-height": {
+        "min": 64,
+        "max": 256,
+        "fade": 10
+    },
     "sounds": [
         {
             "name": "beach",
@@ -13,11 +18,11 @@
         },
         {
             "name": "seagull",
-            "category": "bird_day",
             "files": [
                 "ambientsounds:animals.seagull"
             ],
             "overall-raining": false,
+            "time": "day",
             "volume": 0.4,
             "pause": {
                 "min": 750,
@@ -26,11 +31,11 @@
         },
         {
             "name": "seagull-long",
-            "category": "bird_day",
             "files": [
                 "ambientsounds:animals.seagull-long"
             ],
             "overall-raining": false,
+            "time": "day",
             "length": {
                 "min": 30,
                 "max": 600

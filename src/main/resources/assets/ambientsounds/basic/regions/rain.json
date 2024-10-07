@@ -9,10 +9,13 @@
         "#forge:is_snowy",
         "#c:is_snowy"
     ],
+    "absolute-height": {
+        "min": 64,
+        "fade": 10
+    },
     "sounds": [
         {
             "name": "rain",
-            "category": "weather",
             "files": [
                 "ambientsounds:weather.rain1",
                 "ambientsounds:weather.rain2"
