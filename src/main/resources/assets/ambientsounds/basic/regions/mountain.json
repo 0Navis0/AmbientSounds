@@ -9,7 +9,7 @@
     ],
     "absolute-height": {
         "min": 64,
-        "max": 256,
+        "max": 128,
         "fade": 10
     },
     "sounds": [
