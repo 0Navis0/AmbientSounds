@@ -3,11 +3,6 @@
     "dimension-names": [
         "minecraft:overworld"
     ],
-    "surface-selector": {
-        "regions": [
-            "surface"
-        ]
-    },
     "biome-selector": {
         "always": true
     }
