@@ -1,8 +1,0 @@
-{
-    "name": "grass",
-    "groups": [
-        "grass"
-    ],
-    "low-weight": 0.2,
-    "high-weight": 0.4
-}
