@@ -26,6 +26,13 @@
                 "min": 1000,
                 "max": 5000
             }
+        },
+        {
+            "name": "heavy-wind",
+            "files": [
+                "ambientsounds:wind.heavy-wind"
+            ],
+            "volume": 0.4
         }
     ]
 }
