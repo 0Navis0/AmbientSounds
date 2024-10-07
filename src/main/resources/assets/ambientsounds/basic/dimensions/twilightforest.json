@@ -3,13 +3,7 @@
     "dimension-names": [
         "twilightforest:twilightforest"
     ],
-    "regions": [
-        {
-            "name": "unknown",
-            "volume": 0.2,
-            "sound-collections": [
-                "suspense"
-            ]
-        }
-    ]
+     "biome-selector": {
+        "always": true
+    }
 }
