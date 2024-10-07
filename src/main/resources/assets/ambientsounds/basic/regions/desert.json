@@ -45,8 +45,8 @@
                 "ambientsounds:animals.cicadas-desert2"
             ],
             "overall-raining": false,
-            "day": 1,
-            "night": 0.1,
+            "time": "day",
+            "volume": 0.3,
             "length": {
                 "min": 300,
                 "max": 600
