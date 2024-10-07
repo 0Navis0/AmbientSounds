@@ -3,11 +3,6 @@
     "dimension-names": [
         "aether:the_aether"
     ],
-    "surface-selector": {
-        "regions": [
-            "surface"
-        ]
-    },
     "biome-selector": {
         "always": true
     }
