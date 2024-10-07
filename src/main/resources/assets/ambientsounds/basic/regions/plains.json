@@ -1,9 +1,19 @@
 {
     "name": "plains",
     "biomes": [
-        "#forge:is_plains"
+        "#forge:is_plains",
+        "#c:is_plains"
     ],
     "sounds": [
+        {
+            "name": "bird-warm",
+            "category": "bird_day",
+            "files": [
+                "ambientsounds:animals.bird-ambience-warm1",
+                "ambientsounds:animals.bird-ambience-warm2"
+            ],
+            "overall-raining": false
+        },
         {
             "name": "cricket",
             "category": "cricket_day",
@@ -45,7 +55,7 @@
                 "ambientsounds:animals.cicadas"
             ],
             "overall-raining": false,
-            "day": 0.15,
+            "day": 0.1,
             "night": 0.01,
             "length": {
                 "min": 100,
@@ -63,6 +73,7 @@
                 "ambientsounds:animals.cicadas-night"
             ],
             "overall-raining": false,
+            "time": "night",
             "volume": 0.3
         }
     ]

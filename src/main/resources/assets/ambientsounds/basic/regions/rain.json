@@ -3,10 +3,11 @@
     "overall-raining": true,
     "bad-regions": [
         "#forge:is_desert",
+        "#c:is_desert",
         "#minecraft:is_badlandes",
-        "#forge:is_mesa",
         "#minecraft::is_savanna",
-        "#forge:is_snowy"
+        "#forge:is_snowy",
+        "#c:is_snowy"
     ],
     "sounds": [
         {
