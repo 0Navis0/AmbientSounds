@@ -16,8 +16,8 @@
                 "min": 400,
                 "max": 700
             },
-            "volume": 0.5,
-            "transition": 200
+            "transition": 200,
+            "volume": 0.5
         },
         {
             "name": "cave-deep",
@@ -33,7 +33,8 @@
                 "min": 400,
                 "max": 700
             },
-            "transition": 200
+            "transition": 200,
+            "volume": 0.5
         },
         {
             "name": "cave-large",
@@ -67,12 +68,12 @@
                 "ambientsounds:cave.cave-water4",
                 "ambientsounds:cave.cave-water5"
             ],
-            "volume": 0.5,
             "length": {
                 "min": 400,
                 "max": 700
             },
-            "transition": 200
+            "transition": 200,
+            "volume": 0.5
         },
         {
             "name": "cave-lush",
