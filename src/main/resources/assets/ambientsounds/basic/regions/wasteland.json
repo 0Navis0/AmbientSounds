@@ -11,11 +11,18 @@
     },
     "sounds": [
         {
-            "name": "wind-mesa",
+            "name": "light-wind",
             "files": [
-                "ambientsounds:wind.mesa"
+                "ambientsounds:wind.light-wind",
+                "ambientsounds:wind.light-wind2",
+                "ambientsounds:wind.light-wind3"
             ],
-            "volume": 0.4
+            "volume": 0.4,
+            "transition": 200,
+            "length": {
+                "min": 1000,
+                "max": 5000
+            }
         }
     ]
 }

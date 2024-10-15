@@ -90,6 +90,24 @@
             }
         },
         {
+            "name": "cicadas-desert-day",
+            "files": [
+                "ambientsounds:animals.cicadas-desert1",
+                "ambientsounds:animals.cicadas-desert2"
+            ],
+            "overall-raining": false,
+            "time": "day",
+            "volume": 0.3,
+            "length": {
+                "min": 300,
+                "max": 600
+            },
+            "pause": {
+                "min": 200,
+                "max": 500
+            }
+        },
+        {
             "name": "cicadas-night",
             "files": [
                 "ambientsounds:animals.cicadas-night"
