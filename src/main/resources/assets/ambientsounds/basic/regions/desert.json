@@ -1,6 +1,7 @@
 {
     "name": "desert",
     "biomes": [
+        "#minecraft:is_badlands",
         "#forge:is_desert",
         "#c:is_desert"
     ],
@@ -29,21 +30,18 @@
             }
         },
         {
-            "name": "cicadas-night",
+            "name": "light-wind",
             "files": [
-                "ambientsounds:animals.cicadas-night"
+                "ambientsounds:wind.light-wind",
+                "ambientsounds:wind.light-wind2",
+                "ambientsounds:wind.light-wind3"
             ],
-            "overall-raining": false,
-            "time": "night",
-            "volume": 0.3
-        },
-        {
-            "name": "wind-mesa",
-            "category": "wind",
-            "files": [
-                "ambientsounds:wind.mesa"
-            ],
-            "volume": 0.4
+            "volume": 0.4,
+            "transition": 200,
+            "length": {
+                "min": 1000,
+                "max": 5000
+            }
         }
     ]
 }

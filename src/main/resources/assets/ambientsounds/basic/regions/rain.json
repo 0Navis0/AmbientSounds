@@ -13,6 +13,8 @@
         "min": 64,
         "fade": 10
     },
+    "mute": 0.8,
+    "mute-priority": 5,
     "sounds": [
         {
             "name": "rain",
