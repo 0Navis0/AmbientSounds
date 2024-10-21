@@ -5,19 +5,28 @@
         "#c:is_swamp"
     ],
     "absolute-height": {
-        "min": 64,
         "max": 128,
         "fade": 10
     },
+    "overall-raining": false,
     "sounds": [
         {
             "name": "bird-warm-day",
             "files": [
-                "ambientsounds:animals.bird-ambience-warm1",
-                "ambientsounds:animals.bird-ambience-warm2"
+                "ambientsounds:animals.bird-ambience-plains"
             ],
-            "overall-raining": false,
-            "time": "day",
+            "time": {
+                "6": 0,
+                "6.5": 0.25,
+                "7": 0.5,
+                "7.5": 0.75,
+                "8": 1,
+                "16": 1,
+                "16.5": 0.75,
+                "17": 0.5,
+                "17.5": 0.25,
+                "18": 0
+            },
             "length": {
                 "min": 1500,
                 "max": 2000
@@ -28,12 +37,33 @@
             "name": "frog",
             "files": [
                 "ambientsounds:animals.frog1",
-                "ambientsounds:animals.frog2"
+                "ambientsounds:animals.frog2",
+                "ambientsounds:animals.frog3"
             ],
+            "length": {
+                "min": 100,
+                "max": 300
+            },
             "pause": {
                 "min": 100,
                 "max": 750
-            }
+            },
+            "volume": 0.1
+        },
+        {
+            "name": "frog-crowking",
+            "files": [
+                "ambientsounds:animals.frog-crowking"
+            ],
+            "length": {
+                "min": 50,
+                "max": 100
+            },
+            "pause": {
+                "min": 500,
+                "max": 2000
+            },
+            "volume": 0.4
         },
         {
             "name": "mouring_dove",
@@ -44,40 +74,21 @@
                 "min": 100,
                 "max": 400
             },
-            "volume": 0.1
+            "volume": 0.2
         },
         {
             "name": "cricket-swamp",
             "files": [
                 "ambientsounds:animals.cricket-swamp"
             ],
-            "overall-raining": false,
-            "time": "day",
-            "volume": 0.3
+            "volume": 0.4
         },
         {
-            "name": "cricket-warm-night",
+            "name": "cicada-swamp",
             "files": [
-                "ambientsounds:animals.cricket-warm-night",
-                "ambientsounds:animals.cricket-warm-night2"
+                "ambientsounds:animals.cicada-swamp"
             ],
-            "overall-raining": false,
-            "time": "night",
-            "length": {
-                "min": 1000,
-                "max": 1500
-            },
-            "transition": 100,
-            "volume": 0.3
-        },
-        {
-            "name": "cicadas-night",
-            "files": [
-                "ambientsounds:animals.cicadas-night"
-            ],
-            "overall-raining": false,
-            "time": "night",
-            "volume": 0.3
+            "volume": 0.4
         }
     ]
 }

@@ -28,18 +28,6 @@
             "weight": 1
         }
     ],
-    "solids": [
-        "#minecraft:doors",
-        "#minecraft:impermeable",
-        "#minecraft:stairs",
-        "#minecraft:glass_panes",
-        "#minecraft:walls"
-    ],
-    "biome-types": [
-        "surface",
-        "underground"
-    ],
     "fade-volume": "0.005",
-    "fade-pitch": "0.005",
-    "default-biome-type": "surface"
+    "fade-pitch": "0.005"
 }

@@ -3,7 +3,7 @@
     "dimension-names": [
         "twilightforest:twilightforest"
     ],
-     "biome-selector": {
+    "biome-selector": {
         "always": true
     }
 }
