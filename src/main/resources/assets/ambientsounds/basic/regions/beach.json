@@ -4,46 +4,46 @@
         "#minecraft:is_beach"
     ],
     "absolute-height": {
-        "min": 64,
-        "max": 256,
+        "max": 128,
         "fade": 10
     },
     "sounds": [
         {
-            "name": "beach",
+            "name": "ocean",
             "files": [
-                "ambientsounds:water.beach"
+                "ambientsounds:water.ocean1",
+                "ambientsounds:water.ocean2"
             ],
             "volume": 0.1
         },
         {
             "name": "seagull",
             "files": [
-                "ambientsounds:animals.seagull"
+                "ambientsounds:animals.seagull1",
+                "ambientsounds:animals.seagull2",
+                "ambientsounds:animals.seagull3",
+                "ambientsounds:animals.seagull4",
+                "ambientsounds:animals.seagull5",
+                "ambientsounds:animals.seagull6"
             ],
             "overall-raining": false,
-            "time": "day",
-            "volume": 0.4,
-            "pause": {
-                "min": 750,
-                "max": 1000
-            }
-        },
-        {
-            "name": "seagull-long",
-            "files": [
-                "ambientsounds:animals.seagull-long"
-            ],
-            "overall-raining": false,
-            "time": "day",
-            "length": {
-                "min": 30,
-                "max": 600
+            "time": {
+                "6": 0,
+                "6.5": 0.25,
+                "7": 0.5,
+                "7.5": 0.75,
+                "8": 1,
+                "16": 1,
+                "16.5": 0.75,
+                "17": 0.5,
+                "17.5": 0.25,
+                "18": 0
             },
             "pause": {
                 "min": 750,
                 "max": 1000
-            }
+            },
+            "volume": 0.4
         }
     ]
 }

@@ -4,101 +4,196 @@
         "#minecraft:is_taiga"
     ],
     "absolute-height": {
-        "min": 64,
         "max": 128,
         "fade": 10
     },
+    "overall-raining": false,
     "sounds": [
         {
-            "name": "bird-taiga-day",
+            "name": "bird-day",
             "files": [
-                "ambientsounds:animals.bird-ambience-huge1",
-                "ambientsounds:animals.bird-ambience-huge2",
-                "ambientsounds:animals.bird-ambience-huge3"
+                "ambientsounds:animals.bird-ambience1",
+                "ambientsounds:animals.bird-ambience2",
+                "ambientsounds:animals.bird-ambience3",
+                "ambientsounds:animals.bird-ambience4",
+                "ambientsounds:animals.bird-ambience5",
+                "ambientsounds:animals.bird-ambience6",
+                "ambientsounds:animals.bird-ambience7",
+                "ambientsounds:animals.bird-ambience8",
+                "ambientsounds:animals.bird-ambience9",
+                "ambientsounds:animals.bird-ambience10",
+                "ambientsounds:animals.bird-ambience11",
+                "ambientsounds:animals.bird-ambience12",
+                "ambientsounds:animals.bird-ambience13",
+                "ambientsounds:animals.bird-ambience14",
+                "ambientsounds:animals.bird-ambience15",
+                "ambientsounds:animals.bird-ambience16"
             ],
-            "overall-raining": false,
-            "time": "day",
+            "time": {
+                "6": 0,
+                "6.5": 0.25,
+                "7": 0.5,
+                "7.5": 0.75,
+                "8": 1,
+                "16": 1,
+                "16.5": 0.75,
+                "17": 0.5,
+                "17.5": 0.25,
+                "18": 0
+            },
             "length": {
                 "min": 2000,
                 "max": 3000
             },
-            "transition": 400
+            "transition": 400,
+            "volume": 0.8
         },
         {
             "name": "crow",
             "files": [
-                "ambientsounds:animals.crow"
+                "ambientsounds:animals.crow1",
+                "ambientsounds:animals.crow2",
+                "ambientsounds:animals.crow3",
+                "ambientsounds:animals.crow4",
+                "ambientsounds:animals.crow5",
+                "ambientsounds:animals.crow6",
+                "ambientsounds:animals.crow7",
+                "ambientsounds:animals.crow8"
             ],
-            "overall-raining": false,
             "pause": {
                 "min": 800,
                 "max": 4000
-            }
+            },
+            "day": 0.8,
+            "night": 0.4
         },
         {
             "name": "owl",
             "files": [
-                "ambientsounds:animals.owl"
+                "ambientsounds:animals.owl1",
+                "ambientsounds:animals.owl2",
+                "ambientsounds:animals.owl3",
+                "ambientsounds:animals.owl4",
+                "ambientsounds:animals.owl5",
+                "ambientsounds:animals.owl6",
+                "ambientsounds:animals.owl7",
+                "ambientsounds:animals.owl8",
+                "ambientsounds:animals.owl9",
+                "ambientsounds:animals.owl10"
             ],
-            "overall-raining": false,
             "time": "night",
             "pause": {
                 "min": 400,
                 "max": 5000
-            }
+            },
+            "volume": 0.8
         },
         {
             "name": "wolf",
             "files": [
-                "ambientsounds:animals.wolf"
+                "ambientsounds:animals.wolf1",
+                "ambientsounds:animals.wolf2",
+                "ambientsounds:animals.wolf3",
+                "ambientsounds:animals.wolf4",
+                "ambientsounds:animals.wolf5",
+                "ambientsounds:animals.wolf6",
+                "ambientsounds:animals.wolf7",
+                "ambientsounds:animals.wolf8",
+                "ambientsounds:animals.wolf9",
+                "ambientsounds:animals.wolf10"
             ],
-            "overall-raining": false,
+            "time": "night",
             "pause": {
                 "min": 100,
                 "max": 600
-            }
+            },
+            "volume": 0.8
+        },
+        {
+            "name": "long-wolf",
+            "files": [
+                "ambientsounds:animals.long-wolf1",
+                "ambientsounds:animals.long-wolf2"
+            ],
+            "time": "night",
+            "pause": {
+                "min": 12000,
+                "max": 72000
+            },
+            "volume": 0.8
         },
         {
             "name": "cricket-day",
             "files": [
-                "ambientsounds:animals.cricket",
+                "ambientsounds:animals.cricket1",
                 "ambientsounds:animals.cricket2",
                 "ambientsounds:animals.cricket3"
             ],
-            "overall-raining": false,
-            "time": "day",
+            "time": {
+                "6": 0,
+                "6.5": 0.25,
+                "7": 0.5,
+                "7.5": 0.75,
+                "8": 1,
+                "16": 1,
+                "16.5": 0.75,
+                "17": 0.5,
+                "17.5": 0.25,
+                "18": 0
+            },
             "length": {
                 "min": 1000,
                 "max": 1500
             },
             "transition": 100,
-            "volume": 0.3
+            "volume": 0.4
         },
         {
             "name": "cricket-night",
             "files": [
-                "ambientsounds:animals.cricket-night",
+                "ambientsounds:animals.cricket-night1",
                 "ambientsounds:animals.cricket-night2",
                 "ambientsounds:animals.cricket-night3",
-                "ambientsounds:animals.cricket-night4"
+                "ambientsounds:animals.cricket-night4",
+                "ambientsounds:animals.cricket-night5"
             ],
-            "overall-raining": false,
-            "time": "night",
+            "time": {
+                "6": 1,
+                "6.5": 0.75,
+                "7": 0.5,
+                "7.5": 0.25,
+                "8": 0,
+                "16": 0,
+                "16.5": 0.25,
+                "17": 0.5,
+                "17.5": 0.75,
+                "18": 1
+            },
             "length": {
                 "min": 1000,
                 "max": 1500
             },
             "transition": 100,
-            "volume": 0.3
+            "volume": 0.4
         },
         {
             "name": "cicadas-night",
             "files": [
                 "ambientsounds:animals.cicadas-night"
             ],
-            "overall-raining": false,
-            "time": "night",
-            "volume": 0.3
+            "time": {
+                "6": 1,
+                "6.5": 0.75,
+                "7": 0.5,
+                "7.5": 0.25,
+                "8": 0,
+                "16": 0,
+                "16.5": 0.25,
+                "17": 0.5,
+                "17.5": 0.75,
+                "18": 1
+            },
+            "volume": 0.4
         }
     ]
 }
