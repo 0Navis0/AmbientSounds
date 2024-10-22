@@ -29,7 +29,7 @@
                 "max": 4000
             },
             "transition": 400,
-            "volume": 0.2
+            "volume": 0.4
         }
     ]
 }

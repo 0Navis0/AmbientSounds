@@ -4,12 +4,10 @@
         "max": -10,
         "fade": 10
     },
-    "absolute-height": {
-        "max": 64,
+    "min-height-relative": {
+        "max": 0,
         "fade": 10
     },
-    "mute": 1,
-    "mute-priority": 5,
     "sounds": [
         {
             "name": "cave",
@@ -60,35 +58,6 @@
             },
             "transition": 200,
             "volume": 0.2
-        },
-        {
-            "name": "cave-deep-dark",
-            "biomes": [
-                "minecraft:deep_dark"
-            ],
-            "files": [
-                "ambientsounds:cave.deep-dark1",
-                "ambientsounds:cave.deep-dark2"
-            ],
-            "volume": 0.2
-        },
-        {
-            "name": "cave-lush",
-            "biomes": [
-                "minecraft:lush_caves"
-            ],
-            "files": [
-                "ambientsounds:cave.cave-lush"
-            ],
-            "length": {
-                "min": 100,
-                "max": 500
-            },
-            "pause": {
-                "min": 250,
-                "max": 500
-            },
-            "volume": 0.4
         },
         {
             "name": "cave-water",

@@ -1,0 +1,16 @@
+{
+    "name": "cave-deep-dark",
+    "biomes": [
+        "minecraft:deep_dark"
+    ],
+    "sounds": [
+        {
+            "name": "cave-deep-dark",
+            "files": [
+                "ambientsounds:cave.deep-dark1",
+                "ambientsounds:cave.deep-dark2"
+            ],
+            "volume": 0.2
+        }
+    ]
+}
