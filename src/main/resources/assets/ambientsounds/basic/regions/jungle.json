@@ -32,7 +32,7 @@
                 "max": 2000
             },
             "transition": 200,
-            "volume": 0.8
+            "volume": 0.6
         },
         {
             "name": "bird-jungle-night",
@@ -57,7 +57,7 @@
                 "max": 2000
             },
             "transition": 200,
-            "volume": 0.8
+            "volume": 0.6
         },
         {
             "name": "cricket-jungle-day",
@@ -76,7 +76,7 @@
                 "17.5": 0.25,
                 "18": 0
             },
-            "volume": 0.8
+            "volume": 0.6
         },
         {
             "name": "cricket-jungle-night",
@@ -95,7 +95,7 @@
                 "17.5": 0.75,
                 "18": 1
             },
-            "volume": 0.8
+            "volume": 0.6
         }
     ]
 }

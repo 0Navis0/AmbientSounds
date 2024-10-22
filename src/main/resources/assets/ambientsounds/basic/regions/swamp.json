@@ -37,8 +37,7 @@
             "name": "frog",
             "files": [
                 "ambientsounds:animals.frog1",
-                "ambientsounds:animals.frog2",
-                "ambientsounds:animals.frog3"
+                "ambientsounds:animals.frog2"
             ],
             "length": {
                 "min": 100,
@@ -48,7 +47,7 @@
                 "min": 100,
                 "max": 750
             },
-            "volume": 0.1
+            "volume": 0.2
         },
         {
             "name": "frog-crowking",
@@ -62,8 +61,7 @@
             "pause": {
                 "min": 500,
                 "max": 2000
-            },
-            "volume": 0.4
+            }
         },
         {
             "name": "mouring_dove",
@@ -81,14 +79,14 @@
             "files": [
                 "ambientsounds:animals.cricket-swamp"
             ],
-            "volume": 0.4
+            "volume": 0.6
         },
         {
             "name": "cicada-swamp",
             "files": [
                 "ambientsounds:animals.cicada-swamp"
             ],
-            "volume": 0.4
+            "volume": 0.6
         }
     ]
 }

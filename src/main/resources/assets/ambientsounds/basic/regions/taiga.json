@@ -46,7 +46,7 @@
                 "max": 3000
             },
             "transition": 400,
-            "volume": 0.8
+            "volume": 0.6
         },
         {
             "name": "crow",
@@ -64,7 +64,7 @@
                 "min": 800,
                 "max": 4000
             },
-            "day": 0.8,
+            "day": 0.6,
             "night": 0.4
         },
         {
@@ -107,7 +107,7 @@
                 "min": 100,
                 "max": 600
             },
-            "volume": 0.8
+            "volume": 0.6
         },
         {
             "name": "long-wolf",
@@ -120,7 +120,7 @@
                 "min": 12000,
                 "max": 72000
             },
-            "volume": 0.8
+            "volume": 0.6
         },
         {
             "name": "cricket-day",
