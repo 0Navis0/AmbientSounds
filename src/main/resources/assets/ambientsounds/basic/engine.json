@@ -4,10 +4,10 @@
     "environment-tick-time": 50,
     "sound-tick-time": 5,
     "block-scan-distance": 50,
-    "average-height-scan-distance": 5,
+    "average-height-scan-distance": 2,
     "average-height-scan-count": 5,
     "biome-scan-distance": 5,
-    "biome-scan-count": 5,
+    "biome-scan-count": 2,
     "air-pocket-count": 50000,
     "air-pocket-distance": 10,
     "air-pocket-groups": [
