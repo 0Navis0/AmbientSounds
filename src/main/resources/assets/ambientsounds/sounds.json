@@ -1,206 +1,206 @@
 {
-    "animals.bird-ambience1": {
+    "animals.bird1": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/bird/bird-ambience1",
+                "name": "ambientsounds:animals/bird/bird1",
                 "stream": true
             }
         ],
         "category": "ambient"
     },
-    "animals.bird-ambience2": {
+    "animals.bird2": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/bird/bird-ambience2",
+                "name": "ambientsounds:animals/bird/bird2",
                 "stream": true
             }
         ],
         "category": "ambient"
     },
-    "animals.bird-ambience3": {
+    "animals.bird3": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/bird/bird-ambience3",
+                "name": "ambientsounds:animals/bird/bird3",
                 "stream": true
             }
         ],
         "category": "ambient"
     },
-    "animals.bird-ambience4": {
+    "animals.bird4": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/bird/bird-ambience4",
+                "name": "ambientsounds:animals/bird/bird4",
                 "stream": true
             }
         ],
         "category": "ambient"
     },
-    "animals.bird-ambience5": {
+    "animals.bird5": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/bird/bird-ambience5",
+                "name": "ambientsounds:animals/bird/bird5",
                 "stream": true
             }
         ],
         "category": "ambient"
     },
-    "animals.bird-ambience6": {
+    "animals.bird6": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/bird/bird-ambience6",
+                "name": "ambientsounds:animals/bird/bird6",
                 "stream": true
             }
         ],
         "category": "ambient"
     },
-    "animals.bird-ambience7": {
+    "animals.bird7": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/bird/bird-ambience7",
+                "name": "ambientsounds:animals/bird/bird7",
                 "stream": true
             }
         ],
         "category": "ambient"
     },
-    "animals.bird-ambience8": {
+    "animals.bird8": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/bird/bird-ambience8",
+                "name": "ambientsounds:animals/bird/bird8",
                 "stream": true
             }
         ],
         "category": "ambient"
     },
-    "animals.bird-ambience9": {
+    "animals.bird9": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/bird/bird-ambience9",
+                "name": "ambientsounds:animals/bird/bird9",
                 "stream": true
             }
         ],
         "category": "ambient"
     },
-    "animals.bird-ambience10": {
+    "animals.bird10": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/bird/bird-ambience10",
+                "name": "ambientsounds:animals/bird/bird10",
                 "stream": true
             }
         ],
         "category": "ambient"
     },
-    "animals.bird-ambience11": {
+    "animals.bird11": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/bird/bird-ambience11",
+                "name": "ambientsounds:animals/bird/bird11",
                 "stream": true
             }
         ],
         "category": "ambient"
     },
-    "animals.bird-ambience12": {
+    "animals.bird12": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/bird/bird-ambience12",
+                "name": "ambientsounds:animals/bird/bird12",
                 "stream": true
             }
         ],
         "category": "ambient"
     },
-    "animals.bird-ambience13": {
+    "animals.bird13": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/bird/bird-ambience13",
+                "name": "ambientsounds:animals/bird/bird13",
                 "stream": true
             }
         ],
         "category": "ambient"
     },
-    "animals.bird-ambience14": {
+    "animals.bird14": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/bird/bird-ambience14",
+                "name": "ambientsounds:animals/bird/bird14",
                 "stream": true
             }
         ],
         "category": "ambient"
     },
-    "animals.bird-ambience15": {
+    "animals.bird15": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/bird/bird-ambience15",
+                "name": "ambientsounds:animals/bird/bird15",
                 "stream": true
             }
         ],
         "category": "ambient"
     },
-    "animals.bird-ambience16": {
+    "animals.bird16": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/bird/bird-ambience16",
+                "name": "ambientsounds:animals/bird/bird16",
                 "stream": true
             }
         ],
         "category": "ambient"
     },
-    "animals.bird-ambience-huge1": {
+    "animals.bird-huge1": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/bird/bird-ambience-huge1",
+                "name": "ambientsounds:animals/bird/bird-huge1",
                 "stream": true
             }
         ],
         "category": "ambient"
     },
-    "animals.bird-ambience-huge2": {
+    "animals.bird-huge2": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/bird/bird-ambience-huge2",
+                "name": "ambientsounds:animals/bird/bird-huge2",
                 "stream": true
             }
         ],
         "category": "ambient"
     },
-    "animals.bird-ambience-jungle1": {
+    "animals.bird-jungle1": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/bird/bird-ambience-jungle1",
+                "name": "ambientsounds:animals/bird/bird-jungle1",
                 "stream": true
             }
         ],
         "category": "ambient"
     },
-    "animals.bird-ambience-jungle2": {
+    "animals.bird-jungle2": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/bird/bird-ambience-jungle2",
+                "name": "ambientsounds:animals/bird/bird-jungle2",
                 "stream": true
             }
         ],
         "category": "ambient"
     },
-    "animals.bird-ambience-jungle-night1": {
+    "animals.bird-jungle-night1": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/bird/bird-ambience-jungle-night1",
+                "name": "ambientsounds:animals/bird/bird-jungle-night1",
                 "stream": true
             }
         ],
         "category": "ambient"
     },
-    "animals.bird-ambience-jungle-night2": {
+    "animals.bird-jungle-night2": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/bird/bird-ambience-jungle-night2",
+                "name": "ambientsounds:animals/bird/bird-jungle-night2",
                 "stream": true
             }
         ],
         "category": "ambient"
     },
-    "animals.bird-ambience-plains": {
+    "animals.bird-plains": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/bird/bird-ambience-plains",
+                "name": "ambientsounds:animals/bird/bird-plains",
                 "stream": true
             }
         ],
@@ -449,10 +449,10 @@
         ],
         "category": "ambient"
     },
-    "animals.frog-crawking": {
+    "animals.frog-special": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/frog/frog-crawking",
+                "name": "ambientsounds:animals/frog/frog-special",
                 "stream": true
             }
         ],
@@ -578,46 +578,46 @@
         ],
         "category": "ambient"
     },
-    "animals.cicadas": {
+    "animals.cicada": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/cicadas/cicadas",
+                "name": "ambientsounds:animals/cicada/cicada",
                 "stream": true
             }
         ],
         "category": "ambient"
     },
-    "animals.cicadas-desert1": {
+    "animals.cicada-desert1": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/cicadas/cicadas-desert1",
+                "name": "ambientsounds:animals/cicada/cicada-desert1",
                 "stream": true
             }
         ],
         "category": "ambient"
     },
-    "animals.cicadas-desert2": {
+    "animals.cicada-desert2": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/cicadas/cicadas-desert2",
+                "name": "ambientsounds:animals/cicada/cicada-desert2",
                 "stream": true
             }
         ],
         "category": "ambient"
     },
-    "animals.cicadas-night": {
+    "animals.cicada-night": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/cicadas/cicadas-night",
+                "name": "ambientsounds:animals/cicada/cicada-night",
                 "stream": true
             }
         ],
         "category": "ambient"
     },
-    "animals.cicadas-swamp": {
+    "animals.cicada-swamp": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/cicadas/cicadas-swamp",
+                "name": "ambientsounds:animals/cicada/cicada-swamp",
                 "stream": true
             }
         ],
@@ -920,19 +920,10 @@
         ],
         "category": "ambient"
     },
-    "cave.deep-dark1": {
+    "cave.deep-dark": {
         "sounds": [
             {
-                "name": "ambientsounds:cave/cave-deep-dark1",
-                "stream": true
-            }
-        ],
-        "category": "ambient"
-    },
-    "cave.deep-dark2": {
-        "sounds": [
-            {
-                "name": "ambientsounds:cave/cave-deep-dark2",
+                "name": "ambientsounds:cave/cave-deep-dark",
                 "stream": true
             }
         ],
