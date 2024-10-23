@@ -5,15 +5,16 @@
     ],
     "absolute-height": {
         "max": 128,
+        "min": 0,
         "fade": 10
     },
-    "overall-raining": false,
+    "raining": false,
     "sounds": [
         {
-            "name": "bird-jungle-day",
+            "name": "bird-jungle",
             "files": [
-                "ambientsounds:animals.bird-ambience-jungle1",
-                "ambientsounds:animals.bird-ambience-jungle2"
+                "ambientsounds:animals.bird-jungle1",
+                "ambientsounds:animals.bird-jungle2"
             ],
             "time": {
                 "6": 0,
@@ -37,8 +38,8 @@
         {
             "name": "bird-jungle-night",
             "files": [
-                "ambientsounds:animals.bird-ambience-jungle-night1",
-                "ambientsounds:animals.bird-ambience-jungle-night2"
+                "ambientsounds:animals.bird-jungle-night1",
+                "ambientsounds:animals.bird-jungle-night2"
             ],
             "time": {
                 "6": 1,
@@ -60,7 +61,7 @@
             "volume": 0.6
         },
         {
-            "name": "cricket-jungle-day",
+            "name": "cricket-jungle",
             "files": [
                 "ambientsounds:animals.cricket-jungle"
             ],

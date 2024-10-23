@@ -7,16 +7,16 @@
     ],
     "absolute-height": {
         "max": 128,
+        "min": 0,
         "fade": 10
     },
     "sounds": [
         {
-            "name": "cicadas-desert-day",
+            "name": "cicadas-desert",
             "files": [
                 "ambientsounds:animals.cicadas-desert1",
                 "ambientsounds:animals.cicadas-desert2"
             ],
-            "overall-raining": false,
             "time": {
                 "6": 0,
                 "6.5": 0.25,
@@ -36,7 +36,8 @@
             "pause": {
                 "min": 200,
                 "max": 500
-            }
+            },
+            "raining": false
         },
         {
             "name": "wind",
@@ -53,7 +54,6 @@
         },
         {
             "name": "wind-in-leaves",
-            "category": "wind",
             "files": [
                 "ambientsounds:wind.wind-in-leaves"
             ],

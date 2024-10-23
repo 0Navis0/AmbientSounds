@@ -5,29 +5,30 @@
     ],
     "absolute-height": {
         "max": 128,
+        "min": 0,
         "fade": 10
     },
-    "overall-raining": false,
+    "raining": false,
     "sounds": [
         {
-            "name": "bird-day",
+            "name": "bird",
             "files": [
-                "ambientsounds:animals.bird-ambience1",
-                "ambientsounds:animals.bird-ambience2",
-                "ambientsounds:animals.bird-ambience3",
-                "ambientsounds:animals.bird-ambience4",
-                "ambientsounds:animals.bird-ambience5",
-                "ambientsounds:animals.bird-ambience6",
-                "ambientsounds:animals.bird-ambience7",
-                "ambientsounds:animals.bird-ambience8",
-                "ambientsounds:animals.bird-ambience9",
-                "ambientsounds:animals.bird-ambience10",
-                "ambientsounds:animals.bird-ambience11",
-                "ambientsounds:animals.bird-ambience12",
-                "ambientsounds:animals.bird-ambience13",
-                "ambientsounds:animals.bird-ambience14",
-                "ambientsounds:animals.bird-ambience15",
-                "ambientsounds:animals.bird-ambience16"
+                "ambientsounds:animals.bird1",
+                "ambientsounds:animals.bird2",
+                "ambientsounds:animals.bird3",
+                "ambientsounds:animals.bird4",
+                "ambientsounds:animals.bird5",
+                "ambientsounds:animals.bird6",
+                "ambientsounds:animals.bird7",
+                "ambientsounds:animals.bird8",
+                "ambientsounds:animals.bird9",
+                "ambientsounds:animals.bird10",
+                "ambientsounds:animals.bird11",
+                "ambientsounds:animals.bird12",
+                "ambientsounds:animals.bird13",
+                "ambientsounds:animals.bird14",
+                "ambientsounds:animals.bird15",
+                "ambientsounds:animals.bird16"
             ],
             "time": {
                 "6": 0,
@@ -123,7 +124,7 @@
             "volume": 0.6
         },
         {
-            "name": "cricket-day",
+            "name": "cricket",
             "files": [
                 "ambientsounds:animals.cricket1",
                 "ambientsounds:animals.cricket2",
@@ -177,9 +178,9 @@
             "volume": 0.4
         },
         {
-            "name": "cicadas-night",
+            "name": "cicada-night",
             "files": [
-                "ambientsounds:animals.cicadas-night"
+                "ambientsounds:animals.cicada-night"
             ],
             "time": {
                 "6": 1,

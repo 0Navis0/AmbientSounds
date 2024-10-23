@@ -3,6 +3,8 @@
     "biomes": [
         "minecraft:lush_caves"
     ],
+    "mute": 1,
+    "mute-priority": 5,
     "sounds": [
         {
             "name": "cave-lush",
@@ -30,14 +32,14 @@
             },
             "pause": {
                 "min": 100,
-                "max": 750
+                "max": 700
             },
             "volume": 0.2
         },
         {
-            "name": "frog-crowking",
+            "name": "frog-special",
             "files": [
-                "ambientsounds:animals.frog-crowking"
+                "ambientsounds:animals.frog-special"
             ],
             "length": {
                 "min": 50,
@@ -46,7 +48,8 @@
             "pause": {
                 "min": 500,
                 "max": 2000
-            }
+            },
+            "volume": 0.6
         }
     ]
 }
