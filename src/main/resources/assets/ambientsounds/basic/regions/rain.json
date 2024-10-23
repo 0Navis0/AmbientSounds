@@ -1,5 +1,6 @@
 {
     "name": "rain",
+    "overall-raining":"true",
     "sounds": [
         {
             "name": "rain",
@@ -13,7 +14,7 @@
             },
             "transition": 400,
             "volume": 0.6,
-            "raining": true
+            "snowing":"false"
         },
         {
             "name": "wind",
@@ -26,8 +27,17 @@
                 "max": 4000
             },
             "transition": 400,
-            "volume": 0.6,
-            "overall-raining": true
+            "volume": 0.6
+        },
+        {
+            "name": "wind-in-leaves",
+            "files": [
+                "ambientsounds:wind.wind-in-leaves"
+            ],
+            "features": [
+                "tree"
+            ],
+            "volume": 0.1
         }
     ]
 }

@@ -8,7 +8,7 @@
         "min": 0,
         "fade": 10
     },
-    "raining": false,
+    "overall-raining": false,
     "sounds": [
         {
             "name": "bird-jungle",
@@ -29,11 +29,11 @@
                 "18": 0
             },
             "length": {
-                "min": 1500,
-                "max": 2000
+                "min": 2000,
+                "max": 3000
             },
-            "transition": 200,
-            "volume": 0.6
+            "transition": 400,
+            "volume": 0.4
         },
         {
             "name": "bird-jungle-night",
@@ -54,11 +54,11 @@
                 "18": 1
             },
             "length": {
-                "min": 1500,
-                "max": 2000
+                "min": 2000,
+                "max": 3000
             },
-            "transition": 200,
-            "volume": 0.6
+            "transition": 400,
+            "volume": 0.4
         },
         {
             "name": "cricket-jungle",
@@ -77,7 +77,7 @@
                 "17.5": 0.25,
                 "18": 0
             },
-            "volume": 0.6
+            "volume": 0.4
         },
         {
             "name": "cricket-jungle-night",
@@ -96,7 +96,7 @@
                 "17.5": 0.75,
                 "18": 1
             },
-            "volume": 0.6
+            "volume": 0.4
         }
     ]
 }

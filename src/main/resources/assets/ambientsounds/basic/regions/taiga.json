@@ -8,7 +8,7 @@
         "min": 0,
         "fade": 10
     },
-    "raining": false,
+    "overall-raining": false,
     "sounds": [
         {
             "name": "bird",
@@ -62,8 +62,8 @@
                 "ambientsounds:animals.crow8"
             ],
             "pause": {
-                "min": 800,
-                "max": 4000
+                "min": 500,
+                "max": 5000
             },
             "day": 0.6,
             "night": 0.4
@@ -84,10 +84,10 @@
             ],
             "time": "night",
             "pause": {
-                "min": 400,
+                "min": 500,
                 "max": 5000
             },
-            "volume": 0.8
+            "volume": 0.6
         },
         {
             "name": "wolf",
@@ -106,7 +106,7 @@
             "time": "night",
             "pause": {
                 "min": 100,
-                "max": 600
+                "max": 500
             },
             "volume": 0.6
         },
@@ -118,8 +118,8 @@
             ],
             "time": "night",
             "pause": {
-                "min": 12000,
-                "max": 72000
+                "min": 10000,
+                "max": 50000
             },
             "volume": 0.6
         },

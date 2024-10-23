@@ -9,7 +9,7 @@
         "min": 0,
         "fade": 10
     },
-    "raining": false,
+    "overall-raining": false,
     "sounds": [
         {
             "name": "bird-plains",
@@ -29,10 +29,22 @@
                 "18": 0
             },
             "length": {
-                "min": 1500,
-                "max": 2000
+                "min": 2000,
+                "max": 3000
             },
             "transition": 200
+        },
+        {
+            "name": "mouring-dove",
+            "files": [
+                "ambientsounds:animals.mouring-dove1",
+                "ambientsounds:animals.mouring-dove2"
+            ],
+            "pause": {
+                "min": 100,
+                "max": 500
+            },
+            "volume": 0.4
         },
         {
             "name": "frog",
@@ -40,41 +52,22 @@
                 "ambientsounds:animals.frog1",
                 "ambientsounds:animals.frog2"
             ],
-            "length": {
-                "min": 100,
-                "max": 300
-            },
             "pause": {
                 "min": 100,
-                "max": 750
+                "max": 500
             },
-            "volume": 0.2
+            "volume": 0.1
         },
         {
             "name": "frog-special",
             "files": [
                 "ambientsounds:animals.frog-special"
             ],
-            "length": {
-                "min": 50,
-                "max": 100
-            },
-            "pause": {
-                "min": 500,
-                "max": 2000
-            },
-            "volume": 0.6
-        },
-        {
-            "name": "mouring-dove",
-            "files": [
-                "ambientsounds:animals.mouring-dove"
-            ],
             "pause": {
                 "min": 100,
-                "max": 400
+                "max": 500
             },
-            "volume": 0.4
+            "volume": 0.1
         },
         {
             "name": "cricket-swamp",

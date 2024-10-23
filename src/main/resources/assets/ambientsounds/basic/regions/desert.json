@@ -37,7 +37,7 @@
                 "min": 200,
                 "max": 500
             },
-            "raining": false
+            "overall-raining": false
         },
         {
             "name": "wind",
@@ -50,7 +50,7 @@
                 "max": 4000
             },
             "transition": 400,
-            "volume": 0.4
+            "volume": 0.6
         },
         {
             "name": "wind-in-leaves",
@@ -60,7 +60,7 @@
             "features": [
                 "tree"
             ],
-            "volume": 0.2
+            "volume": 0.1
         }
     ]
 }
