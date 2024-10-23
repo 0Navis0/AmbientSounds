@@ -15,7 +15,7 @@
                 "ambientsounds:water.ocean1",
                 "ambientsounds:water.ocean2"
             ],
-            "volume": 0.2
+            "volume": 0.1
         }
     ]
 }

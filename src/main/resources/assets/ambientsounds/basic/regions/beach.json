@@ -44,7 +44,7 @@
                 "max": 1000
             },
             "volume": 0.4,
-            "raining": false
+            "overall-raining": false
         }
     ]
 }

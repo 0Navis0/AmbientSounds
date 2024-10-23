@@ -8,7 +8,7 @@
         "min": 0,
         "fade": 10
     },
-    "raining": false,
+    "overall-raining": false,
     "sounds": [
         {
             "name": "bird-plains",
@@ -28,8 +28,8 @@
                 "18": 0
             },
             "length": {
-                "min": 1500,
-                "max": 2000
+                "min": 2000,
+                "max": 3000
             },
             "transition": 200
         },
@@ -110,7 +110,7 @@
             },
             "pause": {
                 "min": 100,
-                "max": 600
+                "max": 500
             },
             "volume": 0.4
         },

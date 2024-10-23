@@ -23,7 +23,7 @@
                 "max": 4000
             },
             "transition": 400,
-            "volume": 0.4
+            "volume": 0.6
         },
         {
             "name": "heavy-wind",
@@ -46,7 +46,7 @@
             "features": [
                 "tree"
             ],
-            "volume": 0.2
+            "volume": 0.1
         }
     ]
 }
