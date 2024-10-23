@@ -6,14 +6,15 @@
     ],
     "absolute-height": {
         "max": 128,
+        "min": 0,
         "fade": 10
     },
-    "overall-raining": false,
+    "raining": false,
     "sounds": [
         {
-            "name": "bird-warm-day",
+            "name": "bird-plains",
             "files": [
-                "ambientsounds:animals.bird-ambience-plains"
+                "ambientsounds:animals.bird-plains"
             ],
             "time": {
                 "6": 0,
@@ -34,7 +35,7 @@
             "transition": 200
         },
         {
-            "name": "cricket-day",
+            "name": "cricket",
             "files": [
                 "ambientsounds:animals.cricket1",
                 "ambientsounds:animals.cricket2",
@@ -88,9 +89,9 @@
             "volume": 0.4
         },
         {
-            "name": "cicadas-day",
+            "name": "cicada",
             "files": [
-                "ambientsounds:animals.cicadas"
+                "ambientsounds:animals.cicada"
             ],
             "time": {
                 "6": 0,
@@ -115,9 +116,9 @@
             "volume": 0.4
         },
         {
-            "name": "cicadas-night",
+            "name": "cicada-night",
             "files": [
-                "ambientsounds:animals.cicadas-night"
+                "ambientsounds:animals.cicada-night"
             ],
             "time": {
                 "6": 1,

@@ -5,6 +5,7 @@
     ],
     "absolute-height": {
         "max": 128,
+        "min": 0,
         "fade": 10
     },
     "sounds": [
@@ -14,7 +15,7 @@
                 "ambientsounds:water.ocean1",
                 "ambientsounds:water.ocean2"
             ],
-            "volume": 0.1
+            "volume": 0.2
         },
         {
             "name": "seagull",
@@ -26,7 +27,6 @@
                 "ambientsounds:animals.seagull5",
                 "ambientsounds:animals.seagull6"
             ],
-            "overall-raining": false,
             "time": {
                 "6": 0,
                 "6.5": 0.25,
@@ -40,10 +40,11 @@
                 "18": 0
             },
             "pause": {
-                "min": 750,
+                "min": 700,
                 "max": 1000
             },
-            "volume": 0.4
+            "volume": 0.4,
+            "raining": false
         }
     ]
 }

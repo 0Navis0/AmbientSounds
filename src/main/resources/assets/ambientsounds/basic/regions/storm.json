@@ -13,8 +13,8 @@
             "files": [
                 "ambientsounds:weather.storm-close"
             ],
-            "overall-raining": true,
-            "volume": 0.8
+            "volume": 0.6,
+            "overall-raining": true
         },
         {
             "name": "wind",
@@ -27,7 +27,7 @@
                 "max": 4000
             },
             "transition": 400,
-            "volume": 0.8
+            "volume": 0.6
         },
         {
             "name": "howling-wind",

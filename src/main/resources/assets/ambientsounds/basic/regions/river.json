@@ -2,6 +2,7 @@
     "name": "river",
     "absolute-height": {
         "max": 128,
+        "min": 0,
         "fade": 10
     },
     "biomes": [
@@ -13,7 +14,7 @@
             "files": [
                 "ambientsounds:water.river"
             ],
-            "volume": 0.1
+            "volume": 0.2
         }
     ]
 }

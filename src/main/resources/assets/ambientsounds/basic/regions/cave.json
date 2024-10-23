@@ -8,6 +8,8 @@
         "max": 0,
         "fade": 10
     },
+    "mute": 1,
+    "mute-priority": 5,
     "sounds": [
         {
             "name": "cave",
