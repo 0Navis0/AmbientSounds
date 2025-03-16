@@ -1,7 +1,17 @@
 {
-    "name": "sky",
+    "name": "mountain",
+    "biomes": [
+        "#minecraft:is_mountain"
+    ],
+    "bad-biomes": [
+        "minecraft:cherry_grove",
+        "minecraft:grove",
+        "minecraft:meadow",
+        "minecraft:snowy_slope"
+    ],
     "absolute-height": {
-        "min": 192,
+        "max": 192,
+        "min": 56,
         "fade": 10
     },
     "sounds": [
