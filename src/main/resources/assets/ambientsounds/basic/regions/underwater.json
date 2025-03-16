@@ -11,7 +11,8 @@
             "name": "underwater",
             "files": [
                 "ambientsounds:water.underwater"
-            ]
+            ],
+            "volume": 0.4
         },
         {
             "name": "underwater-deep",
@@ -20,7 +21,8 @@
             },
             "files": [
                 "ambientsounds:water.underwater-deep"
-            ]
+            ],
+            "volume": 0.4
         }
     ]
 }
