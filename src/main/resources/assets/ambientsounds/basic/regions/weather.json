@@ -12,6 +12,7 @@
                 "max": 4000
             },
             "transition": 400,
+            "volume": 0.4,
             "raining": true
         },
         {
@@ -26,6 +27,7 @@
             "files": [
                 "ambientsounds:weather.storm2"
             ],
+            "volume": 0.4,
             "storming": true
         },
         {
