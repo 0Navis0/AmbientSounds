@@ -62,6 +62,7 @@
                 "max": 1500
             },
             "transition": 100,
+            "volume": 0.8,
             "overall-raining": false,
             "snowing": false
         },
@@ -91,6 +92,7 @@
                 "max": 1500
             },
             "transition": 100,
+            "volume": 0.8,
             "overall-raining": false,
             "snowing": false
         },
@@ -119,6 +121,7 @@
                 "min": 100,
                 "max": 500
             },
+            "volume": 0.8,
             "overall-raining": false,
             "snowing": false
         },
@@ -148,6 +151,7 @@
                 "min": 200,
                 "max": 500
             },
+            "volume": 0.8,
             "overall-raining": false,
             "snowing": false
         }

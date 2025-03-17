@@ -63,6 +63,7 @@
                 "max": 1500
             },
             "transition": 100,
+            "volume": 0.8,
             "bad-biomes": [
                 "#forge:is_snowy",
                 "#c:is_snowy"
@@ -96,6 +97,7 @@
                 "max": 1500
             },
             "transition": 100,
+            "volume": 0.8,
             "bad-biomes": [
                 "#forge:is_snowy",
                 "#c:is_snowy"

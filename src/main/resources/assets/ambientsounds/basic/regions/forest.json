@@ -111,6 +111,7 @@
                 "#forge:is_snowy",
                 "#c:is_snowy"
             ],
+            "volume": 0.8,
             "overall-raining": false,
             "snowing": false
         },
@@ -144,6 +145,7 @@
                 "#forge:is_snowy",
                 "#c:is_snowy"
             ],
+            "volume": 0.8,
             "overall-raining": false,
             "snowing": false
         }

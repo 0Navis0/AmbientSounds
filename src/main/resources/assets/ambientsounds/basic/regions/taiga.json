@@ -110,8 +110,8 @@
             ],
             "time": "night",
             "pause": {
-                "min": 10000,
-                "max": 50000
+                "min": 1000,
+                "max": 5000
             }
         },
         {
@@ -139,6 +139,7 @@
                 "max": 1500
             },
             "transition": 100,
+            "volume": 0.8,
             "bad-biomes": [
                 "#forge:is_snowy",
                 "#c:is_snowy"
@@ -172,6 +173,7 @@
                 "max": 1500
             },
             "transition": 100,
+            "volume": 0.8,
             "bad-biomes": [
                 "#forge:is_snowy",
                 "#c:is_snowy"
