@@ -61,7 +61,7 @@
                 "min": 100,
                 "max": 500
             },
-            "volume": 0.4
+            "volume": 0.5
         },
         {
             "name": "owl",
@@ -94,24 +94,14 @@
                 "ambientsounds:animals.wolf7",
                 "ambientsounds:animals.wolf8",
                 "ambientsounds:animals.wolf9",
-                "ambientsounds:animals.wolf10"
+                "ambientsounds:animals.wolf10",
+                "ambientsounds:animals.wolf11",
+                "ambientsounds:animals.wolf12"
             ],
             "time": "night",
             "pause": {
                 "min": 100,
                 "max": 500
-            }
-        },
-        {
-            "name": "long-wolf",
-            "files": [
-                "ambientsounds:animals.long-wolf1",
-                "ambientsounds:animals.long-wolf2"
-            ],
-            "time": "night",
-            "pause": {
-                "min": 1000,
-                "max": 5000
             }
         },
         {
@@ -139,7 +129,7 @@
                 "max": 1500
             },
             "transition": 100,
-            "volume": 0.8,
+            "volume": 0.5,
             "bad-biomes": [
                 "#forge:is_snowy",
                 "#c:is_snowy"
@@ -173,7 +163,7 @@
                 "max": 1500
             },
             "transition": 100,
-            "volume": 0.8,
+            "volume": 0.5,
             "bad-biomes": [
                 "#forge:is_snowy",
                 "#c:is_snowy"

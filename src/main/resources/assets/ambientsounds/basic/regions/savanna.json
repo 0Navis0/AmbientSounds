@@ -62,7 +62,7 @@
                 "max": 1500
             },
             "transition": 100,
-            "volume": 0.8,
+            "volume": 0.5,
             "overall-raining": false,
             "snowing": false
         },
@@ -92,7 +92,7 @@
                 "max": 1500
             },
             "transition": 100,
-            "volume": 0.8,
+            "volume": 0.5,
             "overall-raining": false,
             "snowing": false
         },

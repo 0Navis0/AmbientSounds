@@ -61,7 +61,7 @@
                 "min": 100,
                 "max": 500
             },
-            "volume": 0.4
+            "volume": 0.5
         },
         {
             "name": "owl",
@@ -111,7 +111,7 @@
                 "#forge:is_snowy",
                 "#c:is_snowy"
             ],
-            "volume": 0.8,
+            "volume": 0.5,
             "overall-raining": false,
             "snowing": false
         },
@@ -145,7 +145,7 @@
                 "#forge:is_snowy",
                 "#c:is_snowy"
             ],
-            "volume": 0.8,
+            "volume": 0.5,
             "overall-raining": false,
             "snowing": false
         }

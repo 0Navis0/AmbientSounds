@@ -116,15 +116,6 @@
         ],
         "category": "ambient"
     },
-    "animals.bird-plains5": {
-        "sounds": [
-            {
-                "name": "ambientsounds:animals/bird/bird-plains5",
-                "stream": true
-            }
-        ],
-        "category": "ambient"
-    },
     "animals.bird-dense1": {
         "sounds": [
             {
@@ -562,18 +553,18 @@
         ],
         "category": "ambient"
     },
-    "animals.long-wolf1": {
+    "animals.wolf11": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/wolf/long-wolf1"
+                "name": "ambientsounds:animals/wolf/wolf11"
             }
         ],
         "category": "ambient"
     },
-    "animals.long-wolf2": {
+    "animals.wolf12": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/wolf/long-wolf2"
+                "name": "ambientsounds:animals/wolf/wolf12"
             }
         ],
         "category": "ambient"
