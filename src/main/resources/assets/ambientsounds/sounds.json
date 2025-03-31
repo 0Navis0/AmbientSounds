@@ -947,15 +947,6 @@
         ],
         "category": "ambient"
     },
-    "cave.deep-dark": {
-        "sounds": [
-            {
-                "name": "ambientsounds:cave/cave-deep-dark",
-                "stream": true
-            }
-        ],
-        "category": "ambient"
-    },
     "suspense.end": {
         "sounds": [
             {
