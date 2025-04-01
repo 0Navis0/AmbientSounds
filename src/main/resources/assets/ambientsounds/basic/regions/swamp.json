@@ -48,6 +48,18 @@
                 "ambientsounds:animals.mouring-dove1",
                 "ambientsounds:animals.mouring-dove2"
             ],
+            "time": {
+                "6": 0,
+                "6.5": 0.25,
+                "7": 0.5,
+                "7.5": 0.75,
+                "8": 1,
+                "16": 1,
+                "16.5": 0.75,
+                "17": 0.5,
+                "17.5": 0.25,
+                "18": 0
+            },
             "pause": {
                 "min": 100,
                 "max": 500
