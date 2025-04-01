@@ -27,18 +27,6 @@
             },
             "transition": 400,
             "volume": 0.2
-        },
-        {
-            "name": "wind-in-leaves",
-            "files": [
-                "ambientsounds:wind.wind-in-leaves"
-            ],
-            "features": [
-                "tree"
-            ],
-            "volume": 0.1,
-            "overall-raining": false,
-            "snowing": false
         }
     ]
 }

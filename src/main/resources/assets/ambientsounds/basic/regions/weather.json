@@ -42,19 +42,15 @@
             },
             "transition": 400,
             "raining": true,
-            "snowing": true
-        },
-        {
-            "name": "wind-in-leaves",
-            "files": [
-                "ambientsounds:wind.wind-in-leaves"
-            ],
-            "features": [
-                "tree"
-            ],
-            "volume": 0.1,
-            "raining": true,
-            "snowing": true
+            "snowing": true,
+            "bad-biomes": [
+                "#minecraft:is_hill",
+                "#minecraft:is_badlands",
+                "#forge:is_desert",
+                "#c:is_desert",
+                "#forge:is_wasteland",
+                "#c:is_wasteland"
+            ]
         },
         {
             "name": "howling-wind",

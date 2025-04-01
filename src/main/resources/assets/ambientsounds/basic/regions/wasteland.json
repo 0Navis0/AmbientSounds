@@ -29,26 +29,7 @@
                 "min": 2000,
                 "max": 4000
             },
-            "transition": 400,
-            "overall-raining": false,
-            "snowing": false
-        },
-        {
-            "name": "wind-in-leaves",
-            "files": [
-                "ambientsounds:wind.wind-in-leaves"
-            ],
-            "features": [
-                "tree"
-            ],
-            "length": {
-                "min": 2000,
-                "max": 4000
-            },
-            "transition": 400,
-            "volume": 0.1,
-            "overall-raining": false,
-            "snowing": false
+            "transition": 400
         }
     ]
 }

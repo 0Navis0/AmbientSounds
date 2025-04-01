@@ -848,15 +848,6 @@
         ],
         "category": "ambient"
     },
-    "wind.wind-in-leaves": {
-        "sounds": [
-            {
-                "name": "ambientsounds:wind/wind-in-leaves",
-                "stream": true
-            }
-        ],
-        "category": "ambient"
-    },
     "cave.cave1": {
         "sounds": [
             {

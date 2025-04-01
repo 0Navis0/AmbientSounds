@@ -6,6 +6,9 @@
         "minecraft:meadow",
         "minecraft:mushroom_fields"
     ],
+    "bad-biomes": [
+        "#minecraft:is_savanna"
+    ],
     "absolute-height": {
         "max": 192,
         "min": 56,
