@@ -677,15 +677,6 @@
         ],
         "category": "ambient"
     },
-    "animals.cricket-night6": {
-        "sounds": [
-            {
-                "name": "ambientsounds:animals/cricket/cricket-night6",
-                "stream": true
-            }
-        ],
-        "category": "ambient"
-    },
     "animals.cricket-jungle": {
         "sounds": [
             {
