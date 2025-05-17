@@ -81,18 +81,9 @@
             "volume": 0.2
         },
         {
-            "name": "cricket-swamp1",
+            "name": "cricket-swamp",
             "files": [
                 "ambientsounds:animals.cricket-swamp1"
-            ],
-            "bad-biomes": [
-                "#minecraft:is_jungle"
-            ]
-        },
-        {
-            "name": "cricket-swamp2",
-            "files": [
-                "ambientsounds:animals.cricket-swamp2"
             ],
             "bad-biomes": [
                 "#minecraft:is_jungle"
