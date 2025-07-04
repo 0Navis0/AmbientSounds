@@ -98,7 +98,18 @@
                 "ambientsounds:animals.wolf11",
                 "ambientsounds:animals.wolf12"
             ],
-            "time": "night",
+            "time": {
+                "6": 1,
+                "6.5": 0.75,
+                "7": 0.5,
+                "7.5": 0.25,
+                "8": 0,
+                "16": 0,
+                "16.5": 0.25,
+                "17": 0.5,
+                "17.5": 0.75,
+                "18": 1
+            },
             "pause": {
                 "min": 100,
                 "max": 500
