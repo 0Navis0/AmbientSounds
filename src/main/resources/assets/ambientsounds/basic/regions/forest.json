@@ -108,8 +108,8 @@
             },
             "transition": 100,
             "bad-biomes": [
-                "#forge:is_snowy",
-                "#c:is_snowy"
+                "#forge:is_cold",
+                "#c:is_cold"
             ],
             "volume": 0.5,
             "overall-raining": false,
@@ -142,8 +142,8 @@
             },
             "transition": 100,
             "bad-biomes": [
-                "#forge:is_snowy",
-                "#c:is_snowy"
+                "#forge:is_cold",
+                "#c:is_cold"
             ],
             "volume": 0.5,
             "overall-raining": false,
