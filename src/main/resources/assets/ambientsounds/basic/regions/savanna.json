@@ -1,159 +1,130 @@
 {
     "name": "savanna",
-    "biomes": [
-        "#minecraft:is_savanna",
-        "minecraft:wooded_badlands"
+    "bad-regions": [
+        "rain"
     ],
-    "absolute-height": {
-        "max": 192,
-        "min": 56,
-        "fade": 10
-    },
+    "biomes": [
+        "#is_savanna",
+        "savanna",
+        "heathland",
+        "prairie",
+        "brushland",
+        "lush desert",
+        "outback",
+        "shrubland",
+        "spiny forest",
+        "ironwood_gour"
+    ],
     "sounds": [
         {
-            "name": "bird-plains",
-            "files": [
-                "ambientsounds:animals.bird-plains1",
-                "ambientsounds:animals.bird-plains2",
-                "ambientsounds:animals.bird-plains3",
-                "ambientsounds:animals.bird-plains4",
-                "ambientsounds:animals.bird-plains5"
-            ],
-            "time": {
-                "6": 0,
-                "6.5": 0.25,
-                "7": 0.5,
-                "7.5": 0.75,
-                "8": 1,
-                "16": 1,
-                "16.5": 0.75,
-                "17": 0.5,
-                "17.5": 0.25,
-                "18": 0
-            },
-            "length": {
-                "min": 2000,
-                "max": 3000
-            },
-            "transition": 200
-        },
-        {
             "name": "cricket",
+            "category": "cricket_day",
             "files": [
-                "ambientsounds:animals.cricket1",
+                "ambientsounds:animals.cricket",
                 "ambientsounds:animals.cricket2",
-                "ambientsounds:animals.cricket3",
-                "ambientsounds:animals.cricket4"
+                "ambientsounds:animals.cricket3"
             ],
-            "time": {
-                "6": 0,
-                "6.5": 0.25,
-                "7": 0.5,
-                "7.5": 0.75,
-                "8": 1,
-                "16": 1,
-                "16.5": 0.75,
-                "17": 0.5,
-                "17.5": 0.25,
-                "18": 0
-            },
+            "overall-raining": false,
             "length": {
                 "min": 1000,
                 "max": 1500
             },
             "transition": 100,
-            "volume": 0.5,
-            "overall-raining": false,
-            "snowing": false
+            "volume": 0.25
         },
         {
-            "name": "cricket-night",
+            "name": "cicadas",
+            "category": "cicadas",
             "files": [
-                "ambientsounds:animals.cricket-night1",
-                "ambientsounds:animals.cricket-night2",
-                "ambientsounds:animals.cricket-night3",
-                "ambientsounds:animals.cricket-night4",
-                "ambientsounds:animals.cricket-night5"
+                "ambientsounds:animals.cicadas"
             ],
-            "time": {
-                "6": 1,
-                "6.5": 0.75,
-                "7": 0.5,
-                "7.5": 0.25,
-                "8": 0,
-                "16": 0,
-                "16.5": 0.25,
-                "17": 0.5,
-                "17.5": 0.75,
-                "18": 1
-            },
-            "length": {
-                "min": 1000,
-                "max": 1500
-            },
-            "transition": 100,
-            "volume": 0.5,
             "overall-raining": false,
-            "snowing": false
-        },
-        {
-            "name": "cicada",
-            "files": [
-                "ambientsounds:animals.cicada"
-            ],
-            "time": {
-                "6": 0,
-                "6.5": 0.25,
-                "7": 0.5,
-                "7.5": 0.75,
-                "8": 1,
-                "16": 1,
-                "16.5": 0.75,
-                "17": 0.5,
-                "17.5": 0.25,
-                "18": 0
-            },
+            "day": 0.15,
+            "night": 0.01,
             "length": {
                 "min": 100,
                 "max": 300
             },
             "pause": {
                 "min": 100,
-                "max": 500
-            },
-            "volume": 0.8,
-            "overall-raining": false,
-            "snowing": false
+                "max": 600
+            }
         },
         {
-            "name": "cicada-desert",
+            "name": "cicadas-desert",
+            "category": "cicadas",
             "files": [
-                "ambientsounds:animals.cicada-desert1",
-                "ambientsounds:animals.cicada-desert2"
+                "ambientsounds:animals.cicadas-desert1",
+                "ambientsounds:animals.cicadas-desert2"
             ],
-            "time": {
-                "6": 0,
-                "6.5": 0.25,
-                "7": 0.5,
-                "7.5": 0.75,
-                "8": 1,
-                "16": 1,
-                "16.5": 0.75,
-                "17": 0.5,
-                "17.5": 0.25,
-                "18": 0
+            "overall-raining": false,
+            "special-biomes": {
+                "temperature": {
+                    "min": 0.8
+                }
             },
+            "day": 1,
+            "night": 0,
             "length": {
-                "min": 300,
-                "max": 600
+                "min": 400,
+                "max": 900
             },
             "pause": {
-                "min": 200,
-                "max": 500
-            },
-            "volume": 0.8,
+                "min": 500,
+                "max": 1000
+            }
+        },
+        {
+            "name": "cricket-warm-night",
+            "category": "cricket_night",
+            "files": [
+                "ambientsounds:animals.cricket-warm-night",
+                "ambientsounds:animals.cricket-warm-night2"
+            ],
             "overall-raining": false,
-            "snowing": false
+            "length": {
+                "min": 1000,
+                "max": 1500
+            },
+            "transition": 100,
+            "volume": 0.3
+        },
+        {
+            "name": "wolf",
+            "category": "animal",
+            "files": [
+                "ambientsounds:animals.wolf"
+            ],
+            "pause": {
+                "min": 100,
+                "max": 600
+            },
+            "day": 0
+        },
+        {
+            "name": "long-wolf",
+            "category": "animal",
+            "files": [
+                "ambientsounds:animals.long-wolf"
+            ],
+            "pause": {
+                "min": 12000,
+                "max": 72000
+            },
+            "day": 0
+        },
+        {
+            "name": "bird-warm",
+            "category": "bird_day",
+            "files": [
+                "ambientsounds:animals.bird-ambience-warm1",
+                "ambientsounds:animals.bird-ambience-warm2"
+            ],
+            "length": {
+                "min": 2000,
+                "max": 3000
+            },
+            "overall-raining": false
         }
     ]
 }

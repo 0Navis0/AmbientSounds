@@ -1,3 +1,26 @@
+6.2.3
+Fixed applying volume setting twice which caused some sounds to be silent
+
+6.2.2
+Fixed crash on fabric when playing sound
+
+6.2.1
+Added performance improvement for biome tags check
+Fixed sound after transition playing with full volume for a split second (this bug has occurred in the past and got fixed, but due to the recent changes it reappeared)
+
+6.2.0
+Added drylands to the desert biome list
+Fixed desert region required water to played
+Fixed random crash occuring from time to time (caused by random generator not being available on different threads)
+Fixed unwanted volume jumps by separating condition and output volume
+Fixed bird-ambience2.ogg (thanks to HowardCLH)
+
+6.1.12
+Reverted Compressed ogg audios to ~160 kbps VBR
+
+6.1.11
+Adapted CreativeCore v2.14.0
+
 6.1.10
 Fixed wind sounds in caves
 

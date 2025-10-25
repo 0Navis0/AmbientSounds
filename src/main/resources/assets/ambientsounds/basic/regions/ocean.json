@@ -1,21 +1,33 @@
 {
     "name": "ocean",
-    "absolute-height": {
-        "max": 192,
-        "min": 56,
-        "fade": 10
-    },
     "biomes": [
-        "#minecraft:is_ocean"
+        "#is_ocean",
+        "#is_river",
+        "ocean",
+        "river",
+        "coral reef",
+        "kelp forest",
+        "lake",
+        "stream",
+        "sea",
+        "lush_stacks"
+    ],
+    "features": [
+        "water"
+    ],
+    "temperature": {
+        "min": 0
+    },
+    "sound-collections": [
+        "wind"
     ],
     "sounds": [
         {
             "name": "ocean",
             "files": [
-                "ambientsounds:water.ocean1",
-                "ambientsounds:water.ocean2"
+                "ambientsounds:water.ocean"
             ],
-            "volume": 0.2
+            "volume": 0.1
         }
     ]
 }
