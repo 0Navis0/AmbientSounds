@@ -1,9 +1,0 @@
-{
-    "name": "nether",
-    "dimension-names": [
-        "minecraft:the_nether"
-    ],
-    "biome-selector": {
-        "always": false
-    }
-}
