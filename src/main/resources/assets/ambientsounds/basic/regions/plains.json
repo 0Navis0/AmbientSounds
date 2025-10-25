@@ -1,84 +1,112 @@
 {
     "name": "plains",
-    "features": [
-        "grass"
-    ],
-    "bad-regions": [
-        "ocean",
-        "forest",
-        "savanna",
-        "swamp",
-        "highland",
-        "nether",
-        "rain",
-        "taiga"
-    ],
-    "temperature": {
-        "min": 0.2
-    },
     "biomes": [
-        "plains",
-        "chaparral",
-        "field",
-        "flower",
-        "grass",
-        "oasis",
-        "tundra",
-        "mushroom*fields",
-        "darklands",
-        "badlands",
-        "pasture",
-        "rocky plateau",
-        "tropics plains",
-        "mycelium",
-        "firecracker_chaparral",
-        "pumpkin_valley",
-        "bayou",
-        "skyrise_vale"
+        "#forge:is_plains",
+        "#c:is_plains",
+        "minecraft:meadow",
+        "minecraft:mushroom_fields"
     ],
+    "bad-biomes": [
+        "#minecraft:is_savanna"
+    ],
+    "absolute-height": {
+        "max": 192,
+        "min": 56,
+        "fade": 10
+    },
     "sounds": [
         {
-            "name": "cricket",
-            "category": "cricket_day",
+            "name": "bird-plains",
             "files": [
-                "ambientsounds:animals.cricket",
-                "ambientsounds:animals.cricket2",
-                "ambientsounds:animals.cricket3"
+                "ambientsounds:animals.bird-plains1",
+                "ambientsounds:animals.bird-plains2",
+                "ambientsounds:animals.bird-plains3",
+                "ambientsounds:animals.bird-plains4"
             ],
-            "overall-raining": false,
+            "time": {
+                "6": 0,
+                "6.5": 0.25,
+                "7": 0.5,
+                "7.5": 0.75,
+                "8": 1,
+                "16": 1,
+                "16.5": 0.75,
+                "17": 0.5,
+                "17.5": 0.25,
+                "18": 0
+            },
+            "length": {
+                "min": 2000,
+                "max": 3000
+            },
+            "transition": 200
+        },
+        {
+            "name": "cricket",
+            "files": [
+                "ambientsounds:animals.cricket1",
+                "ambientsounds:animals.cricket2",
+                "ambientsounds:animals.cricket3",
+                "ambientsounds:animals.cricket4"
+            ],
+            "time": {
+                "6": 0,
+                "6.5": 0.25,
+                "7": 0.5,
+                "7.5": 0.75,
+                "8": 1,
+                "16": 1,
+                "16.5": 0.75,
+                "17": 0.5,
+                "17.5": 0.25,
+                "18": 0
+            },
             "length": {
                 "min": 1000,
                 "max": 1500
             },
             "transition": 100,
-            "volume": 0.3
+            "volume": 0.5,
+            "bad-biomes": [
+                "#forge:is_cold",
+                "#c:is_cold"
+            ],
+            "overall-raining": false,
+            "snowing": false
         },
         {
             "name": "cricket-night",
-            "category": "cricket_night",
             "files": [
-                "ambientsounds:animals.cricket-night",
+                "ambientsounds:animals.cricket-night1",
                 "ambientsounds:animals.cricket-night2",
                 "ambientsounds:animals.cricket-night3",
                 "ambientsounds:animals.cricket-night4",
                 "ambientsounds:animals.cricket-night5"
             ],
-            "overall-raining": false,
+            "time": {
+                "6": 1,
+                "6.5": 0.75,
+                "7": 0.5,
+                "7.5": 0.25,
+                "8": 0,
+                "16": 0,
+                "16.5": 0.25,
+                "17": 0.5,
+                "17.5": 0.75,
+                "18": 1
+            },
             "length": {
                 "min": 1000,
                 "max": 1500
             },
             "transition": 100,
-            "volume": 0.3
-        },
-        {
-            "name": "cicadas-night",
-            "category": "cicadas",
-            "files": [
-                "ambientsounds:animals.cicadas-night"
+            "volume": 0.5,
+            "bad-biomes": [
+                "#forge:is_cold",
+                "#c:is_cold"
             ],
-            "time": "night",
-            "volume": 0.3
+            "overall-raining": false,
+            "snowing": false
         }
     ]
 }
