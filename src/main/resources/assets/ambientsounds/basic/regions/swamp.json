@@ -1,0 +1,93 @@
+{
+    "name": "swamp",
+    "biomes": [
+        "#forge:is_swamp",
+        "#c:is_swamp"
+    ],
+    "absolute-height": {
+        "max": 192,
+        "min": 56,
+        "fade": 10
+    },
+    "sounds": [
+        {
+            "name": "bird-plains",
+            "files": [
+                "ambientsounds:animals.bird-plains1",
+                "ambientsounds:animals.bird-plains2",
+                "ambientsounds:animals.bird-plains3",
+                "ambientsounds:animals.bird-plains4",
+                "ambientsounds:animals.bird-plains5"
+            ],
+            "bad-biomes": [
+                "#minecraft:is_forest",
+                "#minecraft:is_taiga",
+                "#minecraft:is_jungle"
+            ],
+            "time": {
+                "6": 0,
+                "6.5": 0.25,
+                "7": 0.5,
+                "7.5": 0.75,
+                "8": 1,
+                "16": 1,
+                "16.5": 0.75,
+                "17": 0.5,
+                "17.5": 0.25,
+                "18": 0
+            },
+            "length": {
+                "min": 2000,
+                "max": 3000
+            },
+            "transition": 200
+        },
+        {
+            "name": "mouring-dove",
+            "files": [
+                "ambientsounds:animals.mouring-dove1",
+                "ambientsounds:animals.mouring-dove2"
+            ],
+            "time": {
+                "6": 0,
+                "6.5": 0.25,
+                "7": 0.5,
+                "7.5": 0.75,
+                "8": 1,
+                "16": 1,
+                "16.5": 0.75,
+                "17": 0.5,
+                "17.5": 0.25,
+                "18": 0
+            },
+            "pause": {
+                "min": 100,
+                "max": 500
+            },
+            "volume": 0.2
+        },
+        {
+            "name": "frog",
+            "files": [
+                "ambientsounds:animals.frog1",
+                "ambientsounds:animals.frog2",
+                "ambientsounds:animals.frog3",
+                "ambientsounds:animals.frog4"
+            ],
+            "pause": {
+                "min": 100,
+                "max": 500
+            },
+            "volume": 0.2
+        },
+        {
+            "name": "cricket-swamp",
+            "files": [
+                "ambientsounds:animals.cricket-swamp1"
+            ],
+            "bad-biomes": [
+                "#minecraft:is_jungle"
+            ]
+        }
+    ]
+}

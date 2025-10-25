@@ -1,0 +1,69 @@
+{
+    "name": "weather",
+    "sounds": [
+        {
+            "name": "rain",
+            "files": [
+                "ambientsounds:weather.rain1",
+                "ambientsounds:weather.rain2"
+            ],
+            "length": {
+                "min": 2000,
+                "max": 4000
+            },
+            "transition": 400,
+            "volume": 0.5,
+            "raining": true
+        },
+        {
+            "name": "storm1",
+            "files": [
+                "ambientsounds:weather.storm1"
+            ],
+            "storming": true
+        },
+        {
+            "name": "storm2",
+            "files": [
+                "ambientsounds:weather.storm2"
+            ],
+            "volume": 0.5,
+            "storming": true
+        },
+        {
+            "name": "light-wind",
+            "files": [
+                "ambientsounds:wind.light-wind1",
+                "ambientsounds:wind.light-wind2"
+            ],
+            "length": {
+                "min": 2000,
+                "max": 4000
+            },
+            "transition": 400,
+            "raining": true,
+            "snowing": true,
+            "bad-biomes": [
+                "#minecraft:is_hill",
+                "#minecraft:is_badlands",
+                "#forge:is_desert",
+                "#c:is_desert",
+                "#forge:is_wasteland",
+                "#c:is_wasteland"
+            ]
+        },
+        {
+            "name": "howling-wind",
+            "files": [
+                "ambientsounds:wind.howling-wind"
+            ],
+            "length": {
+                "min": 2000,
+                "max": 4000
+            },
+            "transition": 400,
+            "volume": 0.2,
+            "storming": true
+        }
+    ]
+}

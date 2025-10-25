@@ -1,0 +1,32 @@
+{
+    "name": "mountain",
+    "biomes": [
+        "#minecraft:is_mountain"
+    ],
+    "bad-biomes": [
+        "minecraft:cherry_grove",
+        "minecraft:grove",
+        "minecraft:meadow",
+        "minecraft:snowy_slope"
+    ],
+    "absolute-height": {
+        "max": 192,
+        "min": 56,
+        "fade": 10
+    },
+    "sounds": [
+        {
+            "name": "heavy-wind",
+            "files": [
+                "ambientsounds:wind.heavy-wind1",
+                "ambientsounds:wind.heavy-wind2"
+            ],
+            "length": {
+                "min": 2000,
+                "max": 4000
+            },
+            "transition": 400,
+            "volume": 0.2
+        }
+    ]
+}

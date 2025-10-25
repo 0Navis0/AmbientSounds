@@ -1,0 +1,31 @@
+{
+    "name": "underwater",
+    "mute": 1,
+    "mute-priority": 10,
+    "fade-volume": 0.1,
+    "sounds": [
+        {
+            "name": "underwater",
+            "files": [
+                "ambientsounds:water.underwater"
+            ],
+            "underwater": {
+                "min": 0.01,
+                "max": 24
+            },
+            "volume": 0.5,
+            "fade": 10
+        },
+        {
+            "name": "underwater-deep",
+            "underwater": {
+                "min": 24
+            },
+            "files": [
+                "ambientsounds:water.underwater-deep"
+            ],
+            "volume": 0.5,
+            "fade": 10
+        }
+    ]
+}
