@@ -80,6 +80,15 @@
         ],
         "category": "ambient"
     },
+    "animals.bird10": {
+        "sounds": [
+            {
+                "name": "ambientsounds:animals/bird/bird9",
+                "stream": true
+            }
+        ],
+        "category": "ambient"
+    },
     "animals.bird-plains1": {
         "sounds": [
             {
