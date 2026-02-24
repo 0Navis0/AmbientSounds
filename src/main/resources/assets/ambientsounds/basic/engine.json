@@ -28,6 +28,15 @@
             "weight": 1
         }
     ],
+    "solids": [
+        "#minecraft:doors",
+        "#minecraft:trapdoors",
+        "#minecraft:impermeable",
+        "#minecraft:glass_panes",
+        "#minecraft:ice",
+        "#minecraft:slabs",
+        "#minecraft:stairs"
+    ],
     "biome-types": [
         "surface",
         "underground"
