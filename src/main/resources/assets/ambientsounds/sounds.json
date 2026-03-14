@@ -197,15 +197,6 @@
         ],
         "category": "ambient"
     },
-    "animals.bird-plains": {
-        "sounds": [
-            {
-                "name": "ambientsounds:animals/bird/bird-plains",
-                "stream": true
-            }
-        ],
-        "category": "ambient"
-    },
     "animals.crow1": {
         "sounds": [
             {
@@ -346,14 +337,6 @@
         "sounds": [
             {
                 "name": "ambientsounds:animals/owl/owl9"
-            }
-        ],
-        "category": "ambient"
-    },
-    "animals.owl10": {
-        "sounds": [
-            {
-                "name": "ambientsounds:animals/owl/owl10"
             }
         ],
         "category": "ambient"
