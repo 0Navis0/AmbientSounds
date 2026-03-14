@@ -71,24 +71,6 @@
         ],
         "category": "ambient"
     },
-    "animals.bird9": {
-        "sounds": [
-            {
-                "name": "ambientsounds:animals/bird/bird9",
-                "stream": true
-            }
-        ],
-        "category": "ambient"
-    },
-    "animals.bird10": {
-        "sounds": [
-            {
-                "name": "ambientsounds:animals/bird/bird9",
-                "stream": true
-            }
-        ],
-        "category": "ambient"
-    },
     "animals.bird-plains1": {
         "sounds": [
             {
@@ -120,6 +102,24 @@
         "sounds": [
             {
                 "name": "ambientsounds:animals/bird/bird-plains4",
+                "stream": true
+            }
+        ],
+        "category": "ambient"
+    },
+    "animals.bird-plains5": {
+        "sounds": [
+            {
+                "name": "ambientsounds:animals/bird/bird-plains5",
+                "stream": true
+            }
+        ],
+        "category": "ambient"
+    },
+    "animals.bird-plains6": {
+        "sounds": [
+            {
+                "name": "ambientsounds:animals/bird/bird-plains6",
                 "stream": true
             }
         ],
