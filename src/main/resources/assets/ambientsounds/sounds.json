@@ -125,37 +125,37 @@
         ],
         "category": "ambient"
     },
-    "animals.bird-dense1": {
+    "animals.bird-huge1": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/bird/bird-dense1",
+                "name": "ambientsounds:animals/bird/bird-huge1",
                 "stream": true
             }
         ],
         "category": "ambient"
     },
-    "animals.bird-dense2": {
+    "animals.bird-huge2": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/bird/bird-dense2",
+                "name": "ambientsounds:animals/bird/bird-huge2",
                 "stream": true
             }
         ],
         "category": "ambient"
     },
-    "animals.bird-dense3": {
+    "animals.bird-huge3": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/bird/bird-dense3",
+                "name": "ambientsounds:animals/bird/bird-huge3",
                 "stream": true
             }
         ],
         "category": "ambient"
     },
-    "animals.bird-dense4": {
+    "animals.bird-huge4": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/bird/bird-dense4",
+                "name": "ambientsounds:animals/bird/bird-huge4",
                 "stream": true
             }
         ],
