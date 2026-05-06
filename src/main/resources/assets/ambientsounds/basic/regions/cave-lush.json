@@ -13,10 +13,8 @@
         {
             "name": "frog",
             "files": [
-                "ambientsounds:animals.frog1",
-                "ambientsounds:animals.frog2",
-                "ambientsounds:animals.frog3",
-                "ambientsounds:animals.frog4"
+                "ambientsounds:animals.frog-cave1",
+                "ambientsounds:animals.frog-cave2"
             ],
             "pause": {
                 "min": 100,

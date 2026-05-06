@@ -423,19 +423,19 @@
         ],
         "category": "ambient"
     },
-    "animals.frog3": {
+    "animals.frog-cave1": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/frog/frog3",
+                "name": "ambientsounds:animals/frog/frog-cave1",
                 "stream": true
             }
         ],
         "category": "ambient"
     },
-    "animals.frog4": {
+    "animals.frog-cave2": {
         "sounds": [
             {
-                "name": "ambientsounds:animals/frog/frog4",
+                "name": "ambientsounds:animals/frog/frog-cave2",
                 "stream": true
             }
         ],

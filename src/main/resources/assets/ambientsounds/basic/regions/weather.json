@@ -23,14 +23,6 @@
             "storming": true
         },
         {
-            "name": "storm2",
-            "files": [
-                "ambientsounds:weather.storm2"
-            ],
-            "volume": 0.5,
-            "storming": true
-        },
-        {
             "name": "light-wind",
             "files": [
                 "ambientsounds:wind.light-wind1",
@@ -45,6 +37,7 @@
             "snowing": true,
             "bad-biomes": [
                 "#minecraft:is_hill",
+                "#minecraft:is_mountain",
                 "#minecraft:is_badlands",
                 "#forge:is_desert",
                 "#c:is_desert",
