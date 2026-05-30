@@ -5,6 +5,9 @@
         "#forge:is_desert",
         "#c:is_desert"
     ],
+    "bad-biomes": [
+        "minecraft:wooded_badlands"
+    ],
     "absolute-height": {
         "max": 192,
         "min": 56,

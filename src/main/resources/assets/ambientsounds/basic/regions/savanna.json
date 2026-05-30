@@ -1,7 +1,8 @@
 {
     "name": "savanna",
     "biomes": [
-        "#minecraft:is_savanna"
+        "#minecraft:is_savanna",
+        "minecraft:wooded_badlands"
     ],
     "absolute-height": {
         "max": 192,
