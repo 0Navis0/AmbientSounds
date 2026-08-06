@@ -1,5 +1,5 @@
 {
-    "name": "wasteland",
+    "name": "cold-desert",
     "biomes": [
         "#c:is_wasteland",
         "minecraft:ice_spikes",
