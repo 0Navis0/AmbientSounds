@@ -3,13 +3,11 @@
     "biomes": [
         "#c:is_wasteland",
         "minecraft:ice_spikes",
-        "minecraft:snowy_plains",
-        "minecraft:snowy_slopes"
+        "minecraft:snowy_plains"
     ],
     "bad-biomes": [
         "#minecraft:is_mountain",
         "#minecraft:is_badlands",
-        "#minecraft:is_hill",
         "#c:is_desert"
     ],
     "absolute-height": {

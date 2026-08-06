@@ -6,8 +6,7 @@
     "bad-biomes": [
         "minecraft:cherry_grove",
         "minecraft:grove",
-        "minecraft:meadow",
-        "minecraft:snowy_slope"
+        "minecraft:meadow"
     ],
     "absolute-height": {
         "max": 192,
