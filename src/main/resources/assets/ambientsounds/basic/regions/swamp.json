@@ -1,7 +1,6 @@
 {
     "name": "swamp",
     "biomes": [
-        "#forge:is_swamp",
         "#c:is_swamp"
     ],
     "absolute-height": {

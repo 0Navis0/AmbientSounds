@@ -1,7 +1,6 @@
 {
     "name": "wasteland",
     "biomes": [
-        "#forge:is_wasteland",
         "#c:is_wasteland",
         "minecraft:ice_spikes",
         "minecraft:snowy_plains",
@@ -10,7 +9,7 @@
     "bad-biomes": [
         "#minecraft:is_mountain",
         "#minecraft:is_badlands",
-        "#forge:is_desert",
+        "#minecraft:is_hill",
         "#c:is_desert"
     ],
     "absolute-height": {

@@ -2,10 +2,10 @@
     "name": "desert",
     "biomes": [
         "#minecraft:is_badlands",
-        "#forge:is_desert",
         "#c:is_desert"
     ],
     "bad-biomes": [
+        "#minecraft:is_savanna",
         "minecraft:wooded_badlands"
     ],
     "absolute-height": {

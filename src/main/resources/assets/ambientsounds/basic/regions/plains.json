@@ -1,13 +1,14 @@
 {
     "name": "plains",
     "biomes": [
-        "#forge:is_plains",
         "#c:is_plains",
         "minecraft:meadow",
         "minecraft:mushroom_fields"
     ],
     "bad-biomes": [
-        "#minecraft:is_savanna"
+        "#minecraft:is_savanna",
+        "#minecraft:is_hill",
+        "#c:is_windswept"
     ],
     "absolute-height": {
         "max": 192,
@@ -69,7 +70,6 @@
             "transition": 100,
             "volume": 0.5,
             "bad-biomes": [
-                "#forge:is_cold",
                 "#c:is_cold"
             ],
             "overall-raining": false,
@@ -103,7 +103,6 @@
             "transition": 100,
             "volume": 0.5,
             "bad-biomes": [
-                "#forge:is_cold",
                 "#c:is_cold"
             ],
             "overall-raining": false,

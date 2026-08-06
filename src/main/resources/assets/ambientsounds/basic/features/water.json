@@ -1,7 +1,5 @@
 {
     "name": "water",
-    "groups": [    
-        "water"
-    ],
+    "groups": ["water"],
     "low-count": 10
 }

@@ -33,7 +33,7 @@
                 "max": 800
             },
             "transition": 200,
-            "volume": 0.2
+            "volume": 0.5
         },
         {
             "name": "cave-water",
