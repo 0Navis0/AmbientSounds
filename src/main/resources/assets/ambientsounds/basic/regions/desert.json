@@ -1,12 +1,15 @@
 {
     "name": "desert",
     "biomes": [
+        "minecraft:ice_spikes",
+        "minecraft:snowy_plains",
         "#minecraft:is_badlands",
-        "#c:is_desert"
+        "#c:is_desert",
+        "#c:is_wasteland"
     ],
     "bad-biomes": [
-        "#minecraft:is_savanna",
-        "minecraft:wooded_badlands"
+        "minecraft:wooded_badlands",
+        "#minecraft:is_savanna"
     ],
     "absolute-height": {
         "max": 192,
@@ -19,6 +22,9 @@
             "files": [
                 "ambientsounds:animals.cicadas-desert1",
                 "ambientsounds:animals.cicadas-desert2"
+            ],
+            "bad-biomes": [
+                "#c:is_cold"
             ],
             "time": {
                 "6": 0,

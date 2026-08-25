@@ -1,14 +1,13 @@
 {
     "name": "plains",
     "biomes": [
-        "#c:is_plains",
         "minecraft:meadow",
-        "minecraft:mushroom_fields"
+        "minecraft:mushroom_fields",
+        "#minecraft:is_hill",
+        "#c:is_plains"
     ],
     "bad-biomes": [
-        "#minecraft:is_savanna",
-        "#minecraft:is_hill",
-        "#c:is_windswept"
+        "#minecraft:is_savanna"
     ],
     "absolute-height": {
         "max": 192,

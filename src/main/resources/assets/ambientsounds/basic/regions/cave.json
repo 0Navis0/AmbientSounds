@@ -4,6 +4,10 @@
         "max": 56,
         "fade": 10
     },
+    "bad-biomes": [
+        "#minecraft:is_nether",
+        "#minecraft:is_end"
+    ],
     "sounds": [
         {
             "name": "cave",

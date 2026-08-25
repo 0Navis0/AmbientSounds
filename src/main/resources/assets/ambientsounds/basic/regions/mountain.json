@@ -1,12 +1,13 @@
 {
     "name": "mountain",
     "biomes": [
-        "#minecraft:is_mountain"
+        "#minecraft:is_mountain",
+        "#minecraft:is_hill"
     ],
     "bad-biomes": [
         "minecraft:cherry_grove",
-        "minecraft:grove",
-        "minecraft:meadow"
+        "minecraft:meadow",
+        "#c:is_wasteland"
     ],
     "absolute-height": {
         "max": 192,
@@ -15,17 +16,16 @@
     },
     "sounds": [
         {
-            "name": "heavy-wind",
+            "name": "light-wind",
             "files": [
-                "ambientsounds:wind.heavy-wind1",
-                "ambientsounds:wind.heavy-wind2"
+                "ambientsounds:wind.light-wind1",
+                "ambientsounds:wind.light-wind2"
             ],
             "length": {
                 "min": 2000,
                 "max": 4000
             },
-            "transition": 400,
-            "volume": 0.2
+            "transition": 400
         }
     ]
 }
