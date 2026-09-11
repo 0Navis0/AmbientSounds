@@ -4,9 +4,9 @@
         "max": 56,
         "fade": 10
     },
-    "bad-biomes": [
-        "#minecraft:is_nether",
-        "#minecraft:is_end"
+    "bad-dimensions": [
+        "minecraft:the_nether",
+        "minecraft:the_end"
     ],
     "sounds": [
         {

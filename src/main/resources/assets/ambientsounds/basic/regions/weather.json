@@ -16,7 +16,7 @@
             "raining": true
         },
         {
-            "name": "storm1",
+            "name": "storm",
             "files": [
                 "ambientsounds:weather.storm1"
             ],
@@ -34,16 +34,7 @@
             },
             "transition": 400,
             "raining": true,
-            "snowing": true,
-            "bad-biomes": [
-                "#minecraft:is_hill",
-                "#minecraft:is_mountain",
-                "#minecraft:is_badlands",
-                "#forge:is_desert",
-                "#c:is_desert",
-                "#forge:is_wasteland",
-                "#c:is_wasteland"
-            ]
+            "snowing": true
         },
         {
             "name": "howling-wind",
